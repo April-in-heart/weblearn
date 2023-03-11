@@ -1,1 +1,0 @@
-<view class="content"><view class="btn-wrap"><kk-printer class="vue-ref" vue-id="8dd740cc-1" bufferData="{{bufferData}}" data-ref="kkprinter" data-event-opts="{{[['^onPrint',[['onPrint']]]]}}" bind:onPrint="__e" bind:__l="__l"></kk-printer></view></view>

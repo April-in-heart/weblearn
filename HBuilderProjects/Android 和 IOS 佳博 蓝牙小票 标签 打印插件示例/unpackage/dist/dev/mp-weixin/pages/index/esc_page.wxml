@@ -1,1 +1,0 @@
-<view class="content"><view><button data-event-opts="{{[['tap',[['printer01',['$event']]]]]}}" bindtap="__e">打印-小票样单一</button><button data-event-opts="{{[['tap',[['printer02',['$event']]]]]}}" bindtap="__e">打印-小票样单二</button><button data-event-opts="{{[['tap',[['printer03',['$event']]]]]}}" bindtap="__e">打印-小票样单三</button></view><text>{{tip}}</text></view>

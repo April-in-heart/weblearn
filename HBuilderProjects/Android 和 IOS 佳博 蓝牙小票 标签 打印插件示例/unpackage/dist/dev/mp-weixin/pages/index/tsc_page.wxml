@@ -1,1 +1,0 @@
-<view class="content"><view><button data-event-opts="{{[['tap',[['printerTsc',['$event']]]]]}}" bindtap="__e">打印-TSC 标签样板</button><button data-event-opts="{{[['tap',[['printerTscVi',['$event']]]]]}}" bindtap="__e">打印-TSC纯指令打印</button></view><text>{{tip}}</text></view>
