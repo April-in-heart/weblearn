@@ -1,9 +1,0 @@
-<!--index.wxml-->
-<view class="container">
-  <image src="../image/background.jpg"></image>
-  <view class="wenzi">
-  <button type="primary" bindtap="rule">游戏规则</button>
-  <button type="primary" bindtap="start">开始游戏</button>
-  <button type="primary" bindtap="about">关于我们</button>
-  </view>
-</view>

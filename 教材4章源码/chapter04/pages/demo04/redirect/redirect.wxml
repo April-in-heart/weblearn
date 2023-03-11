@@ -1,2 +1,0 @@
-<!--pages/demo04/redirect/redirect.wxml-->
-<text>重定向的新页面，无法返回navigator.wxml</text>

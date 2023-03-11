@@ -1,4 +1,0 @@
-/* pages/demo05/audio/audio.wxss */
-button{
-  margin: 10rpx;
-}

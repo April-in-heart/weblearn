@@ -1,6 +1,0 @@
-/* pages/rule/rule.wxss */
-text{
-  line-height: 80rpx;
-  padding: 20rpx;
-  font-size: 30rpx;
-}

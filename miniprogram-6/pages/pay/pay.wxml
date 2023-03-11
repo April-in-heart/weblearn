@@ -1,9 +1,0 @@
-<view class="contaner">
-  <view class="info">
-    <icon type="success" size="80" color="green"/>
-    <text>提交成功！</text>
-  </view>
-  <view class="info img">
-    <image src="../image/food2.jpg"/>
-  </view>
-</view>

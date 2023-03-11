@@ -1,5 +1,0 @@
-<!--pages/about/about.wxml-->
-<view class="container">
-  <image src="../image/background.jpg"></image>
-  <view class="wenzi"><text>complement.JL出品</text></view>
-</view>
