@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>localstorage 长期存取数据到客户端</title>
+	</head>
+	<body>
+		localstorage<br>
+		<span id="span_1"></span><br>
+		<span id="span_2"></span><br>
+		<span id="span_3"></span><br>
+		
+		<script>
+			//定义了一个localstorage
+			localStorage.message_1="localstorage 方法1";
+			localStorage['message_2']="localstorage 方法2";
+			localStorage.setItem('message_3','localstorage 方法3');//键值对，常用
+			document.getElementById('span_1').innerHTML=localStorage.message_1;
+			document.getElementById('span_2').innerHTML=localStorage.message_2;
+			document.getElementById('span_3').innerHTML=localStorage.message_3;
+		</script>
+	</body>
+</html>

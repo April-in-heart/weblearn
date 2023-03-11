@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		
+		<script>
+			var img_boy=document.createElement("img");
+			img_boy.id="boy";
+			img_boy.style.position="absolute";
+			img_boy.style.top="100px";
+			img_boy.style.left="50px";
+			img_boy.src="./image/boy.jpg";
+			document.body.appendChild(img_boy);
+			
+			var img_girl=document.createElement("img");
+			img_girl.id="girl";
+			img_girl.style.position="absolute";
+			img_girl.style.top="100px";
+			img_girl.style.left="800px";
+			img_girl.src="./image/girl.jpg";
+			// 定义图像来源
+			document.body.appendChild(img_girl);
+			console.log(img_boy.style.width)//样式定义的图片宽度,没设置所以无输出
+			console.log(img_boy.width);//图片本身宽度
+			
+			function move(){
+					img_boy.style.left=parseInt(img_boy.style.left)+1+"px";
+					img_girl.style.left=parseInt(img_girl.style.left)-1+"px";
+					if(parseInt(img_boy.style.left)+img_boy.width<parseInt(img_girl.style.left)){
+						//若小于，执行里面的方法
+						window.setTimeout(move,20);
+					}
+			}
+			move();
+			
+			
+		</script>
+		
+		
+	</body>
+</html>

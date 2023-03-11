@@ -1,0 +1,24 @@
+<!--pages/demo02/text/text.wxml-->
+<view class='container'>
+  <include src='../../common/head.wxml' />
+  <view class='page-body'>
+    <view class='title'>2. 基础组件text的简单应用</view>
+    <view class='demo-box'>
+      <view class='title'>(1) 文本可选</view>
+      <text selectable>这是一段长按可以选择的文本内容。</text>
+    </view>
+    <view class='demo-box'>
+      <view class='title'>(2) 空格显示形式</view>
+      <text>这段代码    不允许连续显示空格。</text>
+      <text space='ensp'>这段代码    中文字符空格一半大小。</text>
+      <text space='emsp'>这段代码    中文字符空格大小。</text>
+      <text space='nbsp'>这段代码    根据字体设置的空格大小。</text>
+    </view>
+    <view class='demo-box'>
+      <view class='title'>(3) 文本解码</view>
+      <text>无法解析&nbsp; &lt; &gt; &amp; &apos; &ensp; &emsp;</text>
+      <text decode>可以解析&nbsp; &lt; &gt; &amp; &apos; &ensp; &emsp;</text>
+    </view>
+  </view>
+  <include src='../../common/foot.wxml' />
+</view>

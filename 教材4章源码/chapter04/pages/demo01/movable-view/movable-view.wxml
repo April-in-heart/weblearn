@@ -1,0 +1,26 @@
+<!--pages/demo01/movable-view/movable-view.wxml-->
+<view class='container'>
+  <include src='../../common/head.wxml' />
+  <view class='page-body'>
+    <view class='title'>1. 视图容器movable-view的简单应用</view>
+    <view class='demo-box'>
+      <view class='title'>(1) movable-view在movable-area内</view>
+      <movable-area>
+        <movable-view id='mv01' direction='all'></movable-view>
+      </movable-area>
+    </view>
+    <view class='demo-box'>
+      <view class='title'>(2) movable-view超出movable-area</view>
+      <movable-area>
+        <movable-view id='mv02' direction='all'></movable-view>
+      </movable-area>
+    </view>
+    <view class='demo-box'>
+      <view class='title'>(3) 可缩放的movable-area</view>
+      <movable-area scale-area>
+        <movable-view id='mv03' direction='all' scale></movable-view>
+      </movable-area>
+    </view>
+  </view>
+  <include src='../../common/foot.wxml' />
+</view>

@@ -1,0 +1,169 @@
+/* pages/zizhen/zizhen.wxss */
+.back{
+  background: #efefef;
+}
+.banner{
+  display: flex;
+
+  background-color: #2089dc;
+  height: 8vh;
+  color: #fff;
+  font-size: 50rpx;
+  align-items: center;
+  border:1px solid #efefef;
+  position: relative;
+}
+
+.banner1{
+  display: flex;
+  justify-content: center;
+  background-color: #2089dc;
+  height: 8vh;
+  color: #fff;
+  font-size: 50rpx;
+  align-items: center;
+  border:1px solid #efefef;
+  position: relative;
+}
+
+.banner_1{
+  display: flex;
+  justify-content: center;
+  background-color: #fff;
+}
+/*四诊样式*/
+.channal_1{
+  display:flex;
+  padding: 20rpx 0;
+  background-color: #fff;
+  margin-bottom: 10px;
+}
+.channalText{
+  text-align: center;
+  padding: 0 20rpx;
+  width: 250rpx;
+  font-size: 30rpx;
+}
+.channalCon{
+  width: 120rpx;
+  height: 120rpx;
+  background: #ffab1a;
+  border-radius: 50px;  
+  overflow: hidden; 
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  font-size: large;
+  color: #fff;
+}
+/*选择性别和年龄*/
+.choose{
+  background-color: #fff;
+  width:100%;
+  display: flex;
+  flex-direction: row;
+  text-align: center;
+  
+}
+.choose-lan{
+  background-color: #0098ff;
+  width:10rpx;
+  height:45rpx;
+  margin: 5rpx 40rpx 5rpx 30rpx;
+}
+.choose_image{
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  
+}
+.choose-sex{
+  color:#0098ff;
+  position: absolute;
+  left: 10%;
+}
+/*使屏幕变暗  */
+.commodity_screen {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: #000;
+  opacity: 0.2;
+  overflow: hidden;
+  z-index: 1000;
+  color: #fff;
+}
+/*对话框 */
+.commodity_attr_box {
+  height: 600rpx;
+  width: 100%;
+  overflow: hidden;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  z-index: 2000;
+  background: #fff;
+  padding-top: 20rpx;
+  border-radius: 5px;
+}
+/*望诊弹窗样式*/
+.text_1{
+  height: 30rpx;
+  color: silver;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+.channal_2{
+  display:flex;
+  flex-direction: column;
+  padding: 20rpx 0;
+  background-color: #fff;
+  margin-bottom: 10px;
+}
+.channalRow_2{
+  display:flex;
+  flex-direction: row;
+  padding: 10rpx 0;
+  margin-bottom: 10px;
+  width: 100%;
+  height: 150rpx;
+}
+.channalCon_2{
+  width:130rpx;
+  height: 130rpx;
+  background:silver;
+  border-radius: 50px;  
+  overflow: hidden; 
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  font-size: large;
+}
+.sx-button{
+  width: 100%;
+  height: 100rpx;
+  background: #831585;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  font-size: large;
+  border-radius: 5rpx;
+}
+.channalCon_3{
+  width: 20%;
+  border-radius: 5rpx;
+  
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  font-size: large;
+  color: #fff;
+}

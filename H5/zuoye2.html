@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		<!-- 使用AJAX技术无刷新提交数据到服务器。
+		 		表单id为form_1，姓名输入框id为name，name为name。
+		 		提交按钮类型为button，id为b_1，点击提交数据到服务器,提交方式post
+		 		提交成功后，把服务器返回的数据显示在div中,div的id为div_1
+		 		服务器处理程序的地址为"/public_libs/server_ajax_post_1.php"
+		 		jquery的引入地址为"/public_libs/jquery.js"（注此项非强制,可用原生代码实现） -->
+				
+		<form action="" method="post" id="form_1">
+			<label for="name">姓名</label>
+			<input type="text" id="name" name="name" value="" /><br>
+			<input type="button" id="b_1" value="ok" onclick="ajax()"/>
+		</form>
+		<div id="div_1"></div>
+		<script>
+			var xmlhttp=new XMLHttpRequest;
+			function ajax(){
+				var url="ajax_39.php";
+				xmlhttp.open("GET",url);//不写false，默认为true：异步,
+				//不管执行成功与否都能继续执行下面的代码
+				//onreadystatechange：准备的事件发生改变事件
+				xmlhttp.onreadystatechange=handleStateChange;//异步
+				xmlhttp.send();
+			}
+			function handleStateChange(){
+				if(xmlhttp.readyState==4 && xmlhttp.status==200){
+					//status=200可以运行，404不能运行
+					document.getElementById("div_1").innerHTML
+					=xmlhttp.responseText;
+				}
+			}
+		</script>
+	</body>
+</html>

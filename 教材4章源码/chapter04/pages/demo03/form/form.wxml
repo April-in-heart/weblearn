@@ -1,0 +1,17 @@
+<!--pages/demo03/form/form.wxml-->
+<view class='container'>
+  <include src='../../common/head.wxml' />
+  <view class='page-body'>
+    <view class='title'>3. 表单组件form的简单应用</view>
+    <view class='demo-box'>
+      <view class='title'>模拟用户登录效果</view>
+      <form bindsubmit='onSubmit' bindreset='onReset'>
+        <input name='username' type='text' placeholder='请输入用户名'></input>
+        <input name='password' password placeholder='请输入密码'></input>
+        <button size='mini' form-type='submit'>提交</button>
+        <button size='mini' form-type='reset'>重置</button>
+      </form>
+    </view>
+  </view>
+  <include src='../../common/foot.wxml' />
+</view>

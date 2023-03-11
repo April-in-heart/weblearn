@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		<script>
+			// 定义一个myJson函数，带有一个形参，
+			// 处理传过来的json形如{name:'mike',age:18,address:'chengdu'}，,
+			// 并返回name的值
+			function myJson(string){
+			var json_data=eval("("+string+")");
+			return   json_data.name;
+			}
+			var string="{name:'mike',age:18,address:'chengdu'}";
+			console.log(myJson(string));
+		</script>
+	</body>
+</html>

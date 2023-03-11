@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		
+		<form>
+			姓名<input type="text" id="name" name="name" value="" onfocus="showEvent('focus')" 
+			onkeydown="showEvent('keydown')" onblur="showEvent('blur')" onclick="showEvent('click')" />
+			年龄<input type="text" id="agr" name="age" value="" />
+		</form>
+		<script>
+			function showEvent(eventname){
+				console.log(eventname);
+			}
+		</script>
+		
+	</body>
+</html>

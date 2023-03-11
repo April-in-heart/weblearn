@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>ajax+jquery</title>
+	</head>
+	<body>
+		
+		<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+		<div id="div_1"></div>
+		<script>
+			
+			function ajaxClock(){
+				$.ajax({
+					url:'web24_h5.php',
+					success:function(result){
+						$("#div_1").html(result);//jquery通过id选择器定位对象,$是封装的一个函数名
+					},
+				})
+				window.setTimeout(ajaxClock,1000);
+			}
+			ajaxClock();
+			
+		</script>
+		
+	</body>
+</html>

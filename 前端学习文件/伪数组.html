@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>伪数组</title>
+</head>
+<body>
+    <div></div>
+    <div></div>
+    <div></div>
+    <script>
+        function add(){
+            console.log(arguments);
+        }
+        add(2,3)
+        console.log(document.querySelectorAll("div")[1]);
+        var bob={
+            '0':'a',
+            '1':17,
+            length:2
+        }
+        console.log(bob[1]);
+        var res=Array.from(bob);
+        console.log(res);
+        console.log(res.push('第三个元素'));
+        console.log(res);
+
+
+        console.log(Array.of('s1','s2',3));
+    </script>
+</body>
+</html>

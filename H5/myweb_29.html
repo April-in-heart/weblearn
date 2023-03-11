@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body onload="myLoad()">
+		<img src="../image/e1.jpg" />
+		<script>
+			//window.onload网页加载完毕后执行，
+			//有window.onload则body里的onload不能执行
+			//onload：页面全部加载完成后再执行里面的代码，确保都加载成功再执行函数提升可靠性
+			window.onload=function(){
+				console.log("window onload");
+			}
+			//3s后自动跳转
+			function mylocation(){
+				window.location="myweb_28.html";
+			}
+			window.setTimeout(mylocation,3000);
+			
+			function myLoad(){
+				console.log("body onload");
+			}
+			
+			
+			
+			
+			
+		</script>
+		
+	</body>
+</html>

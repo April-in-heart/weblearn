@@ -1,0 +1,103 @@
+<!--index.wxml-->
+<view class="all">
+    <view class="headline">
+        <text class="headline">处方</text>
+    </view>
+   
+    <view class="flex">
+    <view class="short">
+        <text class="text1">*姓名</text>
+        <input class="input1" bindinput="name_input" value="{{name}}"></input>
+    </view>
+    <view class="short">
+        <text class="text1">*性别</text>
+        <radio-group bindchange="changesex" class="radio">
+        <label>
+            <radio value="male" checked="{{maleChecked}}"/>男
+        </label>
+        <label>
+            <radio value="female" checked="{{femaleChecked}}"/>女
+        </label>
+        </radio-group>
+    </view>
+    </view>
+    <view class="flex">
+    <view class="short">
+        <text class="text1">*电话</text>
+        <input class="input1" bindinput="phone_input" value="{{phone}}"></input>
+    </view>
+    <view class="short">
+        <text class="text1">*科室</text>
+        <input class="input1" bindinput="keshi_input"></input>
+    </view>
+    </view>
+
+
+    <view class="flex">
+    <view class="short">
+        <text class="text1">*年龄</text>
+        <input class="input1" bindinput="age_input" value="{{age}}"></input>
+    </view>
+    <view class="short">
+        <text class="text1">日期</text>
+        <picker mode='date' bindchange='dateChange' >
+            <view>{{date}}</view>
+        </picker>
+    </view>
+    </view>
+    
+    <view class="long">
+        <text class="text1">*症状(主诉)</text>
+        <input class="input1" bindinput="zhushu_input"></input>
+    </view>
+    <view class="long">
+        <text class="text1">*病名</text>
+        <picker mode='selector' range='{{diseaseItems}}' bindchange='diseaseChange'>
+            <view>{{disease}}</view>
+        </picker>
+    </view>
+    <view class="long">
+        <text class="text1">*证型</text>
+        <picker mode='selector' range='{{syndromeItems}}' bindchange='syndromeChange'>
+            <view>{{syndrome}}</view>
+        </picker>
+    </view>
+    <view class="long">
+        <text class="text1">诊疗意见</text>
+        <input class="input1"  bindinput="advice_input"></input>
+    </view>
+    <view class="long">
+        <text class="text1">*治法</text>
+        <picker mode='selector' range='{{methodItems}}' bindchange='methodChange'>
+            <view>{{method}}</view>
+        </picker>
+    </view>
+    <view class="long">
+        <text class="text1">*处方名</text>
+        <input class="input1" bindinput="c_name_input"></input>
+    </view>
+
+</view>
+<view class="div_2" wx:for="{{medicine}}" wx:key="medi{{index}}" wx:for-item="medi" data-tabindex="{{index}}" bindtap="bindView">
+    <view class="pill">
+        <picker mode='selector' range='{{drugNameItems}}' bindchange='drugNameChange'>
+            <view class="drugName">{{medicine[index].name}}</view>
+        </picker>
+    </view>
+    <view class="flex2">
+    <view class="methed">
+        <picker mode='selector' range='{{zuoFaItems}}' bindchange='zuoFaChange'>
+            <view>{{medicine[index].zuoFa}}</view>
+        </picker>
+    </view>
+    <view class="dose">
+        <picker mode='selector' range='{{grammageItems}}' bindchange='grammageChange'>
+            <view>{{medicine[index].grammage}}</view>
+        </picker>
+    </view>
+    </view>
+</view>
+<view class="flex3">
+    <button size="mini" bindtap="cancel">取消</button>
+    <button size="mini" bindtap="save">保存开药</button>
+</view>

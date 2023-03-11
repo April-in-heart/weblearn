@@ -1,0 +1,12 @@
+<!--pages/demo03/switch/switch.wxml-->
+<view class='container'>
+  <include src='../../common/head.wxml' />
+  <view class='page-body'>
+    <view class='title'>3. 表单组件switch的简单应用</view>
+    <view class='demo-box'>
+      <view class='title'>switch事件监听</view>
+      <switch checked bindchange="switchChange" />
+    </view>
+  </view>
+  <include src='../../common/foot.wxml' />
+</view>

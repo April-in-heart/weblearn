@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		<!-- 姓名输入框的id与name属性值都为name。
+		年龄输入框的id与name属性值都为age。
+		性别按钮的name属性值为gender，id男为male女为female。
+		实现函数 welcome，调用此函数后，实现如图所示的欢迎功能
+		其中如果年龄大于等18岁，男性为'先生'，女性为'女士'
+		其中如果年龄小于18岁，男性为'哥哥'，女性为'姐姐'
+		显示欢迎信息的div的id为div_1 -->
+		
+		<form name="form">
+			<div id="div_1"></div>
+			<lable for="name">姓名:</lable>
+			<input type="text" id="name" name="name" value="小明" /><br>
+			<!-- 跟C#里的id和name差不多，id用于引用该属性，name用于表示属性名称 -->
+			<lable for="name">年龄:</lable>
+			<input type="text" id="age" name="age" value="16"/><br>
+			<!-- value属性为input元素设定值 -->
+			<lable for="name">性别:</lable>
+			<input type="radio" id="male" name="gender" value="01" checked="true"/>男
+			<input type="radio" id="female" name="gender" value="02" />女<br>
+			<!-- radio单选按钮 一组选择项id不能相同，但name要相同，表示一种控件，
+			value用来表示按钮的值 -->
+		</form><!-- form为文本框，可以在里面输入数据 -->
+		
+		
+		<script>
+				var age=document.getElementById("age").value
+				var name=document.getElementById("name").value
+				var sex=document.getElementsByName("gender")
+				var div_1=document.getElementById("div_1")
+				if(sex[0].checked){
+				function welcome(){
+					var a="欢迎"+name
+					if(age>=18)
+						a+="先生";
+					if(age<18)
+						a+="哥哥";
+				div_1.innerHTML=a;
+				}
+				console.log(div_1)
+				welcome();
+				}
+				if(sex[1].checked){
+				function welcome(){
+					var a="欢迎"+name
+					if(age>=18)
+						a+="女士";
+					if(age<18)
+						a+="姐姐";
+				div_1.innerHTML=a;
+				}
+				console.log(div_1)
+				welcome();
+				}
+		</script>
+		
+	</body>
+</html>

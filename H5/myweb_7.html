@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		<link href="my_7.css" rel="stylesheet" type="text/css"/>
+		<form>
+			<lable for="name">姓名 ：</lable>
+			<input type="text" id="name" name="name" value="" /><br>
+			密码1：<input type="password" id="password_1" name="password_1" 
+			value="" /><br>
+			密码2：<input type="password" id="password_2" name="password_2" value="" /><br>
+			<!-- button不会提交到web服务器，submit会提交到web服务器,onclick点击触发事件时执行js方法 -->
+			<input type="button" id="ok" name="ok" value="ok" onclick="mycheckdata()"/><br>
+		</form>
+		<!-- 判断姓名是否为空，两次密码是否一致 -->
+		<script>
+			/* function定义一个函数 */
+			function mycheckdata(){
+				console.log("能绑定");
+				/* 检查姓名是否为空 DOM文档(form)对象模型 obj前缀表示对象名称*/
+				/* 定义对象“姓名”“密码1”“密码2” */
+				var objname=document.getElementById("name");
+				var objpassword1=document.getElementById("password_1");
+				var objpassword2=document.getElementById("password_2");
+				/* 得到输入的objname的值并输出 */
+				console.log(objname.value);
+				if(objname.value==""){
+					alert("姓名不能为空");
+					objname.value="必须要输入姓名";
+					return;/* 函数结束，返回到调用的位置 */
+				}
+				/* 判断密码是否为空 */
+				if(objpassword1.value==""||objpassword2.value==""){
+					alert("密码不能为空");
+				}
+				/* 控制台输出密码 */
+				else{
+					/* 判断密码是否一致 */
+					if(objpassword1.value!=objpassword2.value){
+						alert("error!密码不一致");
+				/* 密码不一致清空密码 */
+				objpassword1.value=objpassword2.value="";
+				return;
+				}
+				/* 判断密码强度 测试中*/
+				if(objpassword1.value.length<8){
+					alert("密码不能小于8位");
+					/* 密码小于8位清空密码 */
+					objpassword1.value=objpassword2.value="";
+					return;
+				}
+
+				console.log("密码:");
+				console.log(objpassword1.value);
+			}
+
+		}	
+		</script>
+		
+	</body>
+</html>

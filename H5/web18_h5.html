@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>拖拽操作</title>
+		<style>
+			#div_1{
+				position: absolute;
+				top: 10px;
+				left: 10px;
+				width: 1000px;
+				height: 1000px;
+				margin: 5px;
+				border: solid 1px #ff0000;
+			}
+			#div_2{
+				position: absolute;
+				top: 10px;
+				left: 1100px;
+				width: 1000px;
+				height: 1000px;
+				margin: 5px;
+				border: solid 1px #ff0000;
+			}
+			#div_3{
+				position: absolute;
+				top: 10px;
+				left: 2100px;
+				width: 1000px;
+				height: 1000px;
+				margin: 5px;
+				border: solid 1px #ff0000;
+			}
+			#img_1{
+				position: relative;
+				width: 400px;
+				height: 500px;
+				z-index: 10;
+			}
+		</style>
+	</head>
+	<body>
+		<!-- drag拖动,drop推动 -->
+		<div id="div_1" ondrop="doOnDrop(event)" ondragover="doOnDragOver(event)">
+			<img src="1.html/image/u1.jpg" id="img_1" draggable="true" ondragstart="doOnDragStart(event)" />
+		</div>
+		<div id="div_2" ondrop="doOnDrop(event)" ondragover="doOnDragOver(event)"></div>
+		<div id="div_3"></div>
+	</body>
+	<script>
+		
+		function doOnDragStart(evt){
+			console.log(evt);
+			evt.dataTransfer.setData("obj_id",evt.target.id);
+		}
+		function doOnDrop(evt){
+			var obj_id=evt.dataTransfer.getData("obj_id");
+			evt.target.appendChild(document.getElementById(obj_id));
+		}
+		function doOnDragOver(evt){
+			evt.preventDefault();//自己写了监听器，阻止默认动作
+		}
+		
+	</script>
+</html>

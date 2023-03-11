@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		
+		<script>
+			
+			//5!=5*4*3*2*1 r(5)=5*r(4)
+			//recursion(){}
+			//递归
+			n=5;
+			console.log(r(n));
+			function r(n){
+				if(n>0){
+					return n*r(n-1);
+				}else{
+					return 1;
+				}
+			}
+			//递归降维，变为循环    课后作业自我实现
+			sum=1;
+			for(var i=n;i>1;i--){
+				sum*=i;
+			}
+			console.log(sum);
+			
+			
+			
+			
+		</script>
+		
+	</body>
+</html>

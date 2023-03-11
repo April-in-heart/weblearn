@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div></div>
+    <script>
+        var s1 = 'hello';
+        var s2 = 'world';
+        var s3 = '123';
+        var s4 = 1;
+        var s5 = 2;
+        var s6 = '3';
+        var res = s1.concat(s2, s3);
+        var res2 = ''.concat(s1, s2);
+        console.log(res);//helloworld123
+        console.log(res2);
+        console.log(s1 + s2 + s3);//helloworld123
+        console.log(typeof (s4 + s5 + s6));//33
+        console.log(res2.substr(4, 7));
+        console.log(res2.indexOf('o', 6));//6
+    </script>
+</body>
+
+</html>

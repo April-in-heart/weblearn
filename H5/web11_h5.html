@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>图层技术</title>
+	</head>
+	<body>
+		<canvas id="canvas_1"></canvas>
+		<canvas id="canvas_2"></canvas>
+		<script>
+			var canvas_1=document.getElementById("canvas_1");
+			var canvas_2=document.getElementById("canvas_2");
+			canvas_1.width=600;
+			canvas_1.height=500;
+			canvas_2.width=600;
+			canvas_2.height=500;
+			canvas_1.style.position="absolute";
+			canvas_2.style.position="absolute";
+			canvas_1.style.top="0px";
+			canvas_1.style.left="0px";
+			canvas_2.style.top="0px";
+			canvas_2.style.left="0px";
+			canvas_1.style.zIndex="2";
+			canvas_2.style.zIndex="1";//zindex为z轴坐标，越大越在上
+			
+			
+			canvas_1.style.border="solid 1px #ff0000";
+			canvas_2.style.border="solid 2px #0000ff";
+			var ctx_1=canvas_1.getContext("2d");
+			var ctx_2=canvas_2.getContext("2d");
+			
+			ctx_1.beginPath();
+			ctx_1.strokeStyle="red";
+			ctx_1.fillStyle="red";//填充颜色
+			ctx_1.rect(220,200,100,100);
+			ctx_1.stroke();//画
+			ctx_1.fill();
+			ctx_1.closePath();
+			
+			var obj_img=new Image();
+			obj_img.src="1.html/image/u1.jpg";
+			obj_img.onload=function(){
+				//裁剪起始位置，裁剪大小，*图片放的位置，*图片大小
+				ctx_2.drawImage(obj_img,100,100,400,300);
+			}
+			
+			
+			function move(){
+				canvas_1.style.left=parseInt(canvas_1.style.left)+1+"px";
+				window.setTimeout(move,5);
+			}
+			//move();
+		</script>
+	</body>
+</html>

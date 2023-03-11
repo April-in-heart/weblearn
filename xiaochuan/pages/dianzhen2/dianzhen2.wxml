@@ -1,0 +1,29 @@
+<!--pages/life.wxml-->
+<view class="lifebox">
+    <view class="topback">
+      <text class="title">电针治疗</text>
+    </view>
+   <button bindtap="search" style="margin-right:10rpx">搜索设备</button>
+   
+  <view class="scheme" wx:for="{{devices}}" wx:key="{{test}}">
+        <view class="detailbox1">
+            <text>设备名：{{item.name}}</text>
+        </view>
+        <view >
+            
+            <button type="primary" id="{{item.deviceId}}" style='background-color:red' bindtap="lanyaconnect"><text style="font-size:27rpx">连接</text></button>
+        </view>
+       
+     
+</view>
+     
+ 
+</view>
+
+
+
+
+
+
+
+

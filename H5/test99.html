@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		
+		<!-- 获取的时间显示在div中，div的id为div_1。
+		从服务器返回的数据是JSON格式，时间数据的键为time。
+		服务器处理程序的地址为"/public_libs/server_ajax_521_1.php"
+		Jquery的引入地址为"/public_libs/jquery.js"（注此项非强制,可用原生代码实现） -->
+		<div id="div_1"></div>
+		<script>
+			
+			var xmlhttp=new XMLHttpRequest;//有兼容性问题，在firefox，chrome中没有问题
+			function ajax_1(){
+				var url="/public_libs/server_ajax_521_1.php";//只能调用跟页面在同一个网站服务器上的程序
+				xmlhttp.open("GET",url);//不写false，默认为true：异步,
+				//不管执行成功与否都能继续执行下面的代码
+				//onreadystatechange：准备的事件发生改变事件
+				xmlhttp.onreadystatechange=handleStateChange;//异步
+				xmlhttp.send();
+				//定时操作
+				//window.setTimeout(ajax_1,1000);
+			}
+			
+			function handleStateChange(){
+				if(xmlhttp.readyState==4 && xmlhttp.status==200){
+					//status=200可以运行，404不能运行
+					document.getElementById("div_1").innerHTML
+					=JSON.parse(xmlhttp.responseText).time;
+				}
+			}
+			ajax_1();
+			
+		</script>
+		
+	</body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		try catch 二
+		<script>
+			
+			try{
+				document.getElementById("div_1").innerHTML="error";
+			}catch(e){
+				console.log(e);
+			}
+			
+			var a=10;
+			try{
+				if(a<10){
+					//throw停止程序执行并抛出错误信息，自定义错误
+					throw "您给的数据不符合要求";
+				}
+				if(a>=10){
+					throw "您给的数据正好";
+				}
+			}catch(e){
+				console.log(e);
+			}
+			
+			
+			
+		</script>
+		
+	</body>
+</html>

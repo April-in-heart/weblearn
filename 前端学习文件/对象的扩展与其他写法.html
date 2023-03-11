@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>对象的扩展与其他写法</title>
+</head>
+<body>
+    <script>
+        var a=1,b=2;
+        var id='123';
+        var obj={
+            id:'321',
+            [id]:"中括号id",
+            [a+b]:"a+b的值",
+            ['a'+'b']:"字符串a+b"
+        }
+        console.log(obj);//{3: 'a+b', 123: '中括号的id', id: '321'}
+        console.log(obj[123]);//中括号的id
+        console.log(obj.id);//321,只有不用中括号的key值才能用点的方式打印
+
+
+        var z={a:3,b:4};
+        var n={...z};
+        console.log(n);//{a: 3, b: 4}对象的扩展运算符
+    </script>
+</body>
+</html>

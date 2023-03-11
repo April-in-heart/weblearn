@@ -1,0 +1,148 @@
+/* pages/result/result.wxss */
+.page{
+  height: 100%;
+  width: 100%;
+}
+/*******背景颜色******/
+.back{
+  background: #efefef;
+}
+
+/*******标题样式******/
+.banner{
+  display: flex;
+  background-color: #2089dc;
+  height: 8vh;
+  color: #fff;
+  font-size: 50rpx;
+  align-items: center;
+  border:1px solid #efefef;
+  position: relative;
+  justify-content: space-between;
+}
+/*横 布局*/
+.row{
+  display: flex;
+  flex-direction: row;
+}
+/*返回图标*/
+.banner_back{
+  width: 50rpx;
+  height:50rpx;
+  margin: 10rpx 0;
+}
+/*******诊断记录******/
+
+/*整体列排列*/
+.channal{
+  display:flex;
+  flex-direction: column;
+  background-color: #fff;
+  margin-bottom: 20rpx;
+}
+/*横排列*/
+.channalRow{
+  display:flex;
+  flex-direction: row;
+  width: 100%;
+  height: 110rpx;
+  border: 1px solid #efefef;
+}
+.channal_text{
+  font-size: 40rpx;
+}
+/*四诊图标*/
+.channalCon{
+  width:90rpx;
+  height: 90rpx;
+  background:#ffab1a;
+  border-radius: 50px;  
+  overflow: hidden; 
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  font-size: large;
+  padding: 0rpx 5rpx 0rpx 5rpx ;
+  margin: 10rpx 10rpx 0rpx 10rpx;
+  color: #fff;
+}
+.space_between{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 100%;
+  justify-content: space-between;
+}
+
+/*****体质判断结果******/
+
+.banner_1{
+  display: flex;
+  justify-content: center;
+  background-color: #fff;
+  padding: 30rpx 10rpx 20rpx 10rpx;
+  font-size: 45rpx;
+}
+.banner_2{
+  display: flex;
+  justify-content: center;
+  background-color: #fff;
+  color:#0098ff;
+  padding: 10rpx 10rpx 30rpx 10rpx ;
+  font-size: 60rpx;
+}
+
+
+/*****结果内容******/
+
+/*内容标题*/
+.contnet-title{
+  background-color: #fff;
+  width:100%;
+  display: flex;
+  flex-direction: row;
+}
+.title-text{
+  font-size: 45rpx;
+  margin: 5rpx 5rpx 30rpx 5rpx;
+}
+/*蓝色栏块*/
+.title-lan{
+  background-color: #0098ff;
+  width:10rpx;
+  height:50rpx;
+  margin: 5rpx 30rpx 5rpx 30rpx;
+}
+/*蓝色点*/
+.contnet-dian{
+  display: flex;
+  justify-content: center;
+  margin: 15rpx 30rpx 0rpx 30rpx;
+}
+.title-dian{
+  background-color: #0098ff;
+  width:20rpx;
+  height:20rpx;
+  border-radius: 50rpx;
+}
+/*内容字体*/
+.contnet-text{
+  color: rgb(139, 138, 138);
+}
+/*底部按钮*/
+.banner_3{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 50%;
+  justify-content: center;
+}
+
+/****查看记录样式****/
+.hide{
+  display: none;
+ }
+ .show{ 
+  display: block;
+ }

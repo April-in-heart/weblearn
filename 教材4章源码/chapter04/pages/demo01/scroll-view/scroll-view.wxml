@@ -1,0 +1,24 @@
+<!--pages/demo01scroll-view/scroll-view.wxml-->
+<view class='container'>
+  <include src='../../common/head.wxml' />
+  <view class='page-body'>
+    <view class='title'>1. 视图容器scroll-view的简单应用</view>
+    <view class='demo-box'>
+      <view class='title'>(1) 纵向滚动</view>
+      <scroll-view scroll-y>
+        <view class='scroll-item-y'>第1页</view>
+        <view class='scroll-item-y'>第2页</view>
+        <view class='scroll-item-y'>第3页</view>
+      </scroll-view>
+    </view>
+    <view class='demo-box'>
+      <view class='title'>(2) 横向滚动</view>
+      <scroll-view scroll-x>
+        <view class='scroll-item-x'>第1页</view>
+        <view class='scroll-item-x'>第2页</view>
+        <view class='scroll-item-x'>第3页</view>
+      </scroll-view>
+    </view>
+  </view>
+  <include src='../../common/foot.wxml' />
+</view>

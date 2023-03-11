@@ -1,0 +1,11 @@
+/* pages/game/game.wxss */
+image{
+  height: 250rpx;
+  width: 250rpx;
+}
+canvas{
+  border: 1rpx solid;
+  /* 画布用px更好 */
+  width: 301px;
+  height: 301px;
+}

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		<!-- 定义函数addDiv()动态生成div
+		div的id为div_1,定位方式为绝对定位，在100，100位置处
+		高与宽都是100px。边框为solid,1个像素，红色。 -->
+		
+		<script>
+			
+			function addDiv(){
+				var objdiv=document.createElement("div");
+				objdiv.id="div_1";
+				objdiv.style.position="absolute";
+				objdiv.style.border="solid 1px #ff0000";
+				objdiv.style.width="200px";
+				objdiv.style.height="100px";
+				objdiv.style.top="100px";
+				objdiv.style.left="100px";
+				// 将objdiv添加body末尾
+				document.body.appendChild(objdiv);
+			}
+			addDiv();
+		</script>
+		
+	</body>
+</html>

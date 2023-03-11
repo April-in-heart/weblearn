@@ -1,0 +1,12 @@
+<!--pages/demo07/canvas/canvas.wxml-->
+<view class='container'>
+  <include src='../../common/head.wxml' />
+  <view class='page-body'>
+    <view class='title'>7. 画布组件canvas的简单应用</view>
+    <view class='demo-box'>
+      <view class='title'>使用画布绘制简笔画</view>
+      <canvas canvas-id="myCanvas" style="border:1rpx solid" ></canvas>
+    </view>
+  </view>
+  <include src='../../common/foot.wxml' />
+</view>

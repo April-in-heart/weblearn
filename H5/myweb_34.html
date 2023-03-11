@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<style>
+		div{
+			border: solid 1px #ff0000;
+			margin: 5px;
+			padding: 5px;
+		}
+	</style>
+	<body>
+		
+		<div id="dom_1">
+			DOM学习  document节点操作
+		</div>
+		<div id="div_1">div_1
+			<div id="div_11">div_11</div>
+			<div id="div_12">div_12</div>
+		</div>
+		<script>
+			
+			//html，childElementCount子元素统计
+			console.log(document.childElementCount);//1
+			//<!DOCTYPE html>+html
+			console.log(document.childNodes.length);//2
+			console.log(document.childNodes[1])//输出html和里面的元素
+			//head+body两个字元素(因为style也在head里面)
+			console.log(document.childNodes[1].childElementCount)//2
+			//
+			console.log(document.childNodes[1].childNodes.length)//3
+			//空白+dom_1+空白+div_1+空白+script 
+			console.log(document.childNodes[1].childNodes[2].childNodes.length);//6
+			var mynode=document.childNodes[1].childNodes[2];//<body>
+			console.log(mynode.childNodes[5])
+			console.log(mynode.childNodes[3].childNodes.length)//5,div_1的子节点数
+			console.log(mynode.childNodes[3].childNodes[0].nodeValue)//div_1+空白
+			
+			
+			
+		</script>
+		
+		
+	</body>
+</html>

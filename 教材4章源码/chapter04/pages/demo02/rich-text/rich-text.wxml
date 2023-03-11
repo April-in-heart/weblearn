@@ -1,0 +1,20 @@
+<!--pages/demo02/rich-text/rich-text.wxml-->
+<view class='container'>
+  <include src='../../common/head.wxml' />
+  <view class='page-body'>
+    <view class='title'>2. 基础组件rich-text的简单应用</view>
+    <view class='demo-box'>
+      <view class='title'>(1) 元素节点(使用style样式)</view>
+      <rich-text nodes='{{nodes01}}'></rich-text>
+    </view>
+    <view class='demo-box'>
+      <view class='title'>(2) 元素节点(使用class样式)</view>
+      <rich-text nodes='{{nodes02}}'></rich-text>
+    </view>
+    <view class='demo-box'>
+      <view class='title'>(3) 文本节点</view>
+      <rich-text nodes='{{nodes03}}'></rich-text>
+    </view>
+  </view>
+  <include src='../../common/foot.wxml' />
+</view>

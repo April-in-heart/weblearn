@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		
+		<script>
+			console.log("window");
+			for(Element in window){
+				console.log(Element,"|",window[Element]);
+			}
+			//下午实现navigator与screen对象的内容反射出来
+			console.log("navigator");
+			for(Element in navigator){
+				console.log(Element,"|",navigator[Element]);
+			}
+			for(Element in screen){
+				console.log(Element,"|",navigator[Element]);
+			}
+			
+			
+		</script>
+		
+	</body>
+</html>

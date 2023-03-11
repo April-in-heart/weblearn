@@ -1,0 +1,75 @@
+<!--pages/result/result.wxml-->
+<view class="back">
+  <!--标题-->
+  <view class="banner" >
+    <view class="row">
+      <image src="/static/images/back.png" class="banner_back"></image>
+      <view style="font-size:40rpx ;padding:10rpx 0;" bindtap="back">返回</view>
+    </view>
+    <view>症状分析</view>
+    <view class="channal_text" style="width:130rpx"></view>
+  </view>
+  <!--诊断记录-->
+  <view class="channal">
+    <view class="channalRow">
+      <view class="channalCon">望</view>
+      <view class="space_between">
+        <view  class="channal_text">望诊记录</view>
+        <view class="row"> 
+          <view class="channal_text">查看</view>
+          <image src="/static/images/arrow.png" class="banner_back" style="width:45rpx;height:45rpx;"></image>
+        </view>
+      </view>
+      
+    </view>
+
+
+    <view class="channalRow">
+      <view class="channalCon" style="background:#49b1e6;">闻</view>
+      <view class="space_between">
+        <view  class="channal_text" >闻诊记录</view>
+        <view class="row">
+          <view class="channal_text">查看</view>
+          <image src="/static/images/arrow.png" class="banner_back" style="width:45rpx;height:45rpx;"></image>
+        </view>
+      </view>
+    </view>
+    <view class="channalRow">
+      <view class="channalCon" style="background:#16a4ae;">问</view>
+      <view class="space_between">
+        <view  class="channal_text">问诊记录</view>
+        <view class="row">
+          <view class="channal_text">查看</view>
+          <image src="/static/images/arrow.png"  style="width:40rpx;height:40rpx;"></image>
+        </view>
+      </view>
+    </view>
+    <view class="channalRow">
+      <view class="channalCon" style="background:#f07e63;">切</view>
+      <view class="space_between">
+        <view  class="channal_text">切诊记录</view>
+        <view class="row">
+          <view class="channal_text">查看</view>
+          <image src="/static/images/arrow.png" class="banner_back" style="width:45rpx;height:45rpx;"></image>
+        </view>
+      </view>
+    </view>
+  </view> 
+  <!--体质判断结果-->
+  <view class="banner_1">您的体质倾向</view>
+  <view class="banner_2">
+     <button bindtap="test">点击测试</button>
+  </view>
+
+ 
+  <!--咨询医生、穴位治疗-->
+    <view class="banner" style="position: fixed;bottom:0;width:100%; flex-direction: row;">
+    
+      <view class="banner_3" bindtap="">症状分析</view>
+      <view class="banner_3">穴位治疗</view>
+    
+  </view>
+  
+  
+ 
+</view>

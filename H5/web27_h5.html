@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>web socket</title>
+	</head>
+	<body>
+		<div id="div_1"></div>
+		<div id="div_2"></div>
+		<script>
+			//websocket与ajax有什么优势和劣势
+			//在命令行用C:\wamp\www>websocket_student.exe -host local
+			//host -port 9999 -html web27_h5.html打开
+			function webSocketText(){
+				var objDiv_1=document.getElementById("div_1");
+				var objDiv_2=document.getElementById("div_2");
+				//in为迭代操作，判断window是否有websocket对象,这里WebSocketW和S都要大写
+				if("WebSocket" in window){
+					objDiv_2.innerHTML="浏览器支持websocket";
+					var ws=new WebSocket("ws://<!--{$ipAddress}-->/echo");
+					ws.onopen=function(){
+						ws.send("set data"+Math.random());//给服务器端发送信息
+					}
+					ws.onmessage=function(event){
+						objDiv_1.innerHTML=event.data;
+					}
+					ws.onclose=function(){
+						objDiv_2.innerHTML="websocket close";
+					}
+				}else{
+					objDiv_2.innerHTML="浏览器不支持websocket";
+				}
+			}
+			webSocketText();
+			
+		</script>
+	</body>
+</html>

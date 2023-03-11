@@ -1,0 +1,8 @@
+
+.content {
+		margin:45px;
+		margin-top:30px;
+}
+.print_btu{ margin-top: 35px;}
+button{ margin-bottom:10px;}
+

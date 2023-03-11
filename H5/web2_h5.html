@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		<form>
+			<select>
+				<option value="asp">ASP</option>
+				<option value="jsp">JSP</option>
+				<option value="php">PHP</option>
+			</select>
+			
+				<!-- 下拉列表输入框,既能下拉也能输入 -->
+			<label for="major">专业</label>
+			<input id="major" list="major_list" />
+			<datalist id="major_list">
+				<option value="asp">ASP</option>
+				<option value="jsp">JSP</option>
+				<option value="php">PHP</option>
+			</datalist>
+			<label for="major">性别</label>
+			<input id="gender" list="gender_list" />
+			<datalist id="gender_list">
+				<option value="001">男</option>
+				<option value="002">女</option>
+				<option value="003">不可识别</option>
+			</datalist>
+		</form>
+	</body>
+</html>

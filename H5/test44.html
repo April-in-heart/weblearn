@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		
+		<script>
+			// <!-- 定义一个Person类，有name,age属性，有setName与getName方法。
+			// constructor无参
+			// 定义一个Student类, 继承于Person，有score属性，有setScore与getScore方法。
+			// 定义一个Student类，有getInfo方法,此方法返回值格式为 "张三:98" 。
+			// constructor无参
+			// 实例化Student类，对象名为stu1 -->
+			
+		class Person{
+			//构造器  构造函数
+			constructor(name,age) {
+			    this.name=name;
+				this.age = age;
+			}
+			setName(name){
+				this.name=name;
+			}
+			getName(){
+				return this.name;
+			}
+		}
+		//类的继承
+		class Student extends Person{
+			constructor(name,age,score) {
+			    //score是学生类的属性，其它是person类的属性
+				super(name,age);
+				this.score=score;
+			}
+			setScore(score){
+				this.score=score;
+			}
+			getCore(){
+				return this.score;
+			}
+			getInfo(){
+				return super.getName()+":"+this.score;
+			}
+		}
+		var stu1=new Student("张三","boy",18,89);
+		stu1.setScore(98);
+		console.log(stu1.getInfo());
+		</script>
+		
+	</body>
+</html>

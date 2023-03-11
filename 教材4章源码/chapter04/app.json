@@ -1,0 +1,38 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/demo01/view/view",
+    "pages/demo01/scroll-view/scroll-view",
+    "pages/demo01/swiper/swiper",
+    "pages/demo01/movable-view/movable-view",
+    "pages/demo01/cover-view/cover-view",
+    "pages/demo02/icon/icon",
+    "pages/demo02/text/text",
+    "pages/demo02/rich-text/rich-text",
+    "pages/demo02/progress/progress",
+    "pages/demo03/button/button",
+    "pages/demo03/checkbox/checkbox",
+    "pages/demo03/input/input",
+    "pages/demo03/label/label",
+    "pages/demo03/form/form",
+    "pages/demo03/picker/picker",
+    "pages/demo03/picker-view/picker-view",
+    "pages/demo03/radio/radio",
+    "pages/demo03/slider/slider",
+    "pages/demo03/switch/switch",
+    "pages/demo03/textarea/textarea",
+    "pages/demo04/navigator/navigator",
+    "pages/demo04/new/new",
+    "pages/demo04/redirect/redirect",
+    "pages/demo05/audio/audio",
+    "pages/demo05/image/image",
+    "pages/demo05/video/video",
+    "pages/demo05/camera/camera",
+    "pages/demo06/map/map",
+    "pages/demo07/canvas/canvas"
+  ],
+  "window": {
+    "navigationBarTitleText": "点餐小程序"
+  },
+  "sitemapLocation": "sitemap.json"
+}

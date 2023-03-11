@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>jquery数据提交GET</title>
+	</head>
+	<body>
+		<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+		<form>
+			<label for="name">姓名：</label>
+			<input type="text" id="name" name="name" value="" />
+			<label for="age">年龄：</label>
+			<input type="text" id="age" name="age" value="" />
+		</form>
+		<div id="div_1" name="div_1"></div>
+		<script>
+			
+			function myAjax(){
+				var jsonData={name:$("#name").val(),age:$("#age").val()}
+				$.ajax({
+					url:'web25_h5.php',
+					type:'get',
+					data:jsonData,
+					success:function(result){
+						$("#div_1").html(result);
+					},
+					error:function(e){
+						console.log(e);
+					}
+				})
+				window.setTimeout(myAjax,1000);//与服务器实时通讯
+			}
+			myAjax();
+		</script>
+	</body>
+</html>

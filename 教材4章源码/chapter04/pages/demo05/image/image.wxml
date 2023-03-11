@@ -1,0 +1,73 @@
+<!--pages/demo05/image/image.wxml-->
+<view class='container'>
+  <include src='../../common/head.wxml' />
+  <view class='page-body'>
+    <view class='title'>5. 媒体组件image的简单应用</view>
+    <view class='demo-box'>
+      <view class='title'>(1) 缩放模式：scaleToFill</view>
+      <image src='{{src}}' mode='scaleToFill'></image>
+      <view class='title'>不保持纵横比缩放图片，使图片完全适应</view>
+    </view>
+    <view class='demo-box'>
+      <view class='title'>(2) 缩放模式：aspectFit</view>
+      <image src='{{src}}' mode='aspectFit'></image>
+      <view class='title'>保持纵横比缩放图片，使图片的长边能完全显示出来</view>
+    </view>
+    <view class='demo-box'>
+      <view class='title'>(3) 缩放模式：aspectFill</view>
+      <image src='{{src}}' mode='aspectFill'></image>
+      <view class='title'>保持纵横比缩放图片，只保证图片的短边能完全显示出来。</view>
+    </view>
+    <view class='demo-box'>
+      <view class='title'>(4) 缩放模式：widthFix</view>
+      <image src='{{src}}' mode='widthFix'></image>
+      <view class='title'>宽度不变，高度自动变化，保持原图宽高比不变</view>
+    </view>
+    <view class='demo-box'>
+      <view class='title'>(5) 裁剪模式：top</view>
+      <image src='{{src}}' mode='top'></image>
+      <view class='title'>不缩放图片，只显示图片的顶部区域</view>
+    </view>
+    <view class='demo-box'>
+      <view class='title'>(6) 裁剪模式：bottom</view>
+      <image src='{{src}}' mode='bottom'></image>
+      <view class='title'>不缩放图片，只显示图片的底部区域</view>
+    </view>
+    <view class='demo-box'>
+      <view class='title'>(7) 裁剪模式：center</view>
+      <image src='{{src}}' mode='center'></image>
+      <view class='title'>不缩放图片，只显示图片的中间区域</view>
+    </view>
+    <view class='demo-box'>
+      <view class='title'>(8) 裁剪模式：left</view>
+      <image src='{{src}}' mode='left'></image>
+      <view class='title'>不缩放图片，只显示图片的左边区域</view>
+    </view>
+    <view class='demo-box'>
+      <view class='title'>(9) 裁剪模式：right</view>
+      <image src='{{src}}' mode='right'></image>
+      <view class='title'>不缩放图片，只显示图片的右边区域</view>
+    </view>
+    <view class='demo-box'>
+      <view class='title'>(10) 裁剪模式：top left</view>
+      <image src='{{src}}' mode='top left'></image>
+      <view class='title'>不缩放图片，只显示图片的左上边区域</view>
+    </view>
+    <view class='demo-box'>
+      <view class='title'>(11) 裁剪模式：top right</view>
+      <image src='{{src}}' mode='top right'></image>
+      <view class='title'>不缩放图片，只显示图片的右上边区域</view>
+    </view>
+    <view class='demo-box'>
+      <view class='title'>(12) 裁剪模式：bottom left</view>
+      <image src='{{src}}' mode='bottom left'></image>
+      <view class='title'>不缩放图片，只显示图片的左下边区域</view>
+    </view>
+    <view class='demo-box'>
+      <view class='title'>(13) 裁剪模式：bottom right</view>
+      <image src='{{src}}' mode='top left'></image>
+      <view class='title'>不缩放图片，只显示图片的右下边区域</view>
+    </view>
+  </view>
+  <include src='../../common/foot.wxml' />
+</view>

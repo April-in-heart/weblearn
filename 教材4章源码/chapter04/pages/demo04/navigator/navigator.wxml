@@ -1,0 +1,20 @@
+<!--pages/demo04/navigator/navigator.wxml-->
+<view class='container'>
+  <include src='../../common/head.wxml' />
+  <view class='page-body'>
+    <view class='title'>4. 导航组件navigator的简单应用</view>
+    <view class='demo-box'>
+      <view class='title'>(1) 点击打开新页面</view>
+      <navigator url="../new/new">
+        <button type="primary">跳转到新页面打开新内容</button>
+      </navigator>
+    </view>
+    <view class='demo-box'>
+      <view class='title'>(2) 点击重定向到新页面</view>
+      <navigator url="../redirect/redirect" open-type='redirect'>
+        <button type="primary">在当前页重新打开新内容</button>
+      </navigator>
+    </view>
+  </view>
+  <include src='../../common/foot.wxml' />
+</view>

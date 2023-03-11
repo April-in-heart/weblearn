@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		
+		<form id="form_1">
+			<input type="text" id="age" name="age" value="18" style="color: dimgrey;" />
+		</form>
+		<div id="div_1" mya="test">div_1_hellow word</div>
+		<div id="div_2" mya="test2"><div>hellow word</div></div>
+		<script>
+			
+			var objage=document.getElementById("age");
+			console.log(objage.value);
+			console.log(document.forms[0].age);
+			console.log(document.forms[0].age.value);
+			//较难操作,得到节点属性
+			//querySelector返回css里的一个指定元素
+			var objdiv_1=document.querySelector("#div_1");
+			//attributes返回对象里的属性
+			console.log(objdiv_1.attributes);
+			//nodeName根据不同的节点类型返回节点名
+			console.log(objdiv_1.nodeName);//DIV
+			//nodeValue返回或设置指定节点的值
+			console.log(objdiv_1.nodeValue);//null,得不到
+			//attributes[1].value返回属性1里的值
+			console.log(objdiv_1.attributes[1].value)//test
+			
+			console.log(objdiv_1.childNodes);//对象的属性
+			console.log(objdiv_1.childNodes[0]);//对象的字符串
+			console.log(objdiv_1.childNodes[0].nodeValue);//对象的值
+			
+			//作业：把div_2分离出来
+			var objdiv_2=document.querySelector("#div_2");
+			console.log(objdiv_2.attributes);
+			console.log(objdiv_2.nodeName);
+			console.log(objdiv_2.attributes[1].value)
+			console.log(objdiv_2.childNodes);
+			console.log(objdiv_2.childNodes[0]);
+			console.log(objdiv_2.childNodes[0].nodeValue);
+			console.log(objdiv_2.childNodes[0].childNodes[0]);
+			console.log(objdiv_2.childNodes[0].childNodes[0].nodeValue);
+			
+		</script>
+		
+		
+	</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>动画</title>
+    <style>
+        @keyframes jump{
+            0%{
+                position: relative;
+            }
+            100%{
+                position: relative;
+                top:-5px;
+            }
+        }
+        .donghua{
+            text-align: center;
+        }
+        .donghua:hover{
+            animation: jump 100ms ease-in-out 1 normal;
+        }
+    </style>
+</head>
+<body>
+    <div class="donghua">动画效果</div>
+</body>
+</html>

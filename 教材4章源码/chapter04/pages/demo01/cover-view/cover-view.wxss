@@ -1,0 +1,17 @@
+/* pages/demo01/cover-view/cover-view.wxss */
+map{
+  width: 100%;
+  height: 600rpx;
+}
+
+cover-view{
+  width: 200rpx;
+  background-color: lightcyan;
+  margin: 0 auto;
+}
+
+cover-image{
+  width: 100rpx;
+  height: 100rpx;
+  margin: 0 auto;
+}

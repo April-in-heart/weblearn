@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>鼠标事件</title>
+    <style>
+        #root{
+            width: 300px;
+            height: 300px;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            background-color: aqua;
+        }
+        #div1{
+            width: 100px;
+            height: 100px;
+            background-color: red;
+        }
+    </style>
+</head>
+<body>
+    <div id="root">
+        <div id="div1"></div>
+    </div>
+    <script>
+        var root=document.getElementById("root");
+        var div1=document.getElementById("div1");
+        // root.addEventListener("mouseover",function(){console.log("root mouseover事件")})
+        // root.addEventListener("mouseout",function(){console.log("root mouseout事件")})
+        // div1.addEventListener("mouseover",function(){console.log("div1 mouseover事件")})
+        // div1.addEventListener("mouseout",function(){console.log("div1 mouseout事件")})
+        root.addEventListener("mouseenter",function(){console.log("root mouseenter事件")})
+        root.addEventListener("mouseleave",function(){console.log("root mouseleave事件")})
+        div1.addEventListener("mouseenter",function(){console.log("div1 mouseenter事件")})
+        div1.addEventListener("mouseleave",function(){console.log("div1 mouseleave事件")})
+    </script>
+</body>
+</html>

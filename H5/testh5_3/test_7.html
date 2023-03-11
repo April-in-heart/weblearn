@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		<!-- canvas的id为canvas_1。
+			canvas大小为150*150,top为10,left为10。(单位px)
+			在canvas上绘制文字，要求如下：
+			文字在canvas中的坐标为30,30，
+			文字内容为hello world,
+			字体为Arial,大小为20px，RGB正红色。 -->
+		<canvas id="canvas_1"></canvas>
+		<script>
+			var canvas_1=document.getElementById("canvas_1");
+			canvas_1.width=150;
+			canvas_1.height=150;
+			canvas_1.style.left="10px";
+			canvas_1.style.top="10px";
+			var ctx=canvas_1.getContext("2d");
+			
+			ctx.font="20px Arial";
+			//绘制实心字
+			ctx.fillStyle="red";//填充红色
+			ctx.fillText("hello world",30,30);
+		</script>
+	</body>
+</html>

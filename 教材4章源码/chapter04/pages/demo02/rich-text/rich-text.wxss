@@ -1,0 +1,6 @@
+/* pages/demo02/rich-text/rich-text.wxss */
+.myStyle{
+  color:red;
+  line-height: 60px;
+  font-weight: bold;
+}

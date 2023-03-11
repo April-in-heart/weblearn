@@ -1,0 +1,8 @@
+/* pages/demo02/text/text.wxss */
+text{
+  margin: 15rpx;
+  padding: 15rpx;
+  border: 1rpx solid silver;
+  display: block;
+  font-size: 10pt;
+}

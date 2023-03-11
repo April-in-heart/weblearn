@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>localstorage 长期存取数据到客户端</title>
+	</head>
+	<body>
+		localstorage 数据呈现<br>
+		<span id="span_1"></span><br>
+		<span id="span_2"></span><br>
+		<span id="span_3"></span><br>
+		
+		<script>
+			
+			document.getElementById('span_1').innerHTML=localStorage.message_1;
+			document.getElementById('span_2').innerHTML=localStorage['message_2'];
+			document.getElementById('span_3').innerHTML=localStorage.getItem('message_3');
+			
+		</script>
+	</body>
+</html>

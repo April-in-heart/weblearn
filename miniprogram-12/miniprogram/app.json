@@ -1,0 +1,16 @@
+{
+  "pages":[
+    "pages/index/index",
+    "pages/intro/intro",
+    "pages/logs/logs"
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarTextStyle":"black",
+    "navigationBarBackgroundColor": "#663366",
+    "navigationBarTitleText": "我的书橱"
+
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json"
+}

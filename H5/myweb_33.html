@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<style>
+		div{
+			border: solid 1px #ff0000;
+			margin: 5px;
+			padding: 5px;
+		}
+	</style>
+	<body>
+		
+		<div id="dom_1">
+			DOM学习
+		</div>
+		<div id="div_1">div_1
+			<div id="div_11">div_11</div>
+			<div id="div_12">div_12</div>
+		</div>
+		<script>
+			
+			var objdiv_1=document.getElementById("div_1");
+			//childElementCount子元素统计
+			console.log(objdiv_1.childElementCount);//2
+			//childNodes存放所有子节点
+			console.log(objdiv_1.childNodes.length);//5
+			//因为上面定义div时，div_1与div_11之间的空白和div_11到div_22之间的空白也算一个子节点
+			console.log(objdiv_1.childNodes[0]);//输出对象，div_1和后面的空白
+			//输出childnodes的子节点0的值：div_1
+			console.log(objdiv_1.childNodes[0].nodeValue);//相当于innerHTML
+			console.log(objdiv_1.childNodes[1].childElementCount);//0,没有子元素
+			console.log(objdiv_1.childNodes[1].childNodes.length);//1，子节点是div_11的值
+			console.log(objdiv_1.childNodes[1].childNodes[0]);//"div_11"
+			console.log(objdiv_1.childNodes[1].childNodes[0].nodeValue);//div_11
+			
+			
+			
+			//克隆节点
+			//克隆一个childnodes[3]当childnodes[1]的子节点
+			objdiv_1.childNodes[1].appendChild(
+				objdiv_1.childNodes[3].cloneNode(true)
+			);
+			//移动节点
+			//移动一个childnodes[3]当childnodes[1]的子节点
+			objdiv_1.childNodes[1].appendChild(
+				objdiv_1.childNodes[3]
+			);
+			//删除节点
+			//先输出一下有几个子节点才好删除
+			console.log(objdiv_1.childNodes[1].childNodes.length);
+			//删除div_1里的第三个子节点
+			objdiv_1.childNodes[1].removeChild(
+				objdiv_1.childNodes[1].childNodes[2]
+			)
+			
+			//得到父节点
+			var objdiv_x=document.getElementById("div_11");
+			console.log(objdiv_x.parentNode);//得到对象
+			console.log(objdiv_x.parentNode.childNodes[0].nodeValue);//得到对象的值
+			
+			
+			
+			
+		</script>
+		
+		
+	</body>
+</html>

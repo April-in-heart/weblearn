@@ -1,0 +1,19 @@
+<view class='container'>
+  <view class='page-body'>
+    <view class='demo-box'>
+      <view class='title'>今日菜单</view>
+      <view class='title'>{{menu}}</view>
+      <picker-view value='{{value}}' indicator-style='height: 50px;' bindchange='pickerviewChange'>
+        <picker-view-column>
+          <view class='col' wx:for='{{soup}}' wx:key='s{{index}}'>{{item}}</view>
+        </picker-view-column>
+        <picker-view-column>
+          <view class='col' wx:for='{{maincourse}}' wx:key='m{{index}}'>{{item}}</view>
+        </picker-view-column>
+        <picker-view-column>
+          <view class='col' wx:for='{{dessert}}' wx:key='d{{index}}'>{{item}}</view>
+        </picker-view-column>
+      </picker-view>
+    </view>
+  </view>
+</view>

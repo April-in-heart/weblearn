@@ -1,0 +1,24 @@
+<!--pages/demo03/button/button.wxml-->
+<view class='container'>
+  <include src='../../common/head.wxml' />
+  <view class='page-body'>
+    <view class='title'>3. 表单组件button的简单应用</view>
+    <view class='demo-box'>
+      <view class='title'>(1) 迷你按钮</view>
+      <button type='primary' size='mini'>主要按钮</button>
+      <button type='default' size='mini'>次要按钮</button>
+      <button type='warn' size='mini'>警告按钮</button>
+    </view>
+    <view class='demo-box'>
+      <view class='title'>(2) 按钮状态</view>
+      <button>普通按钮</button>
+      <button disabled>禁用按钮</button>
+      <button loading>加载按钮</button>
+    </view>
+    <view class='demo-box'>
+      <view class='title'>(3) 按钮点击监听</view>
+      <button type='primary' bindgetuserinfo='getUserDetail' open-type='getUserInfo'>点我试试</button>
+    </view>
+  </view>
+  <include src='../../common/foot.wxml' />
+</view>

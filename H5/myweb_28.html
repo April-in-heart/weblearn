@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		
+		
+		<script>
+			
+			var string="javascript is a program language";
+			//split用空格把每个单词分解成数组的元素
+			//map返回一个新数组，数组中的元素为原始元素处理后的值，
+			//里面value=>(value+1):相当于一个函数，
+			//传入value，返回value+1
+			//slice(start,end)切片，返回一个新数组，包括start到end的元素，
+			//没有end则从start到最后。
+			//.表示再上一步的基础上继续下一步操作
+			//join把数组中的元素放入一个字符串，用双引号里的字符分隔
+			var result=string.split(" ").map(value=> (value.slice(0,1).
+			toUpperCase()+value.slice(1))).join(" ")
+			console.log(result);
+			
+			
+			//下午实践课作业完成对每个单词最后一个字母的大写转换
+			var string2="I love yoU";
+			var result2=string2.split(" ").map(value=> (value.slice(0,
+			value.length-1)+value.slice(value.length-1,value.length).
+			toUpperCase())).join(" ")
+			console.log(result2);
+			
+			
+			
+			
+		</script>
+		
+		
+	</body>
+</html>

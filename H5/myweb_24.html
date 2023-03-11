@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>web_23进阶代码</title>
+	</head>
+	<body>
+
+		<script>
+			function add(a, b) {
+				return a + b;
+			}
+			console.log(add(1, 2));
+
+			//如果要计算1，2    1，2，3，4，5?
+			//变参，可输入多个值
+			function add_1() {
+				console.log(arguments); //arguments:参数，是一个数组，
+				//通过它得到长度，for循环处理,arguments是调用时的数据组成的数组
+				var sum = 0;
+				for (let i = 0; i < arguments.length; i++) {
+					console.log(arguments[i]);
+					sum = sum + arguments[i];
+				}
+				return sum;
+			}
+			console.log(add_1(1, 2));
+			console.log(add_1(1, 2, 3, 4, 5));
+
+			//返回多个值
+			// function rerturnvalue_1(a, b, c) {
+			// 	return a, b, c;
+			// }
+			// console.log(rerturnvalue_1(1, 2, 6)); //只会返回最后的数6
+			//数组
+			function returnvalue_2(a, b, c) {
+				var myarray = new Array();
+				myarray[0] = a;
+				myarray[1] = b;
+				myarray[2] = c;
+				return myarray;
+			}
+			console.log(returnvalue_2(1, 2, 6)); //返回数组，包含1，2，6
+			
+			//实验课完成传入数组并排序，排序后返回排序完成的数据
+			function returnvalue_3(){
+				console.log(arguments);
+				for (let i = 0; i < arguments.length; i++) 
+					for(let j = 0; j < arguments.length; j++){
+						if(j>=1 && arguments[j-1]>arguments[j])
+						{
+							let t=arguments[j-1];
+							arguments[j-1]=arguments[j];
+							arguments[j]=t;
+						}
+					}
+				return arguments;
+			}
+			console.log(returnvalue_3(7,2,3,9,5));
+
+
+			//闭包,延长了局部变量的生命周期
+			function add_2() {
+				var sum = 0;
+
+				function add_3() {
+					sum = sum + 1;
+					console.log(sum); //!!!内部能访问外部，外部不能访问内部
+					return sum;
+				}
+				return add_3; //！！！！!函数当作值传递,
+				//这样就可以把sum的值传到外面的函数了
+			}
+			
+			var myadd=add_2();
+			myadd();//1
+			myadd();//2
+			myadd();//3
+			
+			// var myadd1 = add_2();
+			// var myadd2 = add_2();
+			// //因为myadd1和myadd2指向不同空间，独立运行，有两个sum
+			// //如果sum写在外面，就是全局变量，下面就会输出1，2，3，4
+			// myadd1(); //1
+			// myadd2(); //1
+			// myadd1(); //2
+			// myadd2(); //2
+
+			//函数式编程
+		</script>
+
+	</body>
+</html>

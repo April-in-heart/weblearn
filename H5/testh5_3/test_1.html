@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		<!-- 定义函数showArgs()，实现变参。
+			在函数体中，把各参数用"_"串起来，显示在div中。
+			div的id为div_1。
+			如showArgs(1,2,3)，则调用此函数后，div中出现 1_2_3。 -->
+		<form name="form">
+			<div id="div_1">1</div>
+		</form>
+		<script>
+			function showArgs(){
+				var sum="";
+				sum=arguments[0]+"_"+arguments[1]+"_"+arguments[2];
+				div_1.innerHTML=sum;
+				return sum;
+			}
+			console.log(showArgs(1,2,3));
+		</script>
+	</body>
+<html>

@@ -1,0 +1,18 @@
+{
+  "pages":[
+    "pages/index/index",
+    "pages/logs/logs"
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#a46248",
+    "navigationBarTitleText": "指南针",
+    "navigationBarTextStyle":"white"
+  },
+  "permission": {
+    "scope.userLocation": {
+      "desc": "你的位置信息将被小程序位置接口显示"
+    }
+  },
+  "sitemapLocation": "sitemap.json"
+}

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style>
+			/* 重点 名称或标签选择器 
+			改变所有div样式,
+			如果上面有专门样式则按照专门设定的执行
+			一般先设定共有样式在设置专有样式*/
+			div{
+				margin:5px 5px;
+				width:300px;
+				height:100px;
+			}
+			/* 类选择器 根据div里的属性class设置样式，
+						顺序：重点！！！ 
+			     id选择器>类选择器>名称选择器     */
+			.mydiv{
+				font-size: 36px;
+				color: #00ff00;
+			}
+			
+			/* 私有样式 */
+			#div_1{
+				/* relative:相对位置 */
+				/* position: relative; */
+				/* float:left; */
+				/* float:浮动元素,将div块级元素改为浮动元素 */
+				
+				/* absolute绝对位置 原点在左上角
+				top为距离上面多少px，left为距离左边多少px
+				不设置则在原点显示*/
+				position: absolute;
+				top: 300px;
+				left: 300px;
+				/* border：边框 */
+				border: solid 1px #00ff00;
+				width: 300px;
+				height: 100px;
+				background-color: #000000;
+				z-index: 3;
+			}
+			#div_2{
+				/* position: relative; */
+				/* float:left; */
+				position: absolute;
+				top: 290px;
+				left: 293px;
+				/* border：边框 */
+				border: solid 1px blue;
+				width: 300px;
+				height: 100px;
+				background-color: #ff0000;
+				z-index: 2;
+			}
+		</style>
+	</head>
+	<body>
+		<!-- 绝对定位层重叠时默认先定义在下层，后定义在上层
+		 可以用z-index改变，表示在第几层，越大越在上层-->
+		<div id="div_1" class="mydiv">div_1</div>
+		<div id="div_2" class="mydiv">div_2</div>
+		<div id="div_3">div_3</div>
+		
+		
+	</body>
+</html>

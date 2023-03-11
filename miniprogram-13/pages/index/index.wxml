@@ -1,0 +1,35 @@
+<!--index.wxml-->
+<!-- 会议主题 -->
+<view class="box">
+  <view class="title">会议主题</view>
+  <image src="/images/banner.jpg" mode="widthFix" style="width:100%"></image>
+  <view class="content">
+    <text>全国高校微信小程序开发与实训课程高级研修班 \n主办方：教育部高等学校计算机类专业教学指导委员会和教育部高等学校软件工程专业教学指导委员会 \n承办方：集美大学 \n协办方：腾讯微信事业群和清华大学出版社</text>
+  </view>
+</view>
+<!-- 活动背景 -->
+<view class="box">
+  <view class="title">活动背景</view>
+  <view class="content">
+    <text>2018年腾讯全球合作伙伴大会上...</text>
+  </view>
+</view>
+<!-- 分享嘉宾 -->
+<view class="box">
+  <view class="title">分享嘉宾</view>
+  <view class="content">
+    <view class="bar" wx:for="{{guest}}" wx:key="gst{{index}}">
+      <image src="{{item.src}}" class="avatar"></image>
+      <text>{{item.name}}</text>
+    </view>
+  </view>
+</view>
+<!-- 会议地点 -->
+<view class="box">
+  <view class="title">会议地点</view>
+  <view class="content">
+    <text>2021年5月27日-5月28日 成都中医药大学</text>
+    <map latitude="{{latitude}}" longitude="{{longitude}}"></map>
+    <button bindtap="showGuide">查看详情</button>
+  </view>
+</view>

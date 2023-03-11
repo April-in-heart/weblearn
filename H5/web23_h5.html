@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>体验同步异步</title>
+	</head>
+	<body>
+		
+		<form>
+			name:<input type="text" id="name" name="name" value="" onblur="checkName()"/><br />
+			<div id="tip">tip</div>
+			age:<input type="text" id="age" name="age" value="" />
+			
+			<script src="myliber.js"></script>
+			<script>
+				
+				function checkName(){
+					var objname=document.getElementById("name");
+					var url="web23_h5.php?name="+objname.value+"&random="+Math.random();
+					var xmlhttp=getXMLhttprequest();
+					xmlhttp.open("GET",url,false);
+					xmlhttp.onreadystatechange=function(){
+						//readyState第四步（最后一步）,status=200传输成功
+						if(xmlhttp.readyState==4&&xmlhttp.status==200){
+							document.getElementById("tip").innerHTML=xmlhttp.responseText;
+						}
+					}
+					xmlhttp.send();
+				}
+				
+			</script>
+		</form>
+		
+	</body>
+</html>

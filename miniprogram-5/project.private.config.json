@@ -1,0 +1,29 @@
+{
+  "setting": {},
+  "condition": {
+    "plugin": {
+      "list": []
+    },
+    "game": {
+      "list": []
+    },
+    "gamePlugin": {
+      "list": []
+    },
+    "miniprogram": {
+      "list": [
+        {
+          "name": "pages/submit/submit",
+          "pathName": "pages/submit/submit",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/submit/submit",
+          "pathName": "pages/submit/submit",
+          "scene": null
+        }
+      ]
+    }
+  }
+}

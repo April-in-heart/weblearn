@@ -1,0 +1,9 @@
+{
+  "dependencies": {
+    "element-plus": "^2.2.33"
+  },
+  "devDependencies": {
+    "unplugin-auto-import": "^0.15.1",
+    "unplugin-vue-components": "^0.24.0"
+  }
+}

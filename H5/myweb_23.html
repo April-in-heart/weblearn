@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>自定义函数</title>
+	</head>
+	<body>
+		<span id="span_1"></span>
+		
+		<script>
+			//调用1,定义带参数调用也要带参数
+			console.log(add(1,2));
+			document.getElementById("span_1").innerHTML=add(1,2);
+			
+			//函数与外部的信息交换是通过函数与返回值来实现的
+			//函数体内部最好只对数据进行加工，然后把加工结果返回给调用者，由调用者确定如何显示
+			
+			//定义2，匿名函数
+			var myfun_1=function(a,b){
+				console.log("in myfun_1");
+				// console.log(a+b);
+				return a+b;
+			}
+			//调用2，要放在function2后，因为定义2用变量定义函数，要先定义后使用
+			myfun_1(3,4);
+			
+			//定义1，标准方式,调用可放在之前也可放在之后
+			function add(a,b){
+				console.log("in add function");
+				// console.log(a+b);
+				return a+b;
+			}
+			
+			//定义3
+			var myfun_2=new Function(
+				"a",
+				"b",
+				"console.log(a+b)"
+			)
+			//调用3
+			myfun_2(5,6);//11
+			
+			//将a变为一个函数使用
+			var a=myfun_1;
+			a(250,250);
+			console.log(a(250,250));//500
+			
+			a=function(a,b){
+				console.log("in a");
+				console.log(a*b);
+			}
+			myfun_1(3,4);//还是输出以前的，因为a只是指向了myfun_1方法的地址空间，
+			//自己改变不影响函数
+			a(3,4);//输出改变后的函数
+			
+			// var b=1;
+			// c=b;
+			// console.log(c);//1
+			// c=2;
+			// console.log(b);//1
+			
+		</script>
+		
+		
+	</body>
+</html>

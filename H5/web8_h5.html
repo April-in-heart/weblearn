@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		您是第<span id="message"></span>访问者
+	</body>
+	<script>
+		//localStorage.clear("pageCounter");
+		if(localStorage.pageCounter==undefined){
+			localStorage.pageCounter=1;
+		}else{
+			localStorage.pageCounter=parseInt(localStorage.pageCounter)+1;
+		}
+		document.getElementById("message").innerHTML=localStorage.pageCounter;
+	</script>
+</html>

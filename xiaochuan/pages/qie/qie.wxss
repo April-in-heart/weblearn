@@ -1,0 +1,135 @@
+/* pages/qie/qie.wxss */
+
+.qie-box-title {
+  margin-top: 30rpx;
+  font-size: 28rpx;
+  width: 100%;
+  display: flex;
+}
+.wen-box-txt-line {
+  width: 8rpx;
+  height: 36rpx;
+  background-color: #2089dc;
+  margin:0 6rpx 0 30rpx;
+}
+.num-right {
+  position: fixed;
+  right: 30rpx;
+}
+
+.txt {
+  color: #999999;
+  font-size: 25rpx;
+  display: flex;
+  justify-content: center;
+  margin: 30rpx 0 40rpx 0;
+}
+.wen-box-search {
+  height: 90%;
+  height:70rpx;
+  margin: 10rpx 5% 30rpx 5%;
+  background-color: #f3f3f3;
+  border-radius: 20rpx;
+  display: flex;
+  align-items: center;
+  padding-left: 20rpx;
+}
+.qie-num {
+  font-size: 52rpx;
+  color: #2089dc;
+  display: flex;
+  justify-content: center;
+  font-weight: bold;
+
+}
+.qie-maix {
+  width: 80%;
+  display: inline-block;
+  border-bottom: 1px solid #2089dc;
+  font-size: 30rpx;
+  margin-left: 4%;
+  margin-bottom: 20rpx;
+}
+.title-box {
+  width: 96%;
+  height: 50rpx;
+  margin: 20rpx 2%;
+  border: 1px solid #2089dc;
+  display: flex;
+  align-items: center;
+}
+.title-box-txt {
+    width: 30%;
+    height: 100%;
+    display: inline-block;
+    text-align: center;
+    color: #2089dc;
+    font-size: 30rpx;
+    border: 1px solid #2089dc;
+}
+.title-box-txted {
+  width: 30%;
+  height: 100%;
+  display: inline-block;
+  text-align: center;
+  color: #2089dc;
+  font-size: 30rpx;
+  border: 1px solid #2089dc;
+  color: white;
+  background-color: #2089dc;
+
+}
+
+.submit-btn {
+  width: 100%;
+  height: 8vh;
+  background-color: #2089dc;
+  position: fixed;
+  bottom: 0;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1;
+}
+.list-box {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 10rpx;
+  margin-bottom: 8vh;
+}
+.mai-list-box {
+  width: 100rpx;
+  height: 100rpx;
+  display: flex;
+  text-align: center;
+  border: 1px solid #2089dc;
+  margin: 10rpx 10rpx;
+}
+.list-left-box{
+  width: 50%;
+  height: 100%;
+  border-right: 1px solid #2089dc;
+  font-size: 28rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.list-right-box{
+  width: 50%;
+  height: 100%;
+  font-size: 20rpx;
+  background-color: #f3f3f3;
+}
+.mai-btn {
+  display: flex;
+  justify-content: space-around;
+  margin: 20rpx 0;
+}
+.mai-btn-c {
+  background-color: #2089dc;
+  color: white;
+  padding:6rpx 20rpx;
+  border-radius: 15rpx;
+  font-size: 25rpx;
+}

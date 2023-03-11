@@ -1,0 +1,71 @@
+<!--index.wxml-->
+<view class="all">
+    <view class="headline">
+        <text class="headline">处方</text>
+    </view>
+   
+    <view class="flex">
+    <view class="short">
+        <text class="text1">*姓名:  {{list.name}}</text>
+        
+    </view>
+    <view class="short">
+        <text class="text1">*性别:  {{list.gender?'男':list==null?'':'女'}}</text>
+      
+    </view>
+    </view>
+    <view class="flex">
+    <view class="short">
+        <text class="text1">*电话:  {{list.phone}}</text>
+      
+    </view>
+    <view class="short">
+        <text class="text1">*科室:  {{list.keshi}}</text>
+        
+    </view>
+    </view>
+
+
+    <view class="flex">
+    <view class="short">
+        <text class="text1">*年龄:  {{list.age}}</text>
+        
+    </view>
+    <view class="short">
+        <text class="text1">日期:  {{list.date}}</text>
+      
+    </view>
+    </view>
+    
+    <view class="long">
+        <text class="text1">*症状(主诉):{{list.zhushu}}</text>
+      
+    </view>
+    <view class="long">
+        <text class="text1">*病名:{{list.disease}}</text>
+       
+    </view>
+    <view class="long">
+        <text class="text1">*证型:{{list.syndrome}}</text>
+        
+    </view>
+    <view class="long">
+        <text class="text1">诊疗意见:{{list.advice}}</text>
+      
+    </view>
+    <view class="long">
+        <text class="text1">*治法:{{list.method}}</text>
+      
+    </view>
+    <view class="long">
+        <text class="text1">*处方名:{{list.cName}}</text>
+      
+    </view>
+
+      <view class="long">
+        <text class="text1">*处方:{{list.medicine}}</text>
+      
+    </view>
+
+</view>
+

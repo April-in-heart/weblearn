@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		
+		<script>
+			// 实现myXML函数，带有一个形参，处理传过来的XML(形如图所示的数据)，并返回name节点的值
+			function myXML(a){
+				var xml_string=a;
+				try{
+				var xmldoc=new DOMParser().parseFromString(xml_string,"text/xml");
+				var value=xmldoc.childNodes[0].childNodes[0].childNodes[0].nodeValue;
+				console.log(value);
+				}catch(e){
+					//catch里的e代表error
+					//如果出错则执行catch里的语句
+					console.log(e);
+				}
+				return value;
+			}
+			myXML("<student><name>mike</name><age>18</age><class>one</class></student>");
+			
+		</script>
+		
+		
+		
+	</body>
+</html>

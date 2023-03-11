@@ -1,0 +1,31 @@
+/* pages/xinxilan/xinxilan.wxss */
+.text{
+  border-bottom:1px solid rgb(240, 240, 240);
+  padding: 15rpx 15rpx;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+}
+.pic{
+  width: 96%;
+  height: 25%;
+  display: flex;
+  flex-direction: row;
+}
+.text .title{
+  padding: 20rpx 10rpx;
+  font-size: 50rpx;
+  font-weight: bolder;
+
+}
+.text .content{
+  font-size: 30rpx;
+  color:#4e4e4e;
+ 
+}
+.text .doctor{
+  color: rgb(113, 136, 146);
+  font-size: 28rpx;
+  padding-bottom: 10rpx;
+}

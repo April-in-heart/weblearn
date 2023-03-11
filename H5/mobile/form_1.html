@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<!-- meta使用viewport保证页面可自由缩放 -->
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<!-- 引入jQuery Mobile样式 -->
+		<link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
+		<!-- 引入jQuery库 -->
+		<script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+		<!-- 引入jQuery Mobile库 -->
+		<script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+	</head>
+	<body>
+		<div data-role="page">
+			<div data-role="header">
+				<h3>mobile web form 表单</h3>
+				<a href="index_1.html" class="ui-btn ui-btn-inline ui-icon-home ui-btn-icon-notext ui-corner-all ui-shadow ui-alt-icon">返回</a>
+			</div>
+			<!-- text-indent文字缩进 -->
+			<div data-role="main" class="ui-content" style="text-indent:2em">
+				<!-- action表示提交表单时向何处提交数据 -->
+				<form action="" method="post">
+					<div class="ui-field-contain">
+						<lable for="name">姓名</lable>
+						<input type="text" id="name" name="name" value="" />
+					</div>
+					<div class="ui-field-contain">
+						<label for="resume">简历</label>
+						<input type="text" id="resume" name="resume" value="" />
+					</div>
+					<div class="ui-field-contain">
+						<lable for="search">查询</lable>
+						<input type="search" id="search" name="search" value="" />
+					</div>
+					<div class="ui-field-contain">
+						<lable for="major">专业方向</lable>
+						<select id="major" name="major">
+							<option value="java">Java</option>
+							<option value="php">PHP</option>
+							<option value="xml">Xml</option>
+						</select>
+					</div>
+					<div class="ui-field-contain">
+						<lable for="switch">开关</lable>
+						<input type="checkbox" data-role="flipswitch" id="switch" name="switch" value="" />
+					</div>
+					<div class="ui-field-contain">
+						<legend>课程</legend>
+						<lable for="asp">Asp</lable>
+						<input type="checkbox" id="asp" name="course" value="asp" />
+						<lable for="jsp">Jsp</lable>
+						<input type="checkbox" id="jsp" name="course" value="jsp" />
+						<lable for="php">PHP</lable>
+						<input type="checkbox" id="php" name="course" value="php" />
+					</div>
+				</form>
+			</div>
+			<div data-role="footer">
+				<h1>&copy;JL</h1>
+			</div>
+		</div>
+	</body>
+</html>

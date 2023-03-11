@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		<!-- 数字微调器 step为步长，每次增加一个步长-->
+		<input type="number" id="n_1" name="n_1" value="" min="0" max="9" step="1" />
+		<br>
+		
+		<!-- range -->
+		<input type="range" id="r_1" name="r_1" value="" min="0" max="9" />
+		<span id="my_range_display"></span><br>
+		
+		<!-- 日期 -->
+		<input type="date" id="d_1" name="d_1" value="" />
+		<script>
+			var obj_range=document.getElementById("r_1");
+			// 监听range的change事件
+			obj_range.addEventListener("change",
+				function(){
+					var objMyRangeDisplay=document.getElementById("my_range_display");
+					objMyRangeDisplay.innerHTML=obj_range.value;
+				}
+			)
+			var date=document.getElementById("d_1");
+			date.addEventListener("change",
+				function(){
+					var obj_time=document.getElementById("date1");
+					obj_time.innerHTML=date.value;
+				}
+			);
+		</script>
+	</body>
+</html>

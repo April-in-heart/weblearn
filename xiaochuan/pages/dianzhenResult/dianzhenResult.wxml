@@ -1,0 +1,55 @@
+ <view class="topback">
+      <text class="title">治疗结果</text>
+    </view>
+<view class="out">
+
+
+   <view class="row"  >
+    <view class="pic">
+      <image src="/static/images/jt.png"></image>
+    </view>
+    <view class="text">
+      <view class="title">基本信息</view>
+      <view class="content">姓名：{{name}}</view>
+      <view class="content">年龄：{{age}}</view>
+        <view class="content">位置：{{hand}}</view>
+      <view class="content">电针强度：{{strength}}</view>
+      <view class="content">治疗时长：{{time}}</view>
+      
+
+    </view>
+  </view>
+
+
+<view>
+  <view class="row"  >
+     <view class="pic">
+      <image src="/static/images/jt.png"></image>
+    </view>
+    <view class="text">
+   
+      <view class="title">脉搏图像</view>
+      <view class="echart_panel">
+
+		<ec-canvas ec="{{ ecLine }}"></ec-canvas>
+		<view class="label-box">
+			<text>{{start}}</text>
+			<text>{{end}}</text>
+		</view>
+	</view>
+         
+         
+           
+    </view>
+   
+  </view>
+
+</view>
+
+</view>
+
+
+
+
+
+

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>test</title>
+    <style>
+        header{
+            color: rgba(1, 1 , 1, .5);
+        }
+        .container{
+            width: 300px;
+            background-color: red;
+        }
+        .container::after{
+            content: "";
+            display: block;
+            clear: both;
+        }
+        .box{
+            width: 60px;
+            height: 50px;
+            float: left;
+            margin: 5px;
+            background-color: blue;
+        }
+        .text{
+            width: 60px;
+            height: 50px;
+            background-color: gold;
+        }
+    </style>
+</head>
+<body>
+    <header>header</header>
+    <nav>nav</nav>
+    <section>section</section>
+    <aside>aside</aside>
+    <footer>footer</footer>
+    <article>article</article>
+    
+    <div class="container">
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+    </div>
+    <div class="text"></div>
+
+</body>
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>H5 手机传感器</title>
+		<!-- meta使用viewport保证页面可自由缩放 -->
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+	</head>
+	<body>
+		<!-- H5可以和手机传感器交互 -->
+		左右:<span id="tip_1"></span><br>
+		前后:<span id="tip_2"></span><br>
+		旋转:<span id="tip_3"></span><br>
+		X轴加速:<span id="x"></span><br>
+		Y轴加速:<span id="y"></span><br>
+		Z轴加速:<span id="z"></span><br>
+		有效运动次数:<span id="motion_1">0</span><br>
+		运动次数:<span id="motion_2">0</span><br>
+		<script>
+			//判断浏览器是否支持加速度传感器
+			if(window.DeviceMotionEvent){
+				window.addEventListener("devicemotion",motionHandler,false)
+			}else{
+				console.log("浏览器不支持加速度传感器")
+			}
+			//判断浏览器是否支持方向传感器
+			if(window.DeviceOrientationEvent){
+				window.addEventListener("deviceorientation",
+				orientationHandler,
+				false
+				)
+			}else{
+				console.log("浏览器不支持方向传感器")
+			}
+			function orientationHandler(event){
+				document.getElementById("tip_1").innerHTML=event.alpha;
+				document.getElementById("tip_2").innerHTML=event.beta;
+				document.getElementById("tip_3").innerHTML=event.gamma;
+			}
+			function motionHandler(event){
+				var acc=event.acceleration;//加速度
+				document.getElementById("x").innerHTML=acc.x
+				document.getElementById("y").innerHTML=acc.y
+				document.getElementById("z").innerHTML=acc.z
+				if(acc.x>5 || acc.y>5 || acc.z>5){
+					document.getElementById("motion_1").innerHTML=parseInt(document.getElementById("motion_1").innerHTML)+=1;
+					
+				}
+				if(acc.x>1 || acc.y>1 || acc.z>1){
+					document.getElementById("motion_2").innerHTML=parseInt(document.getElementById("motion_2").innerHTML)+=1;
+					
+				}
+			}
+		</script>
+	</body>
+</html>

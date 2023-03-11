@@ -1,0 +1,8 @@
+
+<text>请开始录音，描述您的症状</text>
+
+<button bindtap="openRecording" size="50rpx">开始录音</button>
+<button bindtap="stop">暂停录音</button>
+<button bindtap="shutRecording">上传录音</button>
+
+

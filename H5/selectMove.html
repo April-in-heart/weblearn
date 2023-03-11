@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		<!-- 单击可选列表中的元素后出现在已选列表中。
+		单击已选列表中的元素后出现在可选列表中。
+		其中可选列表的id为select_1,已选列表的id为select_2。
+		其中可选列表中的元素的id为option_1，option_2...option_n。 -->
+		<select id="select_1" size="4">
+				<option value="可选">可选</option>
+				<!-- this表示当前的组件，此例子为option -->
+				<option id="option_1" value="成都" onclick="move(this)">成都</option>
+				<option id="option_2" value="重庆" onclick="move(this)">重庆</option>
+			</select>
+			<select id="select_2" size="4">
+				<option value="已选">已选</option>
+			</select>
+		</body>
+		<script>
+			function move(obj){
+				var select_1=document.getElementById("select_1");
+				var select_2=document.getElementById("select_2");
+				if(obj.parentNode==select_1){
+					select_2.appendChild(obj);
+				}else{
+					select_1.appendChild(obj);
+				}
+			}
+		</script>
+</html>

@@ -1,0 +1,49 @@
+	<view class="title-box">
+		<view class="title-con">
+			<text>实际强度</text>
+			<text style="color:red;font-size:24rpx">{{strength}}</text>
+		</view>
+		<view class="title-con">
+			<text>建议强度</text>
+			<text style="color:#2089dc;font-size:24rpx">{{sugStrength}}</text>
+		</view>
+		<view class="title-con">
+			<text>建议时长</text>
+			<text style="color:#2089dc;font-size:24rpx">{{sugTime}}分钟</text>
+		</view>
+	</view>
+	<view class="txt">
+		<text>{{hours}}:{{minute}}:{{second}}</text>
+	</view>
+	<view id="loading1">
+		<view class="demo1"></view>
+		<view class="demo1"></view>
+		<view class="demo1"></view>
+		<view class="demo1"></view>
+		<view class="demo1"></view>
+		<view class="demo1"></view>
+		<view class="demo1"></view>
+		<view class="demo1"></view>
+	</view>
+
+	<view class="btn-box">
+		<!-- <view class="confirm bubble">开启</view>
+		<view class="confirm bubble" style="background:red;">关闭</view> -->
+		<button hover="true" class="start" hover-class="shover" bindtap="open">开启</button>
+		<button hover="true" class="end" hover-class="ehover"  bindtap="close">关闭</button>
+	</view>
+
+  <modal hidden="{{hiddenmodalput}}" title="请填写相关信息" confirm-text="提交" cancel-text="取消" bindcancel="cancel" bindconfirm="confirm">
+<input type='text' placeholder="请输入姓名" bindinput="input"/> 
+<input type='text' placeholder="请输入年龄" bindinput="input2"/>
+<input type='text' placeholder="请输入强度(1-15)" bindinput="input3"/>
+ <view class='select_box' style="margin-bottom:150rpx">
+ <view class='select' catchtap='selectTap'>
+  <text class='select_text'>{{selectData[index]}}</text>
+  <image class='select_img {{show&&"select_img_rotate"}}' src='/static/images/gobottom.png'></image>   
+ </view>
+ <view class='option_box' style='height:{{show?(selectData.length>5?300:selectData.length*60):0}}rpx;'>
+  <text class='option' style='{{index==selectData.length-1&&"border:0;"}}' wx:for='{{selectData}}' wx:key='this' data-index='{{index}}' catchtap='optionTap'>{{item}}</text>
+ </view>
+</view>
+</modal>

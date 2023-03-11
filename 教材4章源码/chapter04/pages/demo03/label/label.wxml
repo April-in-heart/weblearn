@@ -1,0 +1,33 @@
+<!--pages/demo03/label/label.wxml-->
+<view class='container'>
+  <include src='../../common/head.wxml' />
+  <view class='page-body'>
+    <view class='title'>3. 表单组件label的简单应用</view>
+    <view class='demo-box'>
+      <view class='title'>(1) 使用for属性绑定id</view>
+      <checkbox-group>
+        <checkbox id='apple' value='apple' checked />
+        <label for='apple'>苹果</label>
+        <checkbox id='grape' value='grape' />
+        <label for='grape'>葡萄</label>
+        <checkbox id='lemon' value='lemon' />
+        <label for='lemon'>柠檬</label>
+      </checkbox-group>
+    </view>
+    <view class='demo-box'>
+      <view class='title'>(2) 控件直接放在label内部</view>
+      <checkbox-group>
+        <label>
+          <checkbox value='apple' checked />苹果
+        </label>
+        <label>
+          <checkbox value='grape' />葡萄
+        </label>
+        <label>
+          <checkbox value='lemon' />柠檬
+        </label>
+      </checkbox-group>
+    </view>
+  </view>
+  <include src='../../common/foot.wxml' />
+</view>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+	</head>
+	<body>
+		<form>
+			<label for="name">姓名：</label>
+			<input type="text" id="name" name="name" value="" />
+			<label for="age">年龄：</label>
+			<input type="text" id="age" name="age" value="" />
+		</form>
+		<div id="div_1" name="div_1"></div>
+		<div id="div_2" name="div_2"></div>
+		<script>
+			
+			function myAjax(){
+				//自动找form里的元素封装
+				var jsonData=$("form").serializeArray();
+				$.ajax({
+					url:"web26_h5.php",
+					type:"POST",
+					data:jsonData,
+					success:function(result){
+						$("#div_1").html(result);
+						var myJsonData=JSON.parse(result);
+						$("#div_2").html(myJsonData.name+"|"+myJsonData.age);
+					},
+					error:function(e){
+						console.log(e);
+					}
+				})
+				window.setTimeout(myAjax,1000);
+			}
+			myAjax();
+			
+		</script>
+	</body>
+</html>

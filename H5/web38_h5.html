@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>在线拍照，调用摄像头</title>
+		<style>
+			#canvas_1{
+				position: absolute;
+				left: 50px;
+				top: 200px;
+			}
+			#video_1{
+				position: absolute;
+				left: 450px;
+				top: 200px;
+			}
+		</style>
+		<script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.js"></script>
+	</head>
+	<body>
+		<canvas id="canvas_1"></canvas>
+		<div id="div_1"></div>
+		<!-- autoplay可以自动播放 -->
+		<video id="video_1" autoplay="autoplay"></video>
+		<button type="button" id="snap" onclick="mysnap">拍照</button>
+		<button type="button" id="upload" onclick="myupload">上传</button>
+		
+		<script>
+			var canvas_1=document.getElementById("canvas_1")
+			var video_1=document.getElementById("video_1")
+			var div_1=document.getElementById("div_1")
+			video_1.style.width="150px";
+			video_1.style.height="150px";
+			canvas_1.width=150;
+			canvas_1.height=150;
+			var ctx=canvas_1.getContext("2d");
+			navigator.getUserMedia(
+				{video:true},
+				gotStream,
+				noStream
+			)
+			function gotStream(stream){
+				try{
+					video_1.srcObject=stream
+				}catch{
+					video_1.src=window.URL.createObjectURL(stream)
+				}
+			}
+			function noStream(e){
+				console.log(e)
+			}
+			function mysnap(){
+				ctx.drawImage(video_1,0,0,150,150)
+			}
+			function myupload(){
+				var dataUrl=canvas_1.toDataURL('image/png');
+				//console.log(dataUrl)
+				var imageData=dataUrl.substr(22);
+				$.post(
+					'web38_h5.php',
+					{'photo':imageData},
+					function(data){
+						alert(data)
+					}
+				)
+			}
+		</script>
+	</body>
+</html>

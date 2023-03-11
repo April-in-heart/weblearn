@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		
+		<script>
+			var student='一班';//表示是哪个班的学生
+			var student1='返校';//表示一班学生的状态
+			var student2='';//表示二班学生的状态
+			A113internet='';//表示下午A113教室有无网络
+			console.log("因为上午一班教室没有网，无法直播");
+			if(student==='一班'){
+				if(student1==='返校'){
+					console.log("因此一班返校的同学在A103上课");
+				}
+				else{
+					console.log("因此未返校的同学只能下午与二班未返校的同学一起看直播");
+				}
+			}
+			else{
+				if(student2==='返校'){
+					if(A113internet==='true')
+						console.log("因此二班返校的同学在A113上课");
+					else
+						console.log("因此二班返校的同学在A503上课");
+				}
+				else{
+					console.log("因此二班未返校的同学跟一班同学一起在线看直播");
+				}
+			}
+			
+			
+		</script>
+		
+	</body>
+</html>

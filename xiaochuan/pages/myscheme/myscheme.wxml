@@ -1,0 +1,20 @@
+<!--pages/myscheme.wxml-->
+<view class="myschemebox">
+   <view class="top">
+      <text>我的方案</text>
+   </view>
+    <view class="scheme" wx:for="{{schemelist}}" wx:key="index">
+        <view class="detailbox1">
+            <text>方案名：{{item.name}}</text>
+            <view class="conbox">
+              <text>搜索内容：</text>
+              <text class="scontext" >{{item.searchContent}}</text>
+            </view>
+        </view>
+        <view class="detailbox2">
+            <button class="btn" style="width:80rpx" data-id="{{item.id}}" bindtap="selectmys">查看</button>
+            <button class="btn" style="width:80rpx;background-color:red; margin-top: 20rpx;"  data-id="{{item.id}}" bindtap="delectmys">删除</button>
+        </view>
+        <view class="detailbox"></view>
+     </view>
+</view>

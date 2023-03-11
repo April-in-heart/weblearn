@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>触摸拖动对象</title>
+		<!-- meta使用viewport保证页面可自由缩放 -->
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<style>
+			div{
+				width:90%;
+				height: 150px;
+				border: solid 1px #ff0000;
+				/* margin为auto则为居中 */
+				margin: auto;
+				overflow: hidden;
+			}
+			#main{
+				width: 90%;
+				height: 500px;
+				overflow: hidden;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="main">
+			<div id="div_1">div_1</div>
+			<div id="div_2">div_2</div>
+			<div id="div_3">div_3</div>
+		</div>
+		<script>
+			let div_1=document.getElementById("div_1");
+			let div_2=document.getElementById("div_2");
+			let div_3=document.getElementById("div_3");
+			let img=document.createElement("img");
+			img.src="1.html/image/e1.jpg";
+			img.style.position="absolute";
+			img.style.width=parseInt(img.width/5)+"px";
+			img.style.height=parseInt(img.height/5)+"px";
+			div_1.appendChild(img);
+			img.addEventListener("touchstart",imgtouchstart,false);
+			img.addEventListener("touchmove",imgtouchmove,false);
+			img.addEventListener("touchend",imgtouchend,false);
+			function imgtouchstart(event){
+				event.preventDefault();
+			}
+			function imgtouchmove(event){
+				event.preventDefault();
+				let touchObj=event.touches[0];
+				img=event.target;
+				img.style.position="absolute";
+				img.style.left=parseInt(touchObj.pageX)-parseInt(img.style.width)/2+"px";
+				img.style.top=parseInt(touchObj.pageY)-parseInt(img.style.height)/2+"px"
+			}
+			function imgtouchend(event){
+				event.preventDefault();
+				var touchObj=event.changedTouches[0];//已经改变的数组
+				img=event.target;
+				for(var i=1;i<=3;i++){
+					var objdiv=document.getElementById("div_"+i);
+					if(touchObj.clientY>=objdiv.offsetTop){
+						img.style.position="relative";
+						img.style.top="10px";
+						img.style.left="10px";
+						img.style.width=parseInt(img.width)+"px";
+						img.style.height=parseInt(img.height)+"px";
+						objdiv.appendChild(img)
+					}
+				}
+			}
+			
+		</script>
+	</body>
+</html>

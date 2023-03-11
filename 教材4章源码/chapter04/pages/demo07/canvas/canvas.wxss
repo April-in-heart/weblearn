@@ -1,0 +1,5 @@
+/* pages/demo07/canvas/canvas.wxss */
+canvas{
+  width: 100%;
+  height: 600rpx;
+}

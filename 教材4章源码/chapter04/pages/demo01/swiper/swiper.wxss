@@ -1,0 +1,11 @@
+/* pages/demo01/swiper/swiper.wxss */
+.swiper-item{
+  height: 300rpx;
+  line-height: 300rpx;
+  background-color: lightblue;
+  font-size: 30pt;
+}
+
+swiper{
+  height: 300rpx;
+}

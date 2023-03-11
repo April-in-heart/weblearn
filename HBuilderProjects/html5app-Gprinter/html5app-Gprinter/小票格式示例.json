@@ -1,0 +1,133 @@
+[{
+	"image": "http://www.html5-app.com/gprinter.png",
+	"width": "350",
+	"center": "center",
+	"bottom": "1"
+}, {
+	"text": "万达广场销售单",
+	"center": "center",
+	"font": "max",
+	"bottom": "3"
+}, {
+	"text": "万达广场欢迎您",
+	"center": "left",
+	"font": "normal",
+	"bottom": "1"
+}, {
+	"text": "收银员:00056",
+	"center": "left",
+	"font": "bold",
+	"bottom": "1"
+}, {
+	"text": "单号:00256933",
+	"center": "left",
+	"font": "normal",
+	"bottom": "2"
+}, {
+	"text": "业务日期：2019-05-30 18:15:25",
+	"center": "left",
+	"font": "normal",
+	"bottom": "1"
+}, {
+	"text": "------------------------------",
+	"center": "left",
+	"font": "normal",
+	"bottom": "1"
+}, {
+	"text": "商品名称：小黑瓶眼霜",
+	"center": "left",
+	"font": "normal",
+	"bottom": "1"
+}, {
+	"title": ["数量：1", "单价：305", "金额：305"],
+	"left": [0, 30, 60],
+	"center": "left",
+	"font": "normal",
+	"bottom": "2"
+}, {
+	"text": "商品名称：小黑瓶眼霜",
+	"center": "left",
+	"font": "normal",
+	"bottom": "1"
+}, {
+	"title": ["数量：1", "单价：305", "金额：305"],
+	"left": [0, 30, 60],
+	"center": "left",
+	"font": "normal",
+	"bottom": "2"
+}, {
+	"text": "商品名称：小黑瓶眼霜",
+	"center": "left",
+	"font": "normal",
+	"bottom": "1"
+}, {
+	"title": ["数量：1", "单价：305", "金额：305"],
+	"left": [0, 30, 60],
+	"center": "left",
+	"font": "normal",
+	"bottom": "2"
+}, {
+	"text": "商品名称：小黑瓶眼霜",
+	"center": "left",
+	"font": "normal",
+	"bottom": "1"
+}, {
+	"title": ["数量：1", "单价：305", "金额：305"],
+	"left": [0, 30, 60],
+	"center": "left",
+	"font": "normal",
+	"bottom": "2"
+}, {
+	"text": "------------------------------",
+	"center": "left",
+	"font": "normal",
+	"bottom": "2"
+}, {
+	"text": "数量：4 ,金额：￥1220.00",
+	"center": "left",
+	"font": "bold",
+	"bottom": "1"
+}, {
+	"text": "实收金额：￥1220.00",
+	"center": "left",
+	"font": "bold",
+	"bottom": "2"
+}, {
+	"text": "活动期间满500送100",
+	"center": "left",
+	"font": "normal",
+	"bottom": "1"
+}, {
+	"text": "折让金额500",
+	"center": "left",
+	"font": "normal",
+	"bottom": "1"
+}, {
+	"text": "折后金额2029",
+	"center": "left",
+	"font": "normal",
+	"bottom": "3"
+}, {
+	"text": "30天内可凭小票换开发票",
+	"center": "left",
+	"font": "normal",
+	"bottom": "2"
+}, {
+	"text": "活动商品，不退不换",
+	"center": "left",
+	"font": "normal",
+	"bottom": "2"
+}, {
+	"barcode": "2019563352660",
+	"type": "CODE128",
+	"height": "100",
+	"position": "BELOW",
+	"width": "2",
+	"center": "center",
+	"bottom": "2"
+}, {
+	"qrcode": "www.html5-app.com",
+	"size": "10",
+	"center": "center",
+	"bottom": "0"
+}]

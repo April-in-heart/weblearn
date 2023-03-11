@@ -1,0 +1,16 @@
+<!--pages/demo03/checkbox/checkbox.wxml-->
+<view class='container'>
+  <include src='../../common/head.wxml' />
+  <view class='page-body'>
+    <view class='title'>3. 表单组件checkbox的简单应用</view>
+    <view class='demo-box'>
+      <view class='title'>使用数组批量生成选项</view>
+      <checkbox-group bindchange='checkboxChange'>
+        <view class='test' wx:for='{{checkboxItems}}' wx:key='item{{index}}'>
+          <checkbox value='{{item.value}}' checked='{{item.checked}}' />{{item.name}}
+        </view>
+      </checkbox-group>
+    </view>
+  </view>
+  <include src='../../common/foot.wxml' />
+</view>

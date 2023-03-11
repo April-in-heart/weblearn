@@ -1,0 +1,55 @@
+<!--pages/wen/wen.wxml-->
+<view class="wen-box">
+
+	<!--症状描述-->
+	<view class="wen-box-txt">
+		<view class="wen-box-txt-line"></view>
+		<text>症状描述</text>
+		<view class="wen-box-txt-cicel" style="  background-color: #7bc798;"></view>
+		<text>轻微</text>
+		<view class="wen-box-txt-cicel" style="  background-color: #ffab1a;"></view>
+		<text >中等</text>
+		<view class="wen-box-txt-cicel" style="  background-color: red;"></view>
+		<text>严重</text>
+	</view>
+	<!--症状-->
+	<scroll-view wx:if="{{isOption}}" scroll-x="true" class="sym-box">
+		<view wx:for="{{symlist}}" wx:key="index" class="sym-box-back" style="background-color:{{item.degree}}" wx:for-index="i">
+			{{item.txt}}
+			<icon type="cancel" size="10" color="white" bindtap="cancelSym"id="{{i}}"></icon>
+		</view>
+	</scroll-view>
+	<view class="option-con">
+		<view class="option-con-left">
+			<view class="{{alllist?'option-con-left-txted':'option-con-left-txt'}}" data-menuindex="alllist" bindtap="changemenu">全部</view>
+			<view class="{{headlist?'option-con-left-txted':'option-con-left-txt'}}" data-menuindex="headlist" bindtap="changemenu">头面部位</view>
+			<view class="{{fivelist?'option-con-left-txted':'option-con-left-txt'}}" data-menuindex="fivelist" bindtap="changemenu">五官部位</view>
+			<view class="{{bodylist?'option-con-left-txted':'option-con-left-txt'}}" data-menuindex="bodylist" bindtap="changemenu">躯体部位</view>
+			<view class="{{fourlist?'option-con-left-txted':'option-con-left-txt'}}" data-menuindex="fourlist" bindtap="changemenu">四肢部位</view>
+			<view class="{{twolist?'option-con-left-txted':'option-con-left-txt'}}" data-menuindex="twolist" bindtap="changemenu">二阴部位</view>
+			<view class="{{skinlist?'option-con-left-txted':'option-con-left-txt'}}" data-menuindex="skinlist" bindtap="changemenu">皮肤毛发</view>
+			<view class="{{voicelist?'option-con-left-txted':'option-con-left-txt'}}" data-menuindex="voicelist" bindtap="changemenu">声音气味</view>
+			<view class="{{blist?'option-con-left-txted':'option-con-left-txt'}}" data-menuindex="blist" bindtap="changemenu">大小便</view>
+			<view class="{{dietlist?'option-con-left-txted':'option-con-left-txt'}}" data-menuindex="dietlist" bindtap="changemenu">饮食口味</view>
+			<view class="{{emotionlist?'option-con-left-txted':'option-con-left-txt'}}" data-menuindex="emotionlist" bindtap="changemenu">情志睡眠</view>
+		</view>
+		<scroll-view class="option-con-right" scroll-y="true">
+			<view class="option-con-right-txt" wx:for="{{txtlist}}" wx:key="index" wx:for-index="i">
+				{{item.txt}}
+				<image src="./opistrue.png" wx:if="{{item.opistrue}}" id="{{i}}" bindtap="changeop"></image>
+				<image src="./isopfalse.png" wx:if="{{!item.opistrue}}" id="{{i}}" bindtap="changeop"></image>
+
+			</view>
+		</scroll-view>
+	</view>
+	<view wx:if="{{opistrue}}" class="degree-selection-over"> </view>
+	<view wx:if="{{opistrue}}" class="degree-selection">
+    <image src="./cancel.png" bindtap="imgcancel"></image>
+		<text style="display:block;margin:20rpx 0 50rpx 0">症状程度</text>
+		<view class="degree-selection-back" style="background-color:{{low?'#7bc798':'#999999'}}" bindtap="degree" data-degree="low">轻度</view>
+		<view class="degree-selection-back" style="background-color:{{medi?'#ffab1a':'#999999'}};margin:0 50rpx" bindtap="degree" data-degree="medi">中等</view>
+		<view class="degree-selection-back" style="background-color:{{high?'red':'#999999'}}" bindtap="degree" data-degree="high">严重</view>
+   <view class="submit-btn" bindtap="addSym">添加</view>
+</view>
+<view class="submit-btn" bindtap="submitdata">完成</view>
+</view>

@@ -1,0 +1,64 @@
+/* pages/myscheme.wxss */
+.myschemebox{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.top{
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  background-color: #23435c;
+  color: white;
+  padding: 15rpx 0 15rpx 0;
+  font-size: 35rpx;
+}
+.scheme{
+  width: 96%;
+  display: flex;
+  flex-direction: row;
+  background-color: white;
+  border: 1px solid #e1e1e1;
+  margin-top: 30rpx;
+  border-radius: 15rpx;
+  box-shadow: #e1e1e1 1px 1px 1px;
+}
+.detailbox1{
+  width: 70%;
+  display: flex;
+  flex-direction: column;
+  margin: 30rpx;
+  color: #23435c;
+  font-size: 25rpx;
+}
+.detailbox2{
+  display: flex;
+  flex-direction: column;
+  margin: 30rpx;
+  color: #23435c;
+  font-size: 25rpx;
+}
+.btn{
+  color: white;
+  background-color: #23435c;
+  font-size: 20rpx;
+  padding: 4px;
+}
+.scontext{
+  display: flex;
+  background-color: #c2def3;
+  border-radius: 10rpx;
+  border: 1px solid #0d83dd;
+  color: #23435c;
+  padding-left: 12rpx;
+  align-content: center;
+}
+.conbox{
+  display: flex;
+  flex-direction: row;
+  margin-top: 30rpx;
+  align-content: center;
+}

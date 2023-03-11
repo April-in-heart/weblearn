@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		
+	<!-- 用JavaScript自定义方法动态添加一个文本框到web页面中
+		通过自定义addInput函数实现。
+		文本框的类型为text
+		文本框的id为name,name为name，value为空。
+		form表单的id为form_1，其它属性为默认 -->
+		<script type="text/javascript">
+			function addInput(){
+				var objdiv1=document.createElement("input");
+				objdiv1.type="text";
+				objdiv1.id="name";
+				objdiv1.name="name";
+				objdiv1.value="";
+				var objdiv2=document.createElement("form");
+				objdiv2.id="form_1";
+				// 将objdiv2添加body末尾
+				document.body.appendChild(objdiv2);
+				document.getElementById("form_1").appendChild(objdiv1);
+			}
+			addInput();
+		</script>
+		
+	</body>
+</html>

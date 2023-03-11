@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>es6新增字符串方法</title>
+</head>
+<body>
+    <script>
+        var h="helloworld";
+        console.log(h.includes('h',1));
+        console.log(h.startsWith('e',1));
+        console.log(h.startsWith('rl',6));//false，下标为6的是0
+        console.log(h.startsWith('rl',7));//true，下标为7的才是r
+        console.log(h.endsWith('rl',7));//false
+        console.log(h.endsWith('rl',-1));//false,不支持负索引
+
+
+        console.log('x'.repeat(3));//xxx
+
+        console.log('x'.padStart(3,'ab'));//abx
+        console.log('x'.padStart(3,'abac'));//abx
+
+        console.log("hello".at(1));//e
+        console.log("hello".at(-1));//o
+        console.log("hello".at(8));//undefined
+    </script>
+</body>
+</html>

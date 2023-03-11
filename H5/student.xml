@@ -1,0 +1,23 @@
+
+
+<students>
+	
+	<student id="001">
+		<name>mike</name>
+		<address>
+			<province>四川省</province>
+			<city>成都市</city>
+		</address>
+		<score>98</score>
+	</student>
+	
+	<student id="002">
+		<name>rose</name>
+		<address>
+			<province>四川省</province>
+			<city>绵阳市</city>
+		</address>
+		<score>96</score>
+	</student>
+	
+</students>

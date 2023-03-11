@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		<form>
+			<!-- fieldset类似边框，
+			legend为边框上的字 -->
+			<fieldset>
+				<legend>健康信息卡</legend>
+				<!-- lable的for表示标签为谁服务(先绑定id，id有问题就绑定name)因为id不会重复 -->
+				<!-- 加了lable for点击标签会自动聚焦到for指定的标签上 -->
+				<label for="name">姓名：</label>
+				<input type="text" id="name" name="name" /><br>
+				<label for="shou">血压 收:</label><input type="text" id="shou" name="shou" /><br>
+				<label for="zhang">血压 张:</label><input type="text" id="zhang" name="zhang" /><br>
+				<br>
+				<input type="submit" id="ok" name="ok" value="ok" />
+			</fieldset>
+			<fieldset>
+				<legend>就诊信息卡</legend>
+				姓名：<input type="text" id="name" name="name" /><br>
+				血压 收:<input type="text" id="shou" name="shou" /><br>
+				血压 张:<input type="text" id="zhang" name="zhang" /><br>
+				<br>
+				<input type="submit" id="ok" name="ok" value="ok" />
+			</fieldset>
+		</form>
+	</body>
+</html>

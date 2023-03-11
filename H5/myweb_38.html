@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		
+		AJAX
+		<script>
+			
+			var xmlhttp=new XMLHttpRequest;//有兼容性问题，在firefox，chrome中没有问题
+			/* 典型应用场景：输入姓名后，用AJAX技术到服务器端判断是否重名，
+			但用户不会等待，他会接着输入下一个内容。这时，同步与异步的差异就会很明显。
+			 异步时，就算服务器没有及时响应，也能跳到下一个输入框输入数据。而同步时，浏览器卡顿，
+			 用户暂时无法操作。*/
+			function ajax_1(){
+				var url="ajax_1.php";//只能调用跟页面在同一个网站服务器上的程序
+				console.log(url);
+				xmlhttp.open("GET",url);//不写false，默认为true：异步,
+				//不管执行成功与否都能继续执行下面的代码
+				//onreadystatechange：准备的事件发生改变事件
+				xmlhttp.onreadystatechange=handleStateChange;//异步
+				xmlhttp.send();
+				//定时操作
+				//window.setTimeout(ajax_1,1000);
+			}
+			
+			function handleStateChange(){
+				if(xmlhttp.readyState==4 && xmlhttp.status==200){
+					//status=200可以运行，404不能运行
+					//输出ajax_1.php里的内容
+					console.log(xmlhttp.responseText);
+				}
+			}
+			ajax_1();
+			
+		</script>
+		
+	</body>
+</html>

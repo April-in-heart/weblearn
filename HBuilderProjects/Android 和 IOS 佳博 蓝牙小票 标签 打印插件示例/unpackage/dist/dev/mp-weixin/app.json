@@ -1,0 +1,18 @@
+{
+  "pages": [
+    "pages/index/home",
+    "pages/index/Bluetooth",
+    "pages/index/esc_page",
+    "pages/index/tsc_page",
+    "pages/index/cpcl_page"
+  ],
+  "subPackages": [],
+  "window": {
+    "navigationBarTextStyle": "black",
+    "navigationBarTitleText": "uni-app",
+    "navigationBarBackgroundColor": "#F8F8F8",
+    "backgroundColor": "#F8F8F8"
+  },
+  "usingComponents": {},
+  "sitemapLocation": "sitemap.json"
+}

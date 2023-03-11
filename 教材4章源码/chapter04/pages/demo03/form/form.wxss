@@ -1,0 +1,9 @@
+/* pages/demo03/form/form.wxss */
+input,button{
+  margin: 15rpx;
+}
+
+input{
+  border: 1rpx solid silver;
+  height: 60rpx;
+}

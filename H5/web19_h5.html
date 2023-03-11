@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>文件操作</title>
+		<style>
+			#div_1{
+				width: 300px;
+				height: 200px;
+				border: solid 1px #FF0000;
+			}
+		</style>
+	</head>
+	<body>
+		
+		<div id="div_1"></div>
+		
+	</body>
+	<script>
+		var objdiv_1=document.getElementById("div_1");
+		objdiv_1.addEventListener("dragenter",
+			function(){
+				objdiv_1.innerHTML="请释放鼠标";
+			},false
+		);
+		objdiv_1.addEventListener("dragleave",
+			function(){
+				objdiv_1.innerHTML="请把文件拖入";
+			},false
+		);
+		objdiv_1.addEventListener("dragover",
+			function(){
+				event.preventDefault();
+			},false
+		);
+		objdiv_1.addEventListener("drop",
+			function(e){
+				e.preventDefault();//阻止产生默认动作
+				var fileReader=new FileReader();//文件读写器
+				var fileId=e.dataTransfer.files[0];
+				fileReader.onload=function(){
+					objdiv_1.innerHTML=this.result;
+				}
+				fileReader.onerror=function(){
+					console.log("drag file error");
+				}
+				fileReader.readAsText(fileId);
+			},false
+		);
+	</script>
+</html>

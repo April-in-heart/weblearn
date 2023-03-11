@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		
+		框架开发 先引入jquery，下学期在学vue
+		要把jquery与HTML文件放在一个文件夹下
+		引入框架开发可以大大提高开发质量，效率，降低成本</br>
+		<div id="div_1">no information</div>
+		<form>
+			name:<input type="text" id="name" name="name" value="" /></br>
+			<input type="button" id="ok" name="ok" value="ok1" onclick="checkvalue()" />
+			<input type="button" id="ok2" name="ok2" value="ok2" />
+		</form>
+		
+		<!-- 引入第三方类库 -->
+		<script src="jquery-3.4.1.min.js"></script>
+		<script>
+			<!-- document.getElementById("div_1").innerHTML; -->
+			// document.getElementById("ok1").onclick=function
+			// document.getElementById("ok1").addEventListener()
+			
+			$("#div_1").html("修改了内容");
+			console.log($("#div_1").html());<!-- no information -->
+			
+			function checkvalue(){
+				if($("#name").val()==""){
+					$("#div_1").html("姓名不能为空");
+					$("#name").val("姓名不能为空");
+				}else{
+					$("#div_1").html($("#name").val());
+				}
+			}
+			
+			$("#ok2").click(
+				function(){
+					if($("#name").val()==""){
+						$("#div_1").html("姓名不能为空 ok2");
+					}else{
+						$("#div_1").html($("#name").val()+"ok2");
+					}
+				}
+			)
+			
+			
+			
+		</script>
+		
+	</body>
+</html>

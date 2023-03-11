@@ -1,0 +1,48 @@
+<!--pages/me/me.wxml-->
+<view class="view_contain">
+  <!-- 第一部分 -->
+  <view class="view_1">
+    <view class="view_image_text">
+     <text>{{userInfo.nickName}}</text>
+      <image class="image_radius" src="{{userInfo.avatarUrl}}" />
+    </view>
+  </view>
+ 
+  <!-- 第三部分 -->
+  <view class="view_3">
+    <navigator class="list-item" url="/pages/myscheme/myscheme">
+      <image class="item-image" src="/static/images/wdfa.png"></image>
+      <text class="item-text">我的方案</text>
+      <image class="image-jiantou" src="/static/images/arrow.png"></image>
+    </navigator>
+    <navigator class="list-item" url="/pages/zhiliaojilu/zhiliaojilu">
+      <image class="item-image" src="/static/images/zljl.png"></image>
+      <text class="item-text">治疗记录</text>
+      <image class="image-jiantou" src="/static/images/arrow.png"></image>
+    </navigator>
+    <navigator class="list-item" url="/pages/life/life">
+      <image class="item-image" src="/static/images/shgl.png"></image>
+      <text class="item-text">生活管理</text>
+      <image class="image-jiantou" src="/static/images/arrow.png"  ></image>
+    </navigator>
+<!--
+ <navigator class="list-item" url="/pages/doctorLogin/doctorLogin">
+      <image class="item-image" src="/static/images/shgl.png"></image>
+      <text class="item-text">掌上开方</text>
+      <image class="image-jiantou" src="/static/images/arrow.png"  ></image>
+    </navigator>
+
+ <navigator class="list-item" url="/pages/zizhen/zizhen">
+      <image class="item-image" src="/static/images/shgl.png"></image>
+      <text class="item-text">健康自诊</text>
+      <image class="image-jiantou" src="/static/images/arrow.png"  ></image>
+    </navigator>
+-->
+    <navigator class="list-item" url="/pages/kefu/kefu">
+      <image class="item-image" src="/static/images/kefu.png"></image>
+      <text class="item-text">客服服务</text>
+      <image class="image-jiantou" src="/static/images/arrow.png"></image>
+    </navigator>
+  </view>
+</view>
+

@@ -1,0 +1,86 @@
+<!--pages/zizhen/zizhen.wxml-->
+<view class="back">
+  <view class="banner"><text style="margin-left:45%">自诊</text><image src="/static/images/note.png" style="display:flex;width:80rpx;height:80rpx;margin-left:28%;" bindtap="checkHistory"></image></view>
+  <view class="banner_1">完善相关数据，诊断更准确</view>
+  <!--四诊界面-->
+  <view class="channal_1">
+    <view class="channalText">
+      <view class="channalCon" bindtap="clickme">望</view>
+    </view>
+   
+    <navigator  class="channalText" url="/pages/wen2/wen2">
+      <view class="channalCon" style="background:#49b1e6;">闻</view>
+    </navigator>
+    <navigator  class="channalText" url="/pages/wen/wen">
+      <view class="channalCon" style="background:#16a4ae;">问</view>
+    </navigator>
+    <navigator  class="channalText" url="/pages/qie/qie">
+      <view class="channalCon" style="background:#f07e63;">切</view>
+    </navigator>
+  </view>
+  <!--选择性别和年龄-->
+  <view class="choose">
+    <view class="choose-lan"></view>
+    <picker  mode='selector' range='{{selectorItems}}' bindchange='selectorChange'>
+        <view style="color:#0098ff;">年龄(选择):{{selector}}</view>
+    </picker>
+  </view>
+  <view class="choose" wx:if="manChoose==true" bindtap="choose" style=" flex-direction: column;">
+    <text class="choose-sex">{{sex}} (切换）</text>
+    <image class="choose_image" src="{{img}}" mode="widthFix"></image>
+  </view>
+  <view class="choose" wx:else>
+    <text class="choose-sex">{{sex}} (切换）</text>
+    <image class="choose_image" src="{{img}}" mode="widthFix"></image>
+  </view>
+  
+    <view class="banner1" style="position: fixed;bottom:0;width:100%;" bindtap="modalinput" >系统评估</view>
+  
+  
+</view>
+
+<!--望诊的界面-->
+  <!--屏幕背景变暗的背景  -->
+  <view class="commodity_screen" bindtap="hideModal" wx:if="{{showModalStatus}}"></view>
+  <!--弹窗  -->
+  <view animation="{{animationData}}" class="commodity_attr_box" wx:if="{{showModalStatus}}">
+    <view class="text_1">点击空白区域关闭</view>
+    <view class="channal_2">
+      <view class="channalRow_2">
+        <view class="channalCon_2" bindtap="mianxiangPhoto">面相</view>
+        <text>1.露出完整面部，面部正面完整位于屏幕内
+          2.最好不要化妆，以免影响面色信息及唇色信息的采集
+        </text>
+      </view>
+      <view class="channalRow_2">
+        <view class="channalCon_2" bindtap="shexiangPhoto">舌相</view>
+        <text>1.露出完整口腔，舌头正面完全位于屏幕内。
+          2.最好不要吃可以影响舌头颜色的食物。
+        </text>
+        <view class="channalCon_3" >
+          
+          <!-- 弹出框 start -->
+<view class="dialog_screen"  wx:if="{{showModalStatus}}"></view>
+<view animation="{{animationData}}" class="dialog_attr_box" wx:if="{{showModalStatus}}">
+  <view style='background:white;position: relative;overflow: hidden;'>
+  <view class='dialog_title'>选择系列</view>
+    <view wx:for="{{list}}" wx:key="name" class='dialog_content'>
+        <view class="{{item.status==0?'type_nor':'type_pre'}}" bindtap='typeClick' data-index='{{index}}'>{{item.txt}}</view>
+    </view>
+  </view>
+</view>
+<!-- 弹出框 end -->
+        </view>
+      </view>
+      <view class="channalRow_2">
+        <view class="channalCon_2" bindtap="xingtiPhoto">形体</view>
+        <text>
+          1.穿着轻衣物，请拍摄全身照，将拍摄的人物大致置于屏幕内。
+        </text>
+      </view>
+    </view>
+  </view>
+  <modal hidden="{{hiddenmodalput}}" title="请输入您的真实姓名和手机号以便于医生为您开方" confirm-text="提交" cancel-text="取消" bindcancel="cancel" bindconfirm="confirm">
+<input type='text' placeholder="请输入姓名" bindinput="input"/> 
+<input type='text' placeholder="请输入手机号" bindinput="input2"/> 
+</modal>

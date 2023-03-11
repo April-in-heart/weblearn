@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		
+		<script>
+			
+			var xmlhttp=new XMLHttpRequest();
+			//open打开操作,这里打开student这个xml文档
+			//用get打开false：同步操作，前面成功才继续，true则为异步，不管成功否都继续执行
+			xmlhttp.open("GET","student.xml",false);
+			//也能加载其他类型的页面，但是只有代码，不能操作
+			// xmlhttp.open("GET","myweb_33.html",false);
+			//send发送请求
+			xmlhttp.send();
+			var xmldoc=xmlhttp.responseXML;
+			console.log(xmldoc);
+			console.log(xmldoc.childNodes.length);//1,只有一个student
+			//空白+001+空白+002+空白
+			console.log(xmldoc.childNodes[0].childNodes.length)//5
+			//nodename输出节点名
+			console.log(xmldoc.childNodes[0].childNodes[1].nodeName);//student
+			//attributes输出属性
+			console.log(xmldoc.childNodes[0].childNodes[1].attributes[0]);//id="001"
+			console.log(xmldoc.childNodes[0].childNodes[1].attributes[0].nodeValue);//001
+			//输出mike
+			console.log(xmldoc.childNodes[0].childNodes[1].childNodes[1].childNodes[0].nodeValue)//mike
+			
+			
+			
+		</script>
+		
+	</body>
+</html>

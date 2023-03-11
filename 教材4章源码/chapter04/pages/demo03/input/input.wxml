@@ -1,0 +1,28 @@
+<!--pages/demo03/input/input.wxml-->
+<view class='container'>
+  <include src='../../common/head.wxml' />
+  <view class='page-body'>
+    <view class='title'>3. 表单组件input的简单应用</view>
+    <view class='demo-box'>
+      <view class='title'>(1) 密码输入框</view>
+      <input password placeholder='请输入密码' />
+    </view>
+    <view class='demo-box'>
+      <view class='title'>(2) 最大字符长度限制为10</view>
+      <input type='text' maxlength='10' placeholder='这里最多只能输入10个字' />
+    </view>
+    <view class='demo-box'>
+      <view class='title'>(3) 禁用输入框</view>
+      <input disabled placeholder='该输入框已被禁用' />
+    </view>
+    <view class='demo-box'>
+      <view class='title'>(4) 自定义placeholder样式</view>
+      <input placeholder-style='color:red;font-weight:bold' placeholder='自定义样式' />
+    </view>
+    <view class='demo-box'>
+      <view class='title'>(5) 输入框事件监听</view>
+      <input bindinput='getInput' bindblur='getBlur' placeholder='这里输入内容将被监听' />
+    </view>
+  </view>
+  <include src='../../common/foot.wxml' />
+</view>

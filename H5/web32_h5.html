@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>触屏事件</title>
+		<!-- meta使用viewport保证页面可自由缩放 -->
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+	</head>
+	<body>
+		显示多点触摸数<div id="tip_1"></div>
+		显示触摸事件<div id="tip_2"></div>
+		显示触摸事件坐标<div id="tip_3"></div>
+		<script>
+			let tip_1=document.getElementById("tip_1");
+			let tip_2=document.getElementById("tip_2");
+			let tip_3=document.getElementById("tip_3");
+			function load(){
+				document.addEventListener("touchstart",myTouch,false);
+				document.addEventListener("touchmove",myTouch,false);
+				document.addEventListener("touchend",myTouch,false);
+			}
+			function myTouch(event){
+				var event=event||window.event;
+				tip_1.innerHTML=event.touches.length
+				//event.preventDefault();阻止事件冒泡误触
+				switch(event.type){
+					case "touchstart":event.preventDefault();tip_2.innerHTML="touch start";tip_3.innerHTML=event.touches[0].clientX.toFixed(2)+"|"+event.touches[0].clientY.toFixed(2);break;
+					case "touchmove":event.preventDefault();tip_2.innerHTML="touch move";tip_3.innerHTML=event.touches[0].clientX.toFixed(2)+"|"+event.touches[0].clientY.toFixed(2);break;
+					case "touchend":tip_2.innerHTML="touch end";tip_3.innerHTML=event.touches[0].clientX.toFixed(2)+"|"+event.touches[0].clientY.toFixed(2);break;
+				}
+			}
+			window.addEventListener("load",load,false);//事件名，事件触发执行的函数，是否冒泡
+		</script>
+	</body>
+</html>

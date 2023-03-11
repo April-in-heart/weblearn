@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		
+		javascript 面向对象程序设计
+		
+		<script>
+			
+			function person(name, gender, age){
+				this.name = name;
+				this.gender = gender;
+				this.age = age;
+			}
+			var p1 = new person("mike", "boy", 18);
+			console.log(p1.name);///mike
+			p1.setname = function(name){
+				this.name = name;
+			}
+			p1.getName = function(){
+				return this.name;
+			}
+			p1.setname("rose");
+			console.log(p1.getName());//rose
+			//对象的复制
+			var p2=p1;
+			console.log(p2.name);//rosse
+			console.log(p2.getName());//rose
+			p2.setname("tom");
+			//关键点
+			console.log(p1.getName());//tom  对象复制过程中是引用传递
+			var p3=new person("tony","boy",22);
+			// p3.setname("王小二");
+			// console.log(p3.getName());//uncaught TypeError:p3.setname is not a function
+			//类的原型
+			//一个函数可以看作一个类，原型是所有类都有的一个属性，
+			//作用是给这个类的每一个对象都添加一个统一的方法
+			person.prototype.setname=function(name){
+				this.name=name;
+			}
+			person.prototype.getname=function(){
+				return this.name;
+			}
+			p3.setname("王小二");
+			console.log(p3.getname());//王小二
+			//string.prototype.killstring
+			
+			//ES6语法方式
+			class person_1{
+				//构造器  构造函数
+				constructor(name,gender,age) {
+				    this.name=name;
+					this.gender = gender;
+					this.age = age;
+				}
+				setname(name){
+					this.name=name;
+				}
+				getname(){
+					return this.name;
+				}
+			}
+			var p4=new person_1("bill","male",66);
+			console.log(p4.name);//bill
+			console.log(p4.getname());//bill
+			
+			//类的继承
+			class student_1 extends person_1{
+				constructor(name,gender,age,score) {
+				    //score是学生类的属性，其它是person类的属性
+					super(name,gender,age);
+					this.score=score;
+				}
+				setscore(score){
+					this.score=score;
+				}
+				getscore(){
+					return this.score;
+				}
+				getInfo(){
+					return super.getname()+":"+this.score;
+				}
+			}
+			var s1=new student_1("cxm","boy",18,89);
+			s1.setscore(99);
+			console.log(s1.getInfo());//cxm:99
+			
+			
+			
+			
+		</script>
+		
+		
+	</body>
+</html>

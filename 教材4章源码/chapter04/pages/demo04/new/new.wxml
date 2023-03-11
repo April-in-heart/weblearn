@@ -1,0 +1,2 @@
+<!--pages/demo04/new/new.wxml-->
+<text>新窗口打开的新页面，可以返回navigator.wxml</text>

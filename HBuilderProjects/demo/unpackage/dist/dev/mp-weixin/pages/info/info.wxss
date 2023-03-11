@@ -1,0 +1,33 @@
+
+.content{
+	padding: 10rpx 2%;
+	width: 96%;
+	-webkit-flex-wrap: wrap;
+	        flex-wrap: wrap;
+}
+.title{
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: flex;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	-webkit-flex-direction: column;
+	        flex-direction: column;
+	-webkit-box-align: center;
+	-webkit-align-items: center;
+	        align-items: center;
+	-webkit-box-pack: center;
+	-webkit-justify-content: center;
+	        justify-content: center;
+	line-height: 2em;
+	font-weight: 700;
+	font-size: 38rpx;
+	padding: 10rpx;
+	margin: 10rpx;
+}
+.art-content{
+	line-height: 2em;
+	padding: 10rpx;
+	margin: 10rpx;
+}
+

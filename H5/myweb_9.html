@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		<script>
+			var age="18";
+			console.log(10+age);
+			console.log(age+10);
+			console.log(3&&4);
+			//先判断&&前的值为true还是false，true则返回后面的数4，false返回前面的数3
+			console.log(0&&3);//0
+			console.log(1>2&&3);//false
+			console.log(1||2);
+			//1,因为||先判断||前的值为true or false,true return前面的数，false return后面的数
+			console.log(0||2);
+			//2，因为0表示false，返回后面的数
+			console.log(Math.random());//生成一个0~1包括0，不包括1的随机数
+			console.log(Math.random()*120);
+			//在round内部嵌套random*100，生成0~100随机整数。round为四舍五入取整
+			console.log(Math.round(Math.random()*100));
+			
+			
+			console.log("中国\"加油\'");//输出中国"加油',用转义字符\提示编译器输出\后的符号
+			
+			
+			var name='mike';
+			var test=true;
+			//变量具有全局性，可以在函数体内部使用外面定义的变量,从定义它开始后面所有都可以访问该变量
+			// showname_1();
+			console.log(name);
+			console.log(test);
+			
+			
+			name=showname_2(name);//使用showname里的name值
+			console.log(name);
+			function showname_2(para_name){
+				var age;//定义为局部变量
+				var name;
+				name=para_name;
+				name='rose';
+				return name;//返回name，以便函数体外使用
+			}
+			
+			
+			// function showname_1(){
+			// 	console.log(name);
+			// 	name='rose';
+			// 	console.log(name);
+			// 	var test=false;
+			// 	console.log(test);
+			// }
+		</script>
+	</body>
+</html>

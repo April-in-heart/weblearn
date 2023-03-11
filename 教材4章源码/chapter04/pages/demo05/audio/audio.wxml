@@ -1,0 +1,15 @@
+<!--pages/demo05/audio/audio.wxml-->
+<view class='container'>
+  <include src='../../common/head.wxml' />
+  <view class='page-body'>
+    <view class='title'>5. 媒体组件audio的简单应用</view>
+    <view class='demo-box'>
+      <view class='title'>播放网络音频</view>
+      <audio id="myAudio" poster="{{poster}}" name="{{name}}" author="{{author}}" src="{{src}}"  controls loop></audio>
+      <button size='mini' bindtap='audioPlay'>播放</button>
+      <button size='mini' bindtap='audioPause'>暂停</button>
+      <button size='mini' bindtap='audioSeek0'>回到开头</button>
+    </view>
+  </view>
+  <include src='../../common/foot.wxml' />
+</view>

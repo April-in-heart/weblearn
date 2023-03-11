@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		<script>
+			
+			//NaN   not a number
+			console.log(isNaN("mike"));//不是数字返回true
+			console.log(isNaN(911));//是数字返回false
+			console.log(isNaN("911"));//是数字
+			console.log(isNaN("911abc"));//不是数字
+			console.log(isNaN(parseInt("100px")));//是数字
+			
+			//把数组传到服务器
+			array_1=[1,2,3,4,5];
+			// for(let i=0;i<array_1.length;i++){
+				
+			// }
+			//自动遍历数组，把每个数据取出用引号里面的字符串分割
+			//一般用平时不会出现的符号区分，否则容易跟数组中的元素重复
+			array_string=array_1.join("-");
+			//看在线手册可以找到对应功能(W3或者火狐官网javascript在线手册)
+			console.log(array_string);
+			//获取服务器的数组,还原数组
+			console.log(array_string.split("-"));//split:分离
+			//排序
+			array_1=[3,1,4,2,5];
+			console.log(array_1.sort());
+			
+			//随机
+			console.log(Math.random()*100);//0~100随机数
+			console.log(parseInt(Math.random()*100));//0~100随机整数
+			console.log("20-40",parseInt(Math.random()*20)+20);//20-40随机整数
+			console.log(Math.max(1,3,5));//最大值
+			console.log(Math.min(1,3,5));//最小值
+			//console.log(Math.min(array_1));//不支持数组直接写
+			console.log(Math.round(12.56));//13，小数部分四舍五入，大于0.5加一否则返回原数
+			console.log(Math.round(12.46));//12
+			
+			//日期函数
+			var mydate=new Date();
+			console.log(mydate.getFullYear());
+			console.log(mydate.getMonth());//0~11
+			console.log(mydate.getDate());//getDate得到一个月中的哪一天1~31。getday得到一周里的某天0~6
+			console.log(mydate.getHours());
+			console.log(mydate.getMinutes());
+			console.log(mydate.getSeconds());
+			var ymdhis=mydate.getFullYear()+"-"+(mydate.getMonth()+1)+"-"+mydate.getDate()+" "+
+			mydate.getHours()+":"+mydate.getMinutes()+":"+mydate.getSeconds();
+			console.log(ymdhis);
+			//2020-05-15 10:39:08
+			//课后作业  下午补齐只有一位的数
+			var year=mydate.getFullYear();
+			var month=mydate.getMonth()+1;
+			var day=mydate.getDate();
+			var hour=mydate.getHours();
+			var min=mydate.getMinutes();
+			var sec=mydate.getSeconds();
+			if(month>=0&&month<=9){
+				month="0"+month;
+				console.log(month);
+			}
+			if(day>=0&&day<=9){
+				day="0"+day;
+				console.log(day);
+			}
+			if(hour>=0&&hour<=9){
+				hour="0"+hour;
+				console.log(hour);
+			}
+			if(min>=0&&min<=9){
+				min="0"+min;
+				console.log(min);
+			}
+			if(sec>=0&&sec<=9){
+				sec="0"+sec;
+				console.log(sec);
+			}
+			console.log(year+"-"+month+"-"+day+" "+hour+":"+min+":"+sec);
+			
+			
+			
+			console.log(mydate.getTime());//时间戳，返回从1970年1月1日至今的毫秒数
+			console.log(mydate.getMilliseconds());//时间戳，精确到毫秒0~999
+			
+			string_1="我爱你中国";
+			console.log(string_1.charAt(0));//返回指定位置的字符我
+			console.log(string_1.charAt(1));//爱
+			console.log(string_1.charAt(2));//你
+			//charAt是按字符来计数的
+			string_1="i我love爱you你中国 1";
+			console.log(string_1.charAt(0));//返回指定位置的字符i
+			console.log(string_1.charAt(1));//我
+			console.log(string_1.charAt(2));//l
+			console.log(string_1.length);//13
+			
+			console.log(string_1.substring(2,6));//love,提取2，4之间的字符
+			console.log(string_1.indexOf("love"));//2,检索字符串从哪个位置有查找的字符串
+			console.log(string_1.indexOf("loveyou"));//-1,因为找不到这个字符串返回-1
+			console.log(string_1.indexOf(" "));//13也可以找空格的下标
+			
+			//JSON
+			var data={name:"mike",age:18,score:98};
+			console.log(data.name);
+			console.log(data.age);
+			console.log(data.score);
+			//string="mike-18-98";
+			var string="{\"name\":\"mike\",\"age\":\"18\"}";
+			console.log(string);
+			var json_data=eval("("+string+")");//要加括号
+			console.log(json_data);
+			console.log(json_data.name);
+			
+			
+			
+			
+			
+		</script>
+	</body>
+</html>

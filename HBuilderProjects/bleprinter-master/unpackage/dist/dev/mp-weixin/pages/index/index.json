@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "蓝牙打印",
+  "usingComponents": {
+    "kk-printer": "/components/kk-printer/index"
+  }
+}

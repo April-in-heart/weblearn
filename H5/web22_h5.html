@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>AJAX "多线程"</title>
+	</head>
+	<body>
+		<div id="tip">tip</div>
+		<div id="div_1">div_1</div>
+		<div id="div_2">div_2</div>
+	</body>
+	<script>
+		function ajax(){
+			var xmlhttp=getXMLhttprequest();//用下面自定义的方法获取对象
+			var url="web21_h5.php?name=mike&random="+Math.random();//地址不一样才能再次请求服务器传数据
+			xmlhttp.open("GET",url);//默认true异步可以不写
+			xmlhttp.onreadystatechange=function(){
+				//readyState第四步（最后一步）,status=200传输成功
+				if(xmlhttp.readyState==4&&xmlhttp.status==200){
+					document.getElementById("div_1").innerHTML=xmlhttp.responseText;
+					//
+					window.setTimeout(ajax,1000);
+				}
+			}
+			xmlhttp.send();//发送请求
+		}
+		ajax();
+		
+		function ajax_1(){
+			var xmlhttp=getXMLhttprequest();
+			var url="web22_h5.php?name=rose&random="+Math.random();
+			xmlhttp.open("GET",url);
+			xmlhttp.onreadystatechange=function(){
+				document.getElementById("div_2").innerHTML=xmlhttp.responseText;
+				window.setTimeout(ajax_1,1000);
+			}
+			xmlhttp.send();//发送请求
+		}
+		ajax_1();
+		
+		function getXMLhttprequest(){
+					var xmlhttp;
+					try{
+						xmlhttp=new XMLHttpRequest();
+					}catch(e){
+						console.log("browser not support it");
+					}
+					return xmlhttp;
+				}
+		
+	</script>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		
+		<!-- AJAX相关技术
+		处理服务器返回的xml   服务器可能返回字符串，JSON，XML -->
+		
+		<div id="div_1"></div>
+		<script>
+			
+			var xmlhttp=new XMLHttpRequest;
+			function ajax_1(){
+				var url="ajax_39.php";
+				xmlhttp.open("GET",url);//不写false，默认为true：异步,
+				//不管执行成功与否都能继续执行下面的代码
+				//onreadystatechange：准备的事件发生改变事件
+				xmlhttp.onreadystatechange=handleStateChange;//异步
+				xmlhttp.send();
+			}
+			
+			function handleStateChange(){
+				if(xmlhttp.readyState==4 && xmlhttp.status==200){
+					//status=200可以运行，404不能运行
+					document.getElementById("div_1").innerHTML
+					=xmlhttp.responseText;//{"name":"mike","age":18}
+					// console.log(xmlhttp.responseText.name);
+					document.getElementById("div_1").innerHTML
+					=JSON.parse(xmlhttp.responseText).name;
+				}
+			}
+			ajax_1();
+			
+		</script>
+		
+		
+	</body>
+</html>

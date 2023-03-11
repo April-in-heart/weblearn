@@ -1,0 +1,46 @@
+<!--pages/zhenjiu/zhenjiu.wxml-->
+
+<view>
+     <view>
+        <view class="weui-search-bar">
+            <view class="weui-search-bar__form">
+            <!-- 搜索框 -->
+                <view class="weui-search-bar__box">
+                    <icon class="weui-icon-search_in-box" type="search" size="14"></icon>
+                    <input type="text" class="weui-search-bar__input" placeholder="请输入病症搜索对应针灸方案" bindinput="inputSearch"/>
+                </view>
+            </view>
+            <!-- 搜索按钮,调用搜索查询方法 -->
+            <text class="weui-search-bar__cancel-btn" bindtap='search'>搜索</text>
+        </view>
+    </view>
+</view>
+
+<scroll-view scroll-x="true" class="top">
+  <view class="channalCon">
+    <navigator open-type="navigate" class="position_1" url="/pages/dianzhen2/dianzhen2" >
+      <image class="channalPic" src="/static/images/zhenjiu.png"></image>
+      <view class="channalText">电针治疗</view>
+    </navigator>
+
+    <navigator open-type="navigate" class="position_1" url="/pages/doctorLogin/doctorLogin" >
+      <image class="channalPic" src="/static/images/kaifang.png"></image>
+      <view class="channalText">掌上开方</view>
+    </navigator>
+
+    <navigator open-type="navigate" class="position_1" url="/pages/zizhen/zizhen" >
+      <image class="channalPic" src="/static/images/zizhen.png"></image>
+      <view class="channalText">健康自诊</view>
+    </navigator>
+
+   
+
+  </view>
+</scroll-view>
+
+
+
+
+
+
+

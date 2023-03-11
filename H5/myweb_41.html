@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	<style>
+		body{
+			height: 600px;
+			width: 1024;
+		}
+	</style>
+	</head>
+	<body>
+		
+		键盘处理事件
+		鼠标事件
+		
+	</body>
+	
+	<script>
+		
+		var div_1=document.createElement("div");
+		div_1.id="div_1";
+		div_1.style.position="absolute";
+		div_1.style.top="200px";
+		div_1.style.left="200px";
+		div_1.style.width="100px";
+		div_1.style.height="100px";
+		div_1.style.backgroundColor="red";
+		div_1.style.borderRadius="50%";
+		document.body.appendChild(div_1);
+		
+		//两种都可以,绑定键盘事件
+		document.body.onkeydown=KeyEvent;//不加括号
+		//document.body.addEventListener("keydown".KeyEvent);
+		//绑定鼠标事件
+		document.body.onmousedown=mouseDownEvent;
+		function mouseDownEvent(e){
+			var mouseEvent=window.event||e;
+			div_1.style.left=mouseEvent.x+"px";
+			div_1.style.top=mouseEvent.y+"px";
+		}
+		//根据鼠标实时移动
+		// document.body.addEventListener("mousemove",function(e){
+		// 	var mouseEvent=window.event||e;
+		// 	div_1.style.left=mouseEvent.x+"px";
+		// 	div_1.style.top=mouseEvent.y+"px";
+		// }
+		// )
+		
+		//要有形参e，不然得不到事件
+		function KeyEvent(e){
+			//这样写事件为event或e都可以运行
+			var myEvent=window.event||e;//兼容性写法
+			var keyCode=myEvent.keyCode||myEvent.which;//兼容性写法
+			
+			console.log(keyCode);
+			if(keyCode==37){
+				div_1.style.left=parseInt(div_1.style.left)-1+"px";
+			}
+			if(keyCode==38){
+				div_1.style.top=parseInt(div_1.style.top)-1+"px";
+			}
+			if(keyCode==39){
+				div_1.style.left=parseInt(div_1.style.left)+1+"px";
+			}
+			if(keyCode==40){
+				div_1.style.top=parseInt(div_1.style.top)+1+"px";
+			}
+			if(keyCode==69){
+				div_1.style.left=parseInt(div_1.style.left)+1+"px";
+				div_1.style.top=parseInt(div_1.style.top)-1+"px";
+			}
+		}
+		
+		
+	</script>
+	
+</html>

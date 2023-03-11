@@ -1,0 +1,14 @@
+<!--pages/demo05/camera/camera.wxml-->
+<view class='container'>
+  <include src='../../common/head.wxml' />
+  <view class='page-body'>
+    <view class='title'>5. 媒体组件video的简单应用</view>
+    <view class='demo-box'>
+      <view class='title'>开启相机</view>
+      <camera device-position="back" flash="off" style="width: 100%; height: 300px;"></camera>
+      <button type="primary" bindtap="takePhoto">拍照</button>
+      <image wx:if="{{src}}" mode="widthFix" src="{{src}}"></image>
+    </view>
+  </view>
+  <include src='../../common/foot.wxml' />
+</view>

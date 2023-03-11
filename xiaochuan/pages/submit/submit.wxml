@@ -1,0 +1,31 @@
+<!--pages/submit/submit.wxml-->
+<view class="mainclass">
+  <text>您的体质类型：</text>
+  <text class="hb">{{text.typeList}}</text>
+  <block wx:for="{{text.assessmentMap}}">
+    <text class="hb">{{item.type}}</text>
+    <text class="description" decode="{{true}}">&nbsp;&nbsp;&nbsp;&nbsp;{{item.typeDescription}}</text>
+    <text>饮食推荐：</text>
+    <text class="description" decode="{{true}}">&nbsp;&nbsp;&nbsp;&nbsp;{{item.dietRecommendation}}</text>
+    <text>药膳推荐：</text>
+    <text class="description" decode="{{true}}">&nbsp;&nbsp;&nbsp;&nbsp;{{item.medicinalDishes}}</text>
+    <text>起居养生：</text>
+    <text class="description" decode="{{true}}">&nbsp;&nbsp;&nbsp;&nbsp;{{item.dailyHealth}}</text>
+    <text>运动养生：</text>
+    <text class="description" decode="{{true}}">&nbsp;&nbsp;&nbsp;&nbsp;{{item.sport}}</text>
+    <text>生活习惯：</text>
+    <text class="description" decode="{{true}}">&nbsp;&nbsp;&nbsp;&nbsp;{{item.lifeHabbit}}</text>
+  </block>
+
+</view>
+<!--标题-->
+
+<view class="title">
+
+{{chartTitle}}
+
+</view>
+
+<!--绘制canvas-->
+
+<canvas canvas-id="columnCanvas" class="canvas" bindtouchstart="touchHandler"></canvas>

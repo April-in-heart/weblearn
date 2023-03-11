@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		<div id="div_1">div_1 <a href="##">a</a>
+			<div id="div_11">div_11
+				<div id="div_111">div_111_text</div>				
+				<div id="div_112">div_112</div>				
+			</div>
+			<div id="div_12">div_12
+				<div id="div_121">div_121_text</div>				
+				<div id="div_122">div_122
+					<div id="div_1221">div_1221</div>
+				</div>			
+			</div>
+		</div>
+		<script>
+			
+			function showAllDiv(){
+				var div_1=document.childNodes[1].childNodes[2].childNodes[1]
+				.childNodes[0].nodeValue;
+				var div_11=document.childNodes[1].childNodes[2].childNodes[1]
+				.childNodes[3].childNodes[0].nodeValue;
+				var div_111=document.childNodes[1].childNodes[2].childNodes[1]
+				.childNodes[3].childNodes[1].childNodes[0].nodeValue;
+				var div_112=document.childNodes[1].childNodes[2].childNodes[1]
+				.childNodes[3].childNodes[3].childNodes[0].nodeValue;
+				var div_12=document.childNodes[1].childNodes[2].childNodes[1]
+				.childNodes[5].childNodes[0].nodeValue;
+				var div_121=document.childNodes[1].childNodes[2].childNodes[1]
+				.childNodes[5].childNodes[1].childNodes[0].nodeValue;
+				var div_122=document.childNodes[1].childNodes[2].childNodes[1]
+				.childNodes[5].childNodes[3].childNodes[0].nodeValue;
+				var div_1221=document.childNodes[1].childNodes[2].childNodes[1]
+				.childNodes[5].childNodes[3].childNodes[1].childNodes[0].nodeValue;
+				var AllDiv=[div_1,div_11,div_111,div_112,div_12,div_121,div_122,div_1221];
+				return AllDiv;
+			}
+			console.log(showAllDiv());
+			// //div_1
+			// console.log(document.childNodes[1].childNodes[2].childNodes[1]
+			// .childNodes[0].nodeValue);
+			// //div_11
+			// console.log(document.childNodes[1].childNodes[2].childNodes[1]
+			// .childNodes[3].childNodes[0].nodeValue);
+			// //div_111
+			// console.log(document.childNodes[1].childNodes[2].childNodes[1]
+			// .childNodes[3].childNodes[1].childNodes[0].nodeValue);
+			// //div_112
+			// console.log(document.childNodes[1].childNodes[2].childNodes[1]
+			// .childNodes[3].childNodes[3].childNodes[0].nodeValue);
+			// //div_12
+			// console.log(document.childNodes[1].childNodes[2].childNodes[1]
+			// .childNodes[5].childNodes[0].nodeValue);
+			// //div_121
+			// console.log(document.childNodes[1].childNodes[2].childNodes[1]
+			// .childNodes[5].childNodes[1].childNodes[0].nodeValue);
+			// //div_122
+			// console.log(document.childNodes[1].childNodes[2].childNodes[1]
+			// .childNodes[5].childNodes[3].childNodes[0].nodeValue);
+			// //div_1221
+			// console.log(document.childNodes[1].childNodes[2].childNodes[1]
+			// .childNodes[5].childNodes[3].childNodes[1].childNodes[0].nodeValue);
+			
+		</script>
+	</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		<div id="div_1">div_1 <a href="##">a</a>
+			<div id="div_11">div_11
+				<div id="div_111">div_111_text</div>				
+				<div id="div_112">div_112</div>				
+			</div>
+			<div id="div_12">div_12
+				<div id="div_121">div_121_text</div>				
+				<div id="div_122">div_122
+					<div id="div_1221">div_1221</div>
+				</div>			
+			</div>
+		</div>
+		<script>
+			
+			//输出div_1221的值
+			console.log(document.childNodes[1].childNodes[2].childNodes[1]
+			.childNodes[5].childNodes[3].childNodes[1].childNodes[0].nodeValue);
+			
+		</script>
+		
+	</body>
+</html>

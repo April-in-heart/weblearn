@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>form表单事件</title>
+</head>
+<body>
+    <form name="form1" method="get" onsubmit="submitHandle">
+        <input type="text">
+        <button id="btn1" type="reset">重置</button>
+        <button>提交</button>
+    </form>
+    <script>
+        var form1=document.querySelector("form");
+        var resetbtn=document.querySelector("#btn1");
+        resetbtn.onclick=function(){
+            form1.reset();
+            console.log("reset")
+        }
+        function submitHandle(){
+            console.log("提交")
+        }
+    </script>
+</body>
+</html>

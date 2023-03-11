@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		
+		<!-- 1：函数名为mySort(),带一个数组形参，按由大到小的顺序排
+		2：排完后，返回最大值 -->
+		
+		<script>
+			var array=new Array(7,3,1,2,9)
+			function mySort(array){
+				console.log(arguments); //arguments:参数，是一个数组，
+				//通过它得到长度，for循环处理,arguments是调用时的数据组成的数组
+				console.log(array)
+			for(let j=0;j<array.length;j++)
+				for (let i = 0; i < array.length; i++) {
+					if(array[i]<array[i+1]){
+						var t=array[i]
+						array[i]=array[i+1]
+						array[i+1]=t
+					}
+				}
+				return array[0];
+			}
+			console.log(mySort(array));
+		</script>
+	</body>
+</html>

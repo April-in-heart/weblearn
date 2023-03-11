@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		
+		<canvas id="canvas_1"></canvas>
+		
+		<script>
+			var canvas_1=document.getElementById("canvas_1");
+			canvas_1.width=600;
+			canvas_1.height=500;
+			var ctx=canvas_1.getContext("2d");
+			function randomDrawRectangle(){
+				var x=parseInt(Math.random()*550);
+				var y=parseInt(Math.random()*350);
+				var color_1=parseInt(Math.random()*255);
+				var color_2=parseInt(Math.random()*255);
+				var color_3=parseInt(Math.random()*255);
+				var color="rgb("+color_1+","+color_2+","+color_3+")";
+				ctx.beginPath();
+				ctx.lineWidth=1;
+				ctx.fillStyle=color;
+				ctx.strokeStyle=color;
+				ctx.rect(x,y,50,50);
+				ctx.stroke();
+				ctx.fill();
+				ctx.closePath();
+				window.setTimeout(randomDrawRectangle,100);
+			}
+			randomDrawRectangle();
+		</script>
+		
+	</body>
+</html>

@@ -1,0 +1,126 @@
+/* pages/wen/wen.wxss */
+.wen-box {
+  overflow-x: hidden;
+}
+
+
+.wen-box-txt {
+  display: flex;
+  width: 90%;
+  margin: 20rpx 5%;
+  font-size: 26rpx;
+  align-items: center;
+  margin-top: 20rpx;
+}
+.wen-box-txt-line {
+  width: 8rpx;
+  height: 40rpx;
+  background-color: #2089dc;
+  margin-right: 30rpx;
+}
+.wen-box-txt-cicel {
+  width: 15rpx;
+  height: 15rpx;
+  border-radius: 100%;
+  margin:0 10rpx 0 30rpx;
+}
+.sym-box {
+  display: flex;
+  flex-direction: row;
+  white-space: nowrap;
+  width: 100%;
+}
+.sym-box-back {
+  display: inline-block;
+  padding: 10rpx 6rpx 10rpx 25rpx;
+  border-radius: 10rpx;
+  font-size: 25rpx;
+  color: white;
+  margin-left: 30rpx;
+  margin-bottom: 20rpx;
+}
+.option-con {
+  display: flex;
+  height: 70vh;
+  margin-top: 40rpx;
+  margin-bottom: 10rpx;
+}
+.option-con-left {
+  width: 30%;
+  height: 100%;
+  border-right: 1px solid #f3f3f3;
+}
+.option-con-right {
+  width:70%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.option-con-right-txt {
+  border-bottom: 1px solid #f3f3f3;
+  font-size: 27rpx;
+  padding: 20rpx;
+}
+.option-con-left-txt {
+  border-bottom: 1px solid #f3f3f3;
+  text-align: center;
+  font-size: 27rpx;
+  padding: 25rpx;
+}
+.option-con-left-txted {
+  border-bottom: 1px solid #f3f3f3;
+  text-align: center;
+  font-size: 27rpx;
+  padding: 25rpx;
+  background-color: #2089dc;
+  color: white;
+}
+.submit-btn {
+   width: 100%;
+   height: 8vh;
+   background-color: #2089dc;
+   position: fixed;
+   bottom: 0;
+   color: white;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   z-index: 1;
+}
+
+image{
+  width: 40rpx;
+  height: 40rpx;
+  position: absolute;
+  right: 20rpx;
+}
+.degree-selection-over {
+  height: 92vh;
+  width: 100%;
+  background-color: #f3f3f3;
+  opacity: 0.5;
+  position: fixed;
+  bottom: 8vh;
+}
+.degree-selection {
+  height: 20vh;
+  width: 100%;
+  background-color: white;
+  position: fixed;
+  bottom: 8vh;
+  text-align: center;
+  font-size: 32rpx;
+  z-index: 99;
+}
+.degree-selection image{
+  width: 60rpx;
+  height: 60rpx;
+  float: right;
+}
+.degree-selection-back {
+  display: inline-block;
+  padding: 15rpx 25rpx;
+  border-radius: 10rpx;
+  font-size: 25rpx;
+  color: white;
+}

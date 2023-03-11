@@ -1,0 +1,40 @@
+{
+	"pages": [ //pages数组中第一项表示应用启动页，参考：https://uniapp.dcloud.io/collocation/pages
+		{
+			"path": "pages/index/home",
+			"style": {
+				"navigationBarTitleText": "打印机"
+			}
+		},
+		{
+			"path": "pages/index/Bluetooth",
+			"style": {
+				"navigationBarTitleText": "蓝牙连接"
+			}
+		},
+		{
+			"path": "pages/index/esc_page",
+			"style": {
+				"navigationBarTitleText": "ESC小票打印"
+			}
+		},
+		{
+			"path": "pages/index/tsc_page",
+			"style": {
+				"navigationBarTitleText": "TSC标签打印"
+			}
+		},
+		{
+			"path": "pages/index/cpcl_page",
+			"style": {
+				"navigationBarTitleText": "CPCL 面单打印"
+			}
+		}
+	],
+	"globalStyle": {
+		"navigationBarTextStyle": "black",
+		"navigationBarTitleText": "uni-app",
+		"navigationBarBackgroundColor": "#F8F8F8",
+		"backgroundColor": "#F8F8F8"
+	}
+}

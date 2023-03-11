@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>多点画图</title>
+	</head>
+	<body>
+		
+	</body>
+	<script>
+		function drawPoint(ctx,x,y){
+			ctx.beginPath();
+			ctx.lineWidth=1;
+			ctx.strokeStyle="#ff0000";
+			ctx.moveTo(x,y);
+			ctx.lineTo(x+1,y+1);
+			ctx.closePath();
+			ctx.stroke();
+		}
+		function createCtx(id,width,height){
+			var canvas=document.createElement("canvas");
+			canvas.id=id;
+			canvas.width=width;
+			canvas.height=height;
+			canvas.style.position="absolute";
+			canvas.style.top="1px";
+			canvas.style.backgroundColor="lightblue"
+			canvas.style.left="1px";
+			canvas.style.border="solid 1px #ff0000";
+			document.body.appendChild(canvas);
+			var ctx=canvas.getContext("2d");
+			return ctx;
+		}
+		var ctx=createCtx("canvas_1",600,400);
+		
+		var objcanvas_1=document.getElementById("canvas_1");
+		var mouseDown=false;
+		objcanvas_1.addEventListener(
+			'mousedown',
+			function(evt){
+				mouseDown=true;
+			}
+		)
+		objcanvas_1.addEventListener(
+			'mouseup',
+			function(evt){
+				mouseDown=false;
+			}
+		)
+		objcanvas_1.addEventListener(
+			'mousemove',
+			function(evt){
+				//可以加一个oldx,y与x,y对比，太大了在两点之间连线
+				x=evt.layerX;
+				y=evt.layerY;//x，y坐标
+				if(mouseDown){
+					drawPoint(ctx,x,y);
+				}
+			}
+		)
+		
+	</script>
+</html>

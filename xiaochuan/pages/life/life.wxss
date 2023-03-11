@@ -1,0 +1,158 @@
+/* pages/life.wxss */
+.lifebox{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.topback{
+  width: 100%;
+  height: 6vh;
+  background-color:  #3399cc;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-size: 35rpx;
+}
+.messbox{
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  margin-top: 50rpx;
+  align-items: center;
+  justify-content: center;
+  font-size: 28rpx;
+}
+.inputbox{
+  width: 60%;
+  border: rgb(232, 231, 231) 1px solid;
+  border-radius: 15rpx;
+  padding-left: 15rpx;
+  padding-right: 10rpx;
+  font-size: 28rpx;
+  box-shadow: 1px 1px 1px  #e4e4e3;
+}
+.radiogroup{
+  width: 63%;
+  padding-left: 10rpx;
+}
+.radi{
+  margin-left: 30rpx;
+}
+/*radio未选中时样式 */ 
+radio .wx-radio-input {
+  width: 20rpx;
+  height: 20rpx;
+}
+
+
+/* 选中后的 背景样式 */
+radio .wx-radio-input.wx-radio-input-checked {
+  border-color: #25A96D!important;
+  background-color: #fff!important;
+  width: 20rpx;
+  height: 20rpx;
+}
+
+/* 选中后的 对勾样式  */
+radio .wx-radio-input.wx-radio-input-checked::before {
+  /* 去除对号 */
+  content: ''; 
+  width: 20rpx;
+  height: 20rpx;
+  border-radius: 50%;
+  background-color: #25A96D;
+
+}
+.txt{
+  width: 20%;
+}
+.txt_hint{
+  color:red;
+  font-size:25rpx;
+  margin-top:40rpx;
+  align-self: flex-start;
+  margin-left: 75rpx;
+}
+  
+.invisible_model{
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  bottom: 0;
+  }
+  
+.model {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 100;
+  }
+  
+  .input-box {
+  height: 40%;
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  padding: 30rpx;
+  padding-bottom: 130rpx;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 101;
+  }
+  .option_box{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    font-size: 25rpx;
+    margin-bottom: 20rpx;
+  }
+  .btn_option{
+    margin-top: 20rpx;
+    align-self: center;
+    border: 1px solid gainsboro;
+    background-color: white;
+    font-size: 28rpx;
+    color:#515151 ;
+    font-weight: normal;
+    padding-top: 15rpx;
+    padding-bottom: 15rpx;
+  }
+  .btn_optioned{
+    margin-top: 20rpx;
+    align-self: center;
+    border: 1px solid gainsboro;
+    background-color: #3399cc;
+    font-size: 28rpx;
+    color:white ;
+    font-weight: normal;
+    padding-top: 15rpx;
+    padding-bottom: 15rpx;
+    
+  }
+  .btn_save{
+    background-color: #3399cc;
+    margin-top: 60rpx;
+    margin-bottom: 60rpx;
+    color: white;
+    font-size: 30rpx;
+    font-weight: normal;
+  }
+.lastbox{
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+.checkb{
+  margin:40rpx 30rpx 0 0;
+  font-size: 25rpx;
+}

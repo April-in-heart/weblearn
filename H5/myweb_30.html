@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		<!-- ifram可以在一个页面同时打开多窗口 -->
+		<iframe id="iframe_1" width="300px" height="200px"></iframe>
+		<iframe id="iframe_2" width="300px" height="200px"></iframe>
+		<script>
+			
+			var objifram_1=window.document.getElementById("iframe_1");
+			objifram_1.src="https://www.baidu.com";
+			objifram_1.src="myweb_4.html";
+			//实际开发过程中  推荐 尽量用getElementById，少用frames[]
+			//改变frames_2的链接
+			window.frames[1].location="https://www.baidu.com";
+			
+			//学习window的open方法，了解过去与现在
+			var newwindow=window.open("myweb_4.html");//open会被拦截,需要用户允许才能打开新窗口
+			
+			
+			
+		</script>
+		
+	</body>
+</html>

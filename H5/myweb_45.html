@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		必考题
+		callback 回调  执行完再执行另一个函数</br>
+		把函数作为参数传入到另一个函数中，这个函数就是所谓的回调函数。
+		<script>
+			//先传入mike执行完后再执行show()方法
+			//show里面的参数就是main方法返回的数据rose
+			main("mike",show);
+			function main(name,mycallback){
+				console.log(name);
+				if(typeof mycallback=="function"){
+					mycallback("rose");
+					//show("rose");  
+				}
+				else{
+					console.log("传入的参数不是一个方法");
+				}
+			}
+			function show(name){
+				console.log(name);
+			}
+			
+			
+			
+		</script>
+		
+	</body>
+</html>

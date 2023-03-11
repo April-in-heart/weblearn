@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		<form>
+			<!-- 日期 -->
+			<input type="date" id="date" name="date" value="" />
+			<!-- 时间 -->
+			<input type="time" id="time" name="time" value="" /><br>
+			<span id="date1"></span>
+			<span id="time1"></span><br>
+			<!-- 拾色器 -->
+			<input type="color" id="color" name="color" value="" /><br>
+			<span id="color1"></span>
+			
+		</form>
+	</body>
+	<script>
+		var date=document.getElementById("date");
+		var time=document.getElementById("time");
+		var color=document.getElementById("color");
+		date.addEventListener("change",
+			function(){
+				var obj_time=document.getElementById("date1");
+				obj_time.innerHTML=date.value;
+			}
+		);
+		time.addEventListener("change",
+			function(){
+				var obj_time1=document.getElementById("time1");
+				obj_time1.innerHTML=time.value;
+			}
+		);
+		color.addEventListener("change",
+			function(){
+				var obj_color=document.getElementById("color1");
+				obj_color.innerHTML=color.value;
+			}
+		);
+	</script>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>闭包</title>
+</head>
+
+<body>
+    <div></div>
+    <script>
+
+        // 通过局部变量无法实现累加
+
+        // function add(){
+        //   var num= 100; // 这里改为局部变量;      
+        //    alert(num++); 
+        // };
+        // add();add();add();
+
+
+        // 通过闭包实现局部变量的累加
+
+        function add() {
+            var num = 100; // 这里改为局部变量;
+            return function() {
+                num++;
+                console.log(num);
+            }
+        };
+        console.log(add());//返回aso这个函数和里面的声明
+
+        // add()();add()();add()();//这种调用方式会出错,因为每次调用 num都会初始化一次变为100
+        var fn = add()//只在这里初始化一次，后边调用的时候执行的是里边的匿名函数
+        fn(); fn(); fn();
+        fn = null //应及时解除引用，否则会占用更多内存
+    </script>
+</body>
+
+</html>

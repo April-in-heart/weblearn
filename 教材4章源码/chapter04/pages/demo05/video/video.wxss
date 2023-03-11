@@ -1,0 +1,8 @@
+/* pages/demo05/video/video.wxss */
+video{
+  width: 100%;
+}
+input{
+  border: 1rpx solid lightblue;
+  height: 90rpx;
+}

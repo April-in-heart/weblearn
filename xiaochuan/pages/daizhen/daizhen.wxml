@@ -1,0 +1,23 @@
+<!--pages/myscheme.wxml-->
+<view class="myschemebox">
+   <view class="top">
+      <text>待诊列表</text>
+   </view>
+   <view style="display:flex;width:100%;margin-top:2%"> 
+    <button style="display:flex; margin-right:5%;font-size:25rpx" bindtap="history">历史开方</button>
+   </view>
+  
+    <view class="scheme" wx:for="{{daizhenlist}}" wx:key="index">
+        <view class="detailbox1">
+            <text>姓名：{{item.name}}</text>
+            <text>年龄：{{item.age}}</text>
+            <text>手机：{{item.phone}}</text>
+            <text>自诊时间：{{item.createTime}}</text>
+        </view>
+        <view class="detailbox2">
+            <button class="btn" style="width:100rpx" data-id="{{item.id}}" bindtap="selectmys">自诊信息</button>
+            <button class="btn" style="width:100rpx;background-color:red; margin-top: 20rpx;"  data-id="{{item.id}}" bindtap="kaifang">在线开方</button>
+        </view>
+        <view class="detailbox"></view>
+     </view>
+</view>

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>定时器</title>
+</head>
+
+<body>
+    <div></div>
+    <script>
+        var name = "iwen";
+        var bob = {
+            name: "bob",
+            getName: function () {
+                var that = this;
+                setTimeout(function () {
+                    console.log("定时器1里方法this")
+                    console.log(this)//window
+                    console.log("定时器1里方法that")
+                    console.log(that);//bob
+                }, 1000);
+            }
+        }
+
+
+        var bob1 = {
+            name: "bob1",
+            getName: function () {
+                var that = this;
+                var timer=setTimeout(slg, 2000);
+                console.log("settimeout后timer的值"+timer);//第一个参数可为方法名
+                clearTimeout(timer);
+                console.log("清理后timer的值"+timer);//第一个参数可为方法名
+            }
+        }
+        function slg() {
+            console.log("哈哈哈");
+        }
+
+
+        var bob2 = {
+            name: "bob2",
+            getName: function () {
+                setTimeout(console.log(this), console.log(this.name), 1000);//bob2对象和bob2
+            }
+        }
+        bob.getName();
+        bob1.getName();
+        bob2.getName();
+
+
+        // 说明了一个问题：定时器内用了方法，方法里的this指向window。而不用方法只用一段代码时用this会返回当前对象
+        // 说明对象内部方法的this指向调用这些方法的对象，也就是谁调用就指向谁
+        // 多层嵌套的对象，内部方法的this指向离被调用函数最近的对象,setTimeout是window的对象
+        // setTimeout函数是Window对象提供的方法，因此this默认指向window
+
+        var bob3 = {
+            name: "bob3",
+            getName: function () {
+                setInterval(function () {
+                    console.log("bob3里的setinterval");
+                    console.log(this)
+                }, 1000);//bob3对象
+            }
+        }
+        bob3.getName();
+
+    </script>
+</body>
+
+</html>

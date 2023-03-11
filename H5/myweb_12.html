@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		
+		<view>
+			<!-- div_3就是其innerHTML -->
+			<span id="div_3">div_3</span>
+			<span id="div_2">div_2</span>
+			<span id="div_1">div_1</span>
+		</view>
+		
+		<script>
+			var objdiv_1=document.getElementById("div_1");
+			var objdiv_2=document.getElementById("div_2");
+			var objdiv_3=document.getElementById("div_3");
+			//innerHTML使objdiv_1带html效果
+			objdiv_1.innerHTML="<font color='royalblue'>change color</font>";
+			//objdiv_1.innerText="<font color='royalblue'>change color</font>";
+			//innerText使objdiv_1原样显示
+			
+			//连续定时执行方法
+			objdiv_3.innerHTML=24;
+			objdiv_2.innerHTML=60;
+			objdiv_1.innerHTML=60;
+			
+			function clock3(){
+				objdiv_3.innerHTML=parseInt(objdiv_3.innerHTML)-1;
+				if(parseInt(objdiv_1.innerHTML)>0){
+				window.setTimeout(clock3,3481000);//定时器，单位为ms,间隔59*59s执行一次方法
+				//window.setTimeout是前面一堆程序执行成功之后才执行
+				//window.setInterval不管前面执行是否成功都会执行
+				}
+				else{
+					objdiv_3.innerHTML=24;
+					clock3();
+				}
+			}
+			clock3();
+			function clock2(){
+				objdiv_2.innerHTML=parseInt(objdiv_2.innerHTML)-1;
+				if(parseInt(objdiv_2.innerHTML)>0){
+				window.setTimeout(clock2,59000);//定时器，执行里面的方法，
+				//单位为ms,间隔59s执行一次方法
+				//window.setTimeout是前面一堆程序执行成功之后才执行
+				//window.setInterval不管前面执行是否成功都会执行
+				}
+				else{
+					objdiv_2.innerHTML=60;
+					clock2();
+				}
+			}
+			clock2();
+			function clock1(){
+				objdiv_1.innerHTML=parseInt(objdiv_1.innerHTML)-1;
+				if(parseInt(objdiv_1.innerHTML)>0){
+				window.setTimeout(clock1,1000);//定时器，单位为ms,间隔1000ms执行一次方法
+				//window.setTimeout是前面一堆程序执行成功之后才执行
+				//window.setInterval不管前面执行是否成功都会执行
+				}
+				else{
+					objdiv_1.innerHTML=60;
+					clock1();
+				}
+			}
+			clock1();
+			
+			//测试数组作用域
+			var array_1=new Array;
+			p(array_1);
+			//如果不在外部定义全局变量array_1就是错误写法，
+			//因为array_1只在函数里定义过，函数外无法使用
+			function p(array){
+				//var array_1=array; //可以不用再函数里再次定义array_1
+				array_1=[97,98];
+				console.log(array_1[0]);
+			}
+			p();
+			
+			//趣味题
+			var gun=0;
+			console.log("ak47()||_98k()",ak47()||_98k());
+			console.log("_98k()||ak47()",_98k()||ak47());
+			//_98k()返回false则输出ak47()方法，同样输出
+			//i have ak47,返回true
+			console.log("i have "+gun+" guns");//gun=3
+			
+			function ak47(){
+				console.log("i have ak47");
+				gun++;
+				return true;
+			}
+			function _98k(){
+				console.log("i have 98k");
+				gun++;
+				return false;
+			}
+			
+			
+		</script>
+		
+		
+	</body>
+</html>

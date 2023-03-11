@@ -1,0 +1,33 @@
+<!--pages/qie/qie.wxml-->
+<view class="qie-box">
+	<view class="qie-box-title">
+		<view class="wen-box-txt-line"></view>
+		<rich-text nodes="{{title}}"></rich-text>
+		<text class="num-right">{{mainum}}次/分钟</text>
+	</view>
+	<text class="txt">60-80为正常状态</text>
+	<text class="qie-num">{{mainum}}</text>
+	<view class="wen-box-search">
+		<input bindinput="getnumber" placeholder="请输入您的脉搏跳动数" placeholder-style="font-size:25rpx"></input>
+	</view>
+	<text style="color:#2089dc;margin-left:20rpx">脉象</text>
+	<text class="qie-maix">两侧：{{bothlist}}左：{{leftlist}}右：{{rightlist}}</text>
+	<view class="mai-btn">
+		<view class="mai-btn-c" bindtap="cleardata">清空</view>
+		<view class="mai-btn-c"  bindtap="suredata">确认</view>
+	</view>
+	<view class="{{twoisSelect?'title-box-txted':'title-box-txt'}}" data-va="bi" bindtap="changetitle" data-currentlist="bothmailist" id="twoisSelect" style="margin-left:5%;border-bottom-left-radius: 15rpx; border-top-left-radius: 15rpx;border-right:none">两侧</view>
+	<view class="{{leftisSelect?'title-box-txted':'title-box-txt'}}" data-va="li" bindtap="changetitle" data-currentlist="leftmailist" id="leftisSelect">左</view>
+	<view class="{{rightisSelect?'title-box-txted':'title-box-txt'}}" data-va="ri" id="rightisSelect" data-currentlist="rightmailist" bindtap="changetitle" style="border-bottom-right-radius: 15rpx; border-top-right-radius: 15rpx;border-left:none"> 右</view>
+	<view class="list-box">
+		<view wx:for="{{mailist}}" wx:key="index" wx:for-index="id" class="mai-list-box">
+			<view class="list-left-box" style="background-color:{{item.isoption?'#2089dc':'white'}}" id="{{id}}" bindtap="getMId">{{item.name}}</view>
+			<view class="list-right-box">
+				<view id="cun" data-index="{{id}}" bindtap="getCGC" style="background-color:{{item.cun?'#2089dc':'#f3f3f3'}};height:33%;border-bottom:1px solid #2089dc">寸</view>
+				<view id="guan" data-index="{{id}}" bindtap="getCGC" style="background-color:{{item.guan?'#2089dc':'#f3f3f3'}};height:33%;border-bottom:1px solid #2089dc">关</view>
+				<view id="chi" data-index="{{id}}" bindtap="getCGC" style="background-color:{{item.chi?'#2089dc':'#f3f3f3'}}">尺</view>
+			</view>
+		</view>
+	</view>
+	<view class="submit-btn" bindtap="submit"> 完成</view>
+</view>

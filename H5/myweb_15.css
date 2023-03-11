@@ -1,0 +1,10 @@
+#div_2{
+	position: relative;
+	float:left;
+	/* border：边框 */
+	border: solid 1px blue;
+	width: 300px;
+	height: 100px;
+	margin: 50px 50px 30px 1px;/*外边距,上右下左*/
+	text-align: center;/* align:对齐 文字居中 */
+	}

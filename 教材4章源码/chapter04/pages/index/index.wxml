@@ -1,0 +1,55 @@
+<!--pages/index.wxml-->
+<view class='container'>
+  <include src="../common/head.wxml" />
+  <view class='page-body'>
+    <view class='demo-box'>
+      <view class='title'>1. 视图容器</view>
+      <navigator url='/pages/demo01/view/view'>view</navigator>
+      <navigator url='/pages/demo01/scroll-view/scroll-view'>scroll-view</navigator>
+      <navigator url='/pages/demo01/swiper/swiper'>swiper</navigator>
+      <navigator url='/pages/demo01/movable-view/movable-view'>movable-view</navigator>
+      <navigator url='/pages/demo01/cover-view/cover-view'>cover-view</navigator>
+    </view>
+    <view class='demo-box'>
+      <view class='title'>2. 基础组件</view>
+      <navigator url='/pages/demo02/icon/icon'>icon</navigator>
+      <navigator url='/pages/demo02/text/text'>text</navigator>
+      <navigator url='/pages/demo02/rich-text/rich-text'>rich-text</navigator>
+      <navigator url='/pages/demo02/progress/progress'>progress</navigator>
+    </view>
+    <view class='demo-box'>
+      <view class='title'>3. 表单组件</view>
+      <navigator url='/pages/demo03/button/button'>button</navigator>
+      <navigator url='/pages/demo03/checkbox/checkbox'>checkbox</navigator>
+      <navigator url='/pages/demo03/input/input'>input</navigator>
+      <navigator url='/pages/demo03/label/label'>label</navigator>
+      <navigator url='/pages/demo03/form/form'>form</navigator>
+      <navigator url='/pages/demo03/picker/picker'>picker</navigator>
+      <navigator url='/pages/demo03/picker-view/picker-view'>picker-view</navigator>
+      <navigator url='/pages/demo03/radio/radio'>radio</navigator>
+      <navigator url='/pages/demo03/slider/slider'>slider</navigator>
+      <navigator url='/pages/demo03/switch/switch'>switch</navigator>
+      <navigator url='/pages/demo03/textarea/textarea'>textarea</navigator>
+    </view>
+    <view class='demo-box'>
+      <view class='title'>4. 导航组件</view>
+      <navigator url='/pages/demo04/navigator/navigator'>navigator</navigator>
+    </view>
+    <view class='demo-box'>
+      <view class='title'>5. 媒体组件</view>
+      <navigator url='/pages/demo05/audio/audio'>audio</navigator>
+      <navigator url='/pages/demo05/image/image'>image</navigator>
+      <navigator url='/pages/demo05/video/video'>video</navigator>
+      <navigator url='/pages/demo05/camera/camera'>camera</navigator>
+    </view>
+    <view class='demo-box'>
+      <view class='title'>6. 地图组件</view>
+      <navigator url='/pages/demo06/map/map'>map</navigator>
+    </view>
+    <view class='demo-box'>
+      <view class='title'>7. 画布组件</view>
+      <navigator url='/pages/demo07/canvas/canvas'>canvas</navigator>
+    </view>
+  </view>
+  <include src="../common/foot.wxml" />
+</view>

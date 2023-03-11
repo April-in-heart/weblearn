@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		
+		<!-- 定义div，id为div_1
+		定义名为ajax的函数，此函数带有一个形参可传入服务器端地址
+		得到结果后，将此结果写入到div中。 -->
+		<div id="div_1"></div>
+		<script>
+			
+			var xmlhttp=new XMLHttpRequest;
+			function ajax(a){
+				xmlhttp.open("GET",a);//不写false，默认为true：异步,
+				//不管执行成功与否都能继续执行下面的代码
+				//onreadystatechange：准备的事件发生改变事件
+				xmlhttp.onreadystatechange=handleStateChange;//异步
+				xmlhttp.send();
+			}
+			function handleStateChange(){
+				if(xmlhttp.readyState==4 && xmlhttp.status==200){
+					//status=200可以运行，404不能运行
+					document.getElementById("div_1").innerHTML
+					=xmlhttp.responseText;
+				}
+			}
+			ajax("ajax_39.php");
+		</script>
+		
+	</body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		
+		<!-- 定义两个div，id分别为div_1,div_2，内容为空。
+		定义一个button按钮，id为button_1。
+		给button添加两个click事件监听处理程序。
+		其中第一个事件处理程序修改div_1的内容为click。
+		其中第二个事件处理程序修改div_2的内容为click。 -->
+		
+		<script>
+			
+			// var div_1=document.createElement("div_1");
+			// div_1.id="div_1";
+			
+			// var div_2=document.createElement("div_2");
+			// div_2.id="div_2";
+			
+			// var button=document.createElement("button_1");
+			// dbutton_1.id="button_1";
+			function function_1(){
+				var div_1=document.getElementById("div_1").innerHTML="click"
+			}
+			function function_2(){
+				var div_2=document.getElementById("div_2").innerHTML="click"
+			}
+			
+		</script>
+		<div id="div_1"></div>
+		<div id="div_2"></div>
+		<button id="button_1" onclick="function_1();function_2()"></button>
+	</body>
+</html>

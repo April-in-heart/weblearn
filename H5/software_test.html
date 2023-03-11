@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		<form action="" method="post">
+			<span id="topic">两位整数加法计数器</span><br>
+			<label for="first">第一个数:</label>
+			<input type="text" id="first_number" name="first_name" value=""/><br>
+			<label for="second">第二个数:</label>
+			<input type="text" id="second_number" name="second_name" value=""/><br>
+			<label for="output">结果:</label>
+			<input type="text" id="output" name="output" value="" readonly="true"/><br>
+			<input type="button" id="sum" name="sum" value="计算" onclick="SUM()"/>
+			<input type="button" id="restart" name="restart" value="重置" onclick="RESTART()"/>
+			<input type="button" id="exit" name="exit" value="退出" onclick="EXIT()"/>
+		</form>
+		<script>
+			function SUM(){
+				var n_1=document.getElementById("first_number");
+				var n_2=document.getElementById("second_number");
+				if(n_1.value<-99 || n_1.value>99 || n_2.value<-99 || n_2.value>99){
+					alert("您输入的数据已经溢出！");
+				}
+				else if(parseInt(n_1.value)!=n_1.value||parseInt(n_2.value)!=n_2.value){
+					alert("您输入的数据不合法");
+				}else{				
+				var output=document.getElementById("output");
+				output.value=parseInt(n_1.value)+parseInt(n_2.value);
+				}
+			}
+			function RESTART(){
+				var n_1=document.getElementById("first_number");
+				var n_2=document.getElementById("second_number");
+				var output=document.getElementById("output");
+				output.value="";
+				n_1.value="";
+				n_2.value="";
+				}
+			function EXIT(){
+				document.body.innerHTML="";
+				var div_1=document.createElement("div");
+				div_1.innerHTML="已退出";
+				document.body.appendChild(div_1);
+				
+			}
+			
+		</script>
+	</body>
+</html>

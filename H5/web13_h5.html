@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		
+	</body>
+	
+	<script>
+		
+		var ctx=createCtx("canvas_1",600,400);
+		var ctx_2=createCtx("canvas_2",600,400);
+		
+		//乒乓球 方法二
+		function ppq_2(x_2,y_2,dir_2){
+			ctx_2.clearRect(0,0,600,400);//清除画布
+			ctx_2.beginPath();
+			ctx_2.strokeStyle="lavenderblush";
+			ctx_2.fillStyle="lavenderblush";
+			ctx_2.arc(x_2,y_2,6,0,2*Math.PI,true);
+			ctx_2.stroke();
+			ctx_2.fill();
+			//canvas正常方法实现
+			timer=requestAnimationFrame(
+			function (){
+				if(dir_2==1 && x_2<500){
+					x_2++;//dir=1向右
+				}else{
+					dir_2=2;//到了右边向左
+				}
+				if(dir_2==2 && x_2>=100){
+					x_2--;
+				}else{
+					dir_2=1;
+				}
+				ppq_2(x_2,y_2,dir_2);
+			}
+			)
+		}
+		ppq_2(100,100,1);
+		
+		//乒乓球 方法一
+		function ppq_1(){
+			ctx.clearRect(0,0,600,400);//清除画布
+			ctx.beginPath();
+			ctx.strokeStyle="chartreuse";
+			ctx.fillStyle="chartreuse";
+			ctx.arc(x,y,6,0,2*Math.PI,false);
+			ctx.stroke();
+			ctx.fill();
+			if(dir==1 && x<500){
+				x=x+1;//dir=1向右
+			}else{
+				dir=2;//到了右边向左
+			}
+			if(dir==2 && x>100){
+				x=x-1;
+			}else{
+				dir=1;
+			}
+		}
+		var x=100;
+		var y=200;
+		var dir=1;
+		//
+		function start(){
+			ppq_1();
+			window.setTimeout(start,16);//跟一秒刷新60次一样
+		}
+		start();
+		
+		function createCtx(id,width,height){
+			var canvas=document.createElement("canvas");
+			canvas.id=id;
+			canvas.width=width;
+			canvas.height=height;
+			canvas.style.position="absolute";
+			canvas.style.top="1px";
+			canvas.style.backgroundColor="mediumpurple"
+			canvas.style.left="1px";
+			canvas.style.border="solid 1px #ff0000";
+			document.body.appendChild(canvas);
+			var ctx=canvas.getContext("2d");
+			return ctx;
+		}
+		
+	</script>
+	
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		<script>
+			//先传入mike执行完后再执行show()方法
+			//show里面的参数就是main方法返回的数据rose
+			main(show);
+			function main(mycallback){
+				if(typeof mycallback=="function"){
+					mycallback("callback");
+					//show("rose");  
+				}
+				else{
+					console.log("传入的参数不是一个方法");
+				}
+			}
+			function show(name){
+				console.log(name); 
+			}
+			</script>
+	</body>
+</html>

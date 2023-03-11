@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>表单1</title>
+	</head>
+	<body>
+		<form>
+			<lable for="name">姓名:</lable>
+			<input type="text" id="name" name="name" value="" /><br>
+			<!-- 跟C#里的id和name差不多，id用于引用该属性，name用于表示属性名称 -->
+			<lable for="name">地址:</lable>
+			<input type="text" id="address" name="address" value="" /><br>
+			<!-- value属性为input元素设定值 -->
+			<lable for="name">性别:</lable>
+			<input type="radio" id="boy" name="gender" value="01" />男
+			<input type="radio" id="girl" name="gender" value="02" />女<br>
+			<!-- radio单选按钮 一组选择项id不能相同，但name要相同，表示一种控件，
+			value用来表示按钮的值 -->
+			<input type="submit" id="ok" name="ok" value="ok" /><br> 
+			<!-- submit把表单数据提交到web服务器，相当于刷新 -->
+		</form><!-- form为文本框，可以在里面输入数据 -->
+	</body>
+</html>

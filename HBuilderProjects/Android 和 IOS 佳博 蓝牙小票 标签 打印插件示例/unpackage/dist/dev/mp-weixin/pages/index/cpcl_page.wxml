@@ -1,0 +1,1 @@
+<view class="content"><view><button data-event-opts="{{[['tap',[['printerCpcl',['$event']]]]]}}" bindtap="__e">打印-CPCL 样板</button><button data-event-opts="{{[['tap',[['getHexString',['$event']]]]]}}" bindtap="__e">图片成生16进制字符串</button></view><text>{{tip}}</text></view>

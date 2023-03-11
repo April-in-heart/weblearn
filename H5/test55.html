@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		<!-- 定义div，id为div_1。
+		增加div对象的show方法，带一个形参。
+		在show方法中，将形参的值写到div中。 -->
+		<div id="div_1"></div>
+		<div id="div_2">1234</div>
+		<script>
+			var objDiv=document.getElementById("div_1");
+			var objDiv2=document.getElementById("div_2");
+			Object.prototype.show=function(name){
+				this.innerHTML=name;
+			}
+			objDiv.show('1234');
+		</script>
+	</body>
+<html>

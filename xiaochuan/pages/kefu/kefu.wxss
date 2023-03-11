@@ -1,0 +1,9 @@
+/* pages/kefu/kefu.wxss */
+.text{
+  font-size: 40rpx;
+  padding: 20rpx 20rpx;
+  color:#23435c; 
+  display:flex; 
+  justify-content: center;
+  
+}

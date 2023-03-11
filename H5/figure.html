@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		<!-- figure规定独立的流内容，被删除后对文件流不影响 -->
+		<figure>
+			<figcaption>五星红旗，我为你骄傲</figcaption>
+			<img src="wampthemes/classic/img/favicon.ico" title="1+1=2">
+		</figure>
+		
+		<!-- mark高亮显示 -->
+		<span>前部</span><mark>sdasdas</mark><span>后部</span><br>
+		<span>前部<mark>sdasdas</mark>后部</span><br>
+		
+		<!-- progress进度条 -->
+		<span>下载进度</span>
+		<progress value="30" max="100" id="password_1"></progress><br>
+		
+		<!-- meter与progress差不多 -->
+		<meter id="meter_1" value="1" min="0" max="20"></meter><br>
+		<meter id="meter_2" value="10" min="0" max="20"></meter><br>
+		
+		<ruby>
+			程<rp>(</rp><rt>cheng</rt><rp>)</rp>&nbsp;
+			序<rp>(</rp><rt>xu</rt><rp>)</rp>&nbsp;
+			设<rp>(</rp><rt>she</rt><rp>)</rp>&nbsp;
+			计<rp>(</rp><rt>ji</rt><rp>)</rp>
+		</ruby><br>
+		
+		<p>我们的课程将于<time>8:00</time>开始.</p>
+		<p><time datetime="2015-01-01">抢课时间</time></p>
+		
+		<form action="" method="post" enctype="multipart/form-data">
+			<label for="name">姓名</label>
+			<input type="text" id="name" name="name" />
+		</form>
+		
+	</body>
+	<script>
+		function grow(){
+			var progress=document.getElementById("password_1");
+			if(progress.value<progress.max){
+			progress.value=progress.value+1;
+			window.setTimeout(grow,30);
+			}
+			return;
+		}
+		grow();
+	</script>
+</html>

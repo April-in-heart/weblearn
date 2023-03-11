@@ -1,0 +1,8 @@
+/* pages/demo03/picker-view/picker-view.wxss */
+picker-view {
+  width: 100%;
+  height: 300px;
+}
+.col {
+  line-height: 50px;
+}

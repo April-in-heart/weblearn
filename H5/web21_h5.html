@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>AJAX</title>
+	</head>
+	<body>
+		<div id="tip">tip</div>
+		<div id="div_1">div_1</div>
+	</body>
+	<script>
+		function ajax(){
+			var xmlhttp=getXMLhttprequest();//用下面自定义的方法获取对象
+			var url="web21_h5.php?name=mike&random="+Math.random();//地址不一样才能再次请求服务器传数据
+			xmlhttp.open("GET",url);//默认true异步可以不写,异步服务器反馈后才能进行下一步
+			xmlhttp.onreadystatechange=function(){
+				//readyState第四步（最后一步）,status=200传输成功
+				if(xmlhttp.readyState==4&&xmlhttp.status==200){
+					document.getElementById("div_1").innerHTML=xmlhttp.responseText;
+					//
+					window.setTimeout(ajax,1000);
+				}
+			}
+			xmlhttp.send();//发送请求
+		}
+		ajax();
+		
+		function getXMLhttprequest(){
+					var xmlhttp;
+					try{
+						xmlhttp=new XMLHttpRequest();
+					}catch(e){
+						console.log("browser not support it");
+					}
+					return xmlhttp;
+				}
+		
+	</script>
+</html>

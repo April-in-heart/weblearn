@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		
+		<script>
+			//定义一维数组
+			var array_1=new Array();//定义了一个数组
+			console.log(typeof array_1);//输出object
+			console.log(Array);//输出数组和其内部属性,但是不能看见值
+			array_1[0]=98;
+			array_1[1]=99;
+			console.log(array_1[1]);//输出99，即数组下标为1的值
+			console.log(array_1);//输出数组所有的值，能直接看见数组和值
+			
+			var array_1=new Array(78,79);
+			console.log(array_1);//输出数组所有的值，能直接看见数组和值
+			
+			var array_1=[68,69];
+			console.log(array_1);//输出数组所有的值，能直接看见数组和值
+			
+			var array_2=array_1;
+			console.log(array_2[1]);
+			array_2[1]=89;//改变了array_2第2个元素值
+			console.log(array_2[1]);//89
+			console.log(array_1[1]);
+			//输出89而不是69，因为array是object，用引用传值，数组1和2指向同一个地址
+			//用数组2改变了值，数组1也会改变
+			
+			//用引号自定义字符串作为数组下标
+			var city=new Array();
+			city['cd']="成都";
+			city['cq']="重庆";
+			console.log(city['cd']);
+			
+			//Array里数组下标可为数字或字符串，数据类型也可以不一致
+			var array_3=new Array();
+			array_3[0]=98;
+			array_3[1]=87;
+			array_3[2]="成都中医药大学";
+			array_3['class']="医信一班";
+			console.log(array_3[2]);
+			console.log(array_3['class']);
+			console.log(array_3.length+1);//length只统计下标是数字的数据的长度
+			
+			//定义二维数组方法1
+			var array_1=new Array();
+			array_1[0]=new Array();//用带下标的数组再次定义，定义为二维数组
+			array_1[1]=new Array();
+			array_1[0][0]=2;
+			array_1[0][1]=3;
+			array_1[1][1]=5;
+			console.log(array_1[0][1]);
+			console.log(array_1[1][1]);
+			
+			//定义二维数组方法2
+			var array_1=new Array(new Array,new Array);
+			array_1[0][0]=2;
+			array_1[0][1]=3;
+			array_1[1][1]=5;
+			console.log(array_1[0][1]);
+			console.log(array_1[1][1]);
+			
+			//定义二维数组方法3
+			var array_1=[
+				[2,3],
+				[4,5],
+				[6,7]
+			]
+			console.log(array_1[0][1]);
+			console.log(array_1[1][1]);
+			//遍历二维数组并输出
+			function outputarr2(){
+			console.log("遍历二维数组");
+			//由于通过嵌套方式得到多维数组，所以array_1.length即为行数
+			//array_1[x].length即为第x行的列数
+			for(let i=0;i<array_1.length;i++)
+				for(let j=0;j<array_1[i].length;j++){
+					console.log(array_1[i][j]);
+				}
+			}
+			outputarr2();
+			
+			//定义三维数组
+			var array_1=[
+				[[2,3],[4,5]],
+				[[6,7],[8,9]],
+				[[10,11],[12,13]]
+			]
+			console.log(array_1[1][1][1]);
+			function outputarr3(){
+				console.log("遍历三维数组")
+				for(let i=0;i<array_1.length;i++)
+					for(let j=0;j<array_1[i].length;j++)
+						for(let m=0;m<array_1[i][j].length;m++){
+							console.log(array_1[i][j][m]);
+						}
+			}
+			outputarr3();
+			
+			
+			// for(let i=0;i<100;i++){
+			// 	array_1[i]=i;
+			// }
+			// console.log(array_1);
+			
+		</script>
+		
+	</body>
+</html>

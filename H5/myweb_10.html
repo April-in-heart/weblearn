@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		
+		<script>
+			
+			
+			
+			var data=10;//2进制1010 15的2进制1111
+			console.log(data|15);//或操作输出15，1111
+			console.log(data&15);//与操作输出10，1010
+			console.log(data^15);//按位异或操作输出5.0101
+			console.log(data^data)//与自己按位异或，输出0
+			
+			console.log(typeof 120);//typeof表示输出后面变量的类型，输出number
+			console.log(typeof "120");//输出string
+			console.log(typeof '120');//输出string
+			
+			var a="100";//字符串
+			var b=100;//数字
+			console.log(a==b);//两个等号判断a和b的值是否相等,返回true
+			console.log(a===b);//三个等号判断类型和值是否都相等,返回false
+			
+			var a="100px";
+			var b=100;
+			console.log(a==b);//返回false
+			
+			var salary='100';//单引号和双引号都表示字符串
+			console.log(salary);
+			console.log(parseInt(salary));//parseInt转换为数字
+			console.log(parseInt(salary,2));//parseInt表示设salary为几进制,输出十进制的数
+			console.log(parseInt(salary,8));//parseInt表示几进制
+			console.log(parseInt(salary,10));//parseInt表示几进制
+			console.log(parseInt(salary,16));//parseInt表示几进制
+			
+			var width="100px";
+			console.log(width);
+			console.log(parseInt(width));//parseInt将width转换为数字
+			
+		</script>
+	</body>
+</html>

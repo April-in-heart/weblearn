@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		
+		<!-- 定义函数capsWord(agrs)。
+		在函数体中，用函数式编程实现传入的英语语句单词首字母大写。
+		返回此处理后的句子。
+		如"i am a teacher"，则调用此函数后，返回 "I Am A Teacher"。 -->
+		
+		<script>
+			function capsWord(agrs){
+				var string=agrs;
+				var result=string.split(" ").map(value=> (value.slice(0,1).
+				toUpperCase()+value.slice(1))).join(" ");
+				return result;
+			}
+			capsWord("i am a teacher");
+			
+		</script>
+		
+	</body>
+</html>

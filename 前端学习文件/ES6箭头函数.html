@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>箭头函数</title>
+</head>
+
+<body>
+    <div></div>
+    <script>
+        // 合并数组对象
+        let array1 = ['周一', '周二', '周三', '周四', '周五', '周六', '周日']
+        let array2 = ['上班', '上班', '出差', '出差', '团建', '休息', '约会']
+        // 将两个数组合并成一个数组并返回
+        let data = array1.map((item, index) => {
+            return {
+                name: item,
+                value: array2[index]
+            }
+        })
+        console.log('这是合并的数组对象data', data);
+
+
+
+
+        var arr = [10, 20, 30];
+        var name = 'bob';
+        var user = {
+            name: 'iwen',
+            getName(){
+                arr.map((item, index, arr) => {
+                    console.log(item)
+                    console.log(index)
+                    console.log(arr)
+                })
+                setTimeout(() => {
+                    console.log(this.name)
+                },1000);
+            }
+        }
+        user.getName()
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,20 @@
+<!--pages/demo03/textarea/textarea.wxml-->
+<view class='container'>
+  <include src='../../common/head.wxml' />
+  <view class='page-body'>
+    <view class='title'>3. 表单组件textarea的简单应用</view>
+    <view class='demo-box'>
+      <view class='title'>(1) 自动变高</view>
+      <textarea auto-height placeholder="默认只有一行，但可以自动变高" />
+    </view>
+    <view class='demo-box'>
+      <view class='title'>(2) 自定义占位符颜色</view>
+      <textarea placeholder="placeholder颜色是红色的" placeholder-style="color:red;" />
+    </view>
+    <view class='demo-box'>
+      <view class='title'>(3) 被禁用状态</view>
+      <textarea placeholder="该文本框已被禁用" disabled />
+    </view>
+  </view>
+  <include src='../../common/foot.wxml' />
+</view>

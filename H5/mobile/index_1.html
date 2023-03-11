@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<!-- meta使用viewport保证页面可自由缩放 -->
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<!-- 引入jQuery Mobile样式 -->
+		<link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
+		<!-- 引入jQuery库 -->
+		<script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+		<!-- 引入jQuery Mobile库 -->
+		<script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+	</head>
+	<body>
+		<!-- 引用页面page组件 -->
+		<div data-role="page">
+			<div data-role="header">
+				<h3>我的移动应用</h3>
+			</div>
+			<div data-role="main" class="ui-content">
+				<h3>教学计划</h3>
+				<ul data-role="listview" data-insert="true">
+					<li><a href="content.html">移动应用开发</a></li>
+					<!-- ##表示空链接 -->
+					<li><a href="##">spring-boot应用开发</a></li>
+					<li><a href="##">python应用开发</a></li>
+				</ul>
+				<h3>教学内容</h3>
+				<ul data-role="listview" data-insert="true">
+					<li><a href="botton.html" data-transition="slide">按钮</a></li>
+					<li><a href="dialog_1.html" data-transition="turn">弹窗</a></li>
+					<li><a href="form_1.html" data-transition="pop">表单</a></li>
+					<li><a href="index_2.html" data-transition="slidedown">多页</a></li>
+				</ul>
+				<div data-role="collapsible" data-collapsed="true">
+					<h3>更多内容</h3>
+					<ol data-role="listview">
+						<li><a href="##">代码必须写注释</a></li>
+						<li><a href="##">代码必须提交git</a></li>
+						<li><a href="##">代码必须兼容</a></li>
+					</ol>
+				</div>
+			</div>
+			<div data-role="footer">
+				<h1>&copy;JL</h1>
+			</div>
+		</div>
+	</body>
+</html>

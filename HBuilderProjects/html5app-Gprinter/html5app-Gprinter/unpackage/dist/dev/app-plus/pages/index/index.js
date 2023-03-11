@@ -1,0 +1,2 @@
+setCssToHead([".",[1],"content { margin: 10px; margin-top:30px; }\nwx-button{ margin-bottom: 15px;}\n",],undefined,{path:"./pages/index/index.wxss"})();
+document.dispatchEvent(new CustomEvent("generateFuncReady", { detail: { generateFunc: $gwx('./pages/index/index.wxml') } }));

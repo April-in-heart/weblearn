@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		<!-- 姓名输入文本框的id为name。
+		保存按钮id为ok。
+		点击保存按钮后离线存储，所采用的存储技术方式不限制。
+		刷新页面后，自动将存储的姓名恢复到姓名输入框中。 -->
+		<form>
+			姓名:<input type="text" id="name" name="name" value="" />
+			<input type="button" id="ok" name="ok" value="ok" onclick="save()" />
+		</form>
+		<script>
+			
+			var objDiv_1=document.getElementById("name");
+			objDiv_1.value=sessionStorage.name;
+			function save(){
+				sessionStorage.name=objDiv_1.value;
+				console.log(sessionStorage.name)
+			}
+			
+		</script>
+	</body>
+</html>

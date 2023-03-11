@@ -1,0 +1,10 @@
+/* pages/start/start.wxss */
+input{
+  border: 1rpx solid green;
+  height: 90rpx;
+  margin: 30rpx 0;
+  border-radius: 20rpx;
+}
+#tip{
+  height:800rpx;
+}

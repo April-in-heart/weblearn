@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM</title>
+</head>
+<body>
+    <div id="div1"></div>
+    <script>
+        
+        var div2=document.createElement("div");
+        var text=document.createTextNode("我是文本");
+        div2.appendChild(text);
+        var id=document.createAttribute("id");
+        id.value="root";
+        div2.setAttributeNode(id);
+        var div1=document.getElementById("div1");
+        div1.appendChild(div2);
+        console.log(document.getElementById("div1"))
+        div1.classList.add("class1","class2","class3")
+        console.log(div1.classList.contains("class2","class1"))
+        div1.classList.toggle("p452")//不存在，加入
+        div1.classList.toggle("p452")//存在，删除
+
+
+    </script>
+
+</body>
+</html>

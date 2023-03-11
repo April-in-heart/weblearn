@@ -1,0 +1,33 @@
+/* pages/intro/intro.wxss */
+.loading{
+  height: 100vh;
+  background-color: silver;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+}
+progress{
+  width: 80%;
+}
+.intro{
+  height: 100vh;
+  display: flex;
+  /* 垂直分布 */
+  flex-direction: column;
+  /* 水平居中 */
+  align-items: center;
+  /* 组件间距 */
+  justify-content: space-evenly;
+}
+.intro image{
+  width: 400rpx;
+  margin: 20rpx;
+}
+.intro .intro-box{
+  display: flex;
+  flex-direction: column;
+}
+.intro-box text{
+  margin: 20rpx;
+}

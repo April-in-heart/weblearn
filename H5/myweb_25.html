@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		
+		<form action="" method="post">
+			name:<input type="text" name="name" id="name" value="" /></br>
+			age:<input type="text" name="age" id="age" value="" /></br>
+			<!-- <input type="button" name="ok" id="ok" value="ok" onclick="checkdata()" /> -->
+			<input type="button" name="ok" id="ok" value="ok" />
+		</form>
+		
+		<script>
+			// function checkdata(){
+			// 	var objname=document.getElementById("name");
+			// 	if(objname.value==""){
+			// 		console.log("姓名不能为空");
+			// 	}
+			// }
+			var objbutton=document.getElementById("ok");
+			objbutton.addEventListener("click",
+				function(){
+					var objname=document.getElementById("name");
+						if(objname.value==""){
+							console.log("姓名不能为空");
+						}
+				}
+			)
+			
+			//课后作业：完成blur(失去焦点)事件的绑定，绑定到name控件，效果为当光标从name
+			//框移出时，如果发现没有输入姓名，输出错误，并把光标重新移回到name框中
+			var objname=document.getElementById("name");
+			objbutton.addEventListener("blur",
+				function(){
+					if(objname.value==""){
+						console.log("错误");
+						objname.focus();//获得焦点
+					}
+				}
+			)
+			
+			
+			
+		</script>
+		
+		
+	</body>
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style>
+			/* 重点 名称或标签选择器 
+			改变所有div样式,
+			如果上面有专门样式则按照专门设定的执行
+			一般先设定共有样式在设置专有样式*/
+			div{
+				width:300px;
+				height:100px;
+			}
+			/* 类选择器 根据div里的属性class设置样式，
+						顺序：重点！！！ 
+			     id选择器>类选择器>名称选择器     */
+			.mydiv{
+				color: red;
+			}
+			
+			/* 私有样式 */
+			#div_1{
+				/* relative:相对位置,相对上一个对象 */
+				position: relative;
+				/* float:浮动元素,将div块级元素改为浮动元素 */
+				float:left;
+				/* border：边框 */
+				border: solid 1px #FF0000;
+				width: 300px;
+				height: 100px;
+				margin: 10px;/*外边距,上右下左,顺时针*/
+				padding: 10px;/*内边距,上右下左*/
+			}
+			#div_3{
+				position: relative;
+				float: left;
+			}
+		</style>
+		<!-- stylesheet:样式表 -->
+		<link href="myweb_15.css" rel="stylesheet" type="text/css" />
+	</head>
+	<body>
+		
+		<div id="div_1" class="mydiv">div_1</div>
+		<div id="div_2" class="mydiv">div_2</div>
+		<div id="div_3">div_3</div>
+		
+		
+	</body>
+</html>

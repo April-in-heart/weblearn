@@ -1,0 +1,27 @@
+<!--index.wxml-->
+<swiper class="navigation" indicator-dots="true" indicator-color="#fff" indicator-active-color="#000"
+  autoplay="true" previous-margin="5px" next-margin="5px" circular="true">
+  <swiper-item>
+    <image class="banner" mode="heightFix" src="/static/images/swiper_1.jpg"></image>
+  </swiper-item>
+  <swiper-item>
+    <image class="banner" mode="heightFix" src="/static/images/swiper_2.jpg"></image>
+  </swiper-item>
+  <swiper-item>
+    <image class="banner" mode="heightFix" src="/static/images/swiper_3.jpg"> </image>
+  </swiper-item>
+   <swiper-item>
+    <image class="banner" mode="heightFix" src="/static/images/swiper_4.jpg"></image>
+  </swiper-item>
+</swiper>
+
+<view class="out">
+  <navigator class="row" wx:for="{{dataList}}" wx:key="*this" url="/pages/xinxilan/xinxilan">
+    <image src="{{item.url}}"  mode="widthFix" class="pic" ></image>
+      <view class="text">
+        <view class="title">{{item.title}}</view>
+        <view class="content">{{item.content}}</view>
+        <view class="doctor">{{item.doctor}}</view>
+      </view>
+  </navigator>
+</view>

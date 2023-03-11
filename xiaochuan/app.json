@@ -1,0 +1,79 @@
+{
+  "pages": [
+    "pages/login/login",
+    "pages/dianzhenController/dianzhenController",
+    "pages/dianzhen2/dianzhen2",
+    
+    "pages/index/index",
+   
+  
+    
+    
+    
+   
+   
+   
+    "pages/dianzhenResult/dianzhenResult",
+    
+    "pages/dianzhen/dianzhen",
+   
+   
+    "pages/zizhen/zizhen",
+    "pages/life/life",
+    "pages/myscheme/myscheme",
+   
+    "pages/index2/index2",
+    "pages/submit/submit",
+    "pages/zhenjiu/zhenjiu",
+    "pages/me/me",
+    "pages/fangan/fangan",
+    "pages/xinxilan/xinxilan",
+    "pages/kefu/kefu",
+    "pages/zhiliaojilu/zhiliaojilu",
+    "pages/doctorLogin/doctorLogin",
+    "pages/kaifang/kaifang",
+    "pages/programdetail/programdetail",
+    "pages/wen/wen",
+    "pages/qie/qie",
+    "pages/result/result",
+    "pages/wen2/wen2",
+    "pages/CheckBySelfDetail/CheckBySelfDetail",
+    "pages/daizhen/daizhen",
+    "pages/historyChufang/historyChufang",
+    "pages/historyChufangDetail/historyChufangDetail",
+    "pages/checkHistory/checkHistory"
+    
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#23435c",
+    "navigationBarTitleText": "哮喘电针",
+    "navigationBarTextStyle": "white"
+  },
+  "tabBar": {
+    "color": "#23435c",
+    "selectedColor": "#FFF",
+    "backgroundColor": "#7294AE",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "咨询",
+        "iconPath": "/static/images/lung_2.png",
+        "selectedIconPath": "/static/images/lung_1.png"
+      },
+      {
+        "pagePath": "pages/zhenjiu/zhenjiu",
+        "text": "针灸",
+        "iconPath": "/static/images/zhenjiu_1.png",
+        "selectedIconPath": "/static/images/zhenjiu_2.png"
+      },
+      {
+        "pagePath": "pages/me/me",
+        "text": "我的",
+        "iconPath": "/static/images/me_1.png",
+        "selectedIconPath": "/static/images/me_2.png"
+      }
+    ]
+  },
+  "sitemapLocation": "sitemap.json"
+}
